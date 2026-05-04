@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o \"c:/Users/Admin/Desktop/Projects/Kielhorn/Coder/Dr.KielHorn/public/js/vendor/gsap.min.js\" \"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js\")",
+      "Bash(curl -s -o \"c:/Users/Admin/Desktop/Projects/Kielhorn/Coder/Dr.KielHorn/public/js/vendor/ScrollTrigger.min.js\" \"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js\")",
+      "Bash(node --check public/js/i18n.js)",
+      "Bash(node --check public/js/main.js)",
+      "Bash(node --check server.js)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(awk '{ins=$4; del=$6; print \"LINES:\"\\(ins+del\\)}')",
+      "Bash(awk 'END {print \"FILES:\"NR}')"
+    ]
+  }
+}
