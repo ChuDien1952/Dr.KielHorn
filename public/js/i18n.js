@@ -9,10 +9,12 @@ const TRANSLATIONS = {
       subtitle: 'Zahnarztpraxis · Winsen (Luhe)'
     },
     nav: {
+      home: 'Home',
       services: 'Services',
       team: 'Team',
       practice: 'Practice',
       hours: 'Hours',
+      faq: 'FAQ',
       contact: 'Contact',
       cta: 'Book Appointment'
     },
@@ -180,10 +182,12 @@ const TRANSLATIONS = {
       subtitle: 'Phòng Khám Nha Khoa · Winsen (Luhe)'
     },
     nav: {
+      home: 'Trang Chủ',
       services: 'Dịch Vụ',
       team: 'Đội Ngũ',
       practice: 'Phòng Khám',
       hours: 'Giờ Mở Cửa',
+      faq: 'Câu Hỏi',
       contact: 'Liên Hệ',
       cta: 'Đặt Lịch Khám'
     },
@@ -351,10 +355,12 @@ const TRANSLATIONS = {
       subtitle: 'Zahnarztpraxis · Winsen (Luhe)'
     },
     nav: {
+      home: 'Startseite',
       services: 'Leistungen',
       team: 'Team',
       practice: 'Praxis',
       hours: 'Öffnungszeiten',
+      faq: 'FAQ',
       contact: 'Kontakt',
       cta: 'Termin buchen'
     },

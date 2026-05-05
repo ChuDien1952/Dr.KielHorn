@@ -40,6 +40,12 @@
   <!-- SKIP LINK -->
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- HEADER ACCENT LINE -->
+  <div class="header-accent" aria-hidden="true"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
@@ -52,11 +58,13 @@
       </a>
 
       <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
-        <a href="pages/services.html" class="nav-link" data-i18n="nav.services">Services</a>
-        <a href="pages/team.html" class="nav-link" data-i18n="nav.team">Team</a>
-        <a href="pages/praxis.html" class="nav-link" data-i18n="nav.practice">Practice</a>
-        <a href="#hours" class="nav-link" data-i18n="nav.hours">Hours</a>
-        <a href="pages/contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="#home" class="nav-link active" data-page="home" data-i18n="nav.home">Startseite</a>
+        <a href="pages/services.html" class="nav-link" data-page="services" data-i18n="nav.services">Leistungen</a>
+        <a href="pages/team.html" class="nav-link" data-page="team" data-i18n="nav.team">Team</a>
+        <a href="pages/praxis.html" class="nav-link" data-page="praxis" data-i18n="nav.practice">Praxis</a>
+        <a href="pages/faq.html" class="nav-link" data-page="faq" data-i18n="nav.faq">FAQ</a>
+        <a href="pages/contact.html" class="nav-link" data-page="contact" data-i18n="nav.contact">Kontakt</a>
+        <span class="nav-sep" aria-hidden="true"></span>
         <a href="tel:+494171712120" class="nav-phone">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
           04171 / 71212
@@ -80,7 +88,7 @@
             </button>
           </div>
         </div>
-        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Book Appointment</a>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">

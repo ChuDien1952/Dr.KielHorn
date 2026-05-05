@@ -188,62 +188,98 @@ function initGallery() {
 }
 
 /* ═══════════════════════════════════════════════════
-   1a. CUSTOM CURSOR
+   1a. CUSTOM CURSOR — Luxury Edition
 ═══════════════════════════════════════════════════ */
 function initCustomCursor() {
-  /* only on true pointer devices */
   if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
-  const dot  = document.createElement('div');
+  /* Create ring with SVG spinner */
   const ring = document.createElement('div');
-  dot.className  = 'cursor-dot';
   ring.className = 'cursor-ring';
-  document.body.appendChild(dot);
+  ring.innerHTML = `
+    <svg class="cursor-svg" viewBox="0 0 36 36" aria-hidden="true">
+      <defs>
+        <linearGradient id="cursorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1E6FA8"/>
+          <stop offset="100%" stop-color="#0D9488"/>
+        </linearGradient>
+      </defs>
+      <circle class="ring-track" cx="18" cy="18" r="16.5"/>
+      <circle class="ring-arc" cx="18" cy="18" r="16.5"/>
+    </svg>
+    <div class="cursor-fill"></div>
+  `;
+
+  const dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+
   document.body.appendChild(ring);
+  document.body.appendChild(dot);
 
-  let mouseX = -100, mouseY = -100;
-  let ringX  = -100, ringY  = -100;
-  let animId = null;
-
-  window.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  }, { passive: true });
-
+  let mx = -200, my = -200;
+  let rx = -200, ry = -200;
   const lerp = (a, b, t) => a + (b - a) * t;
 
-  function animateRing() {
-    ringX = lerp(ringX, mouseX, 0.12);
-    ringY = lerp(ringY, mouseY, 0.12);
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    animId = requestAnimationFrame(animateRing);
-  }
-  animateRing();
+  window.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  }, { passive: true });
 
-  /* hover states */
-  const hoverTargets = 'a, button, [role="button"], .svc-more, .nav-link, .btn, .lang-option, .scroll-top';
-  const imgTargets   = '.gallery-item, .hero-photo, .team-card, .svc-bg';
+  (function animRing() {
+    rx = lerp(rx, mx, 0.13);
+    ry = lerp(ry, my, 0.13);
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  /* State management */
+  const HOVER_TARGETS  = 'a, button, [role="button"], .nav-link, .btn, .svc-more, input[type=submit], select, label[for]';
+  const IMG_TARGETS    = '.gallery-item, .hero-photo, .team-card, .svc-bg, .service-card-img, img';
+  const TEXT_TARGETS   = 'p, h1, h2, h3, h4, h5, span, li, td';
+
+  let state = 'default';
+  function setState(s) {
+    if (state === s) return;
+    const prev = state;
+    state = s;
+    if (prev === 'hover') { ring.classList.remove('hovered'); dot.classList.remove('hovered'); }
+    else if (prev === 'image') { ring.classList.remove('image-hovered'); }
+    else if (prev === 'text') { ring.classList.remove('text-hovered'); dot.classList.remove('text-hovered'); }
+    if (s === 'hover') {
+      ring.classList.add('hovered'); dot.classList.add('hovered');
+    } else if (s === 'image') {
+      ring.classList.add('image-hovered');
+    } else if (s === 'text') {
+      ring.classList.add('text-hovered'); dot.classList.add('text-hovered');
+    }
+  }
 
   document.addEventListener('mouseover', e => {
-    if (e.target.closest(hoverTargets)) ring.classList.add('hovered');
-    else if (e.target.closest(imgTargets)) ring.classList.add('image-hovered');
+    if (e.target.closest(HOVER_TARGETS)) setState('hover');
+    else if (e.target.closest(IMG_TARGETS)) setState('image');
+    else if (e.target.closest(TEXT_TARGETS)) setState('text');
+    else setState('default');
   });
   document.addEventListener('mouseout', e => {
-    if (e.target.closest(hoverTargets)) ring.classList.remove('hovered');
-    else if (e.target.closest(imgTargets)) ring.classList.remove('image-hovered');
+    if (!e.relatedTarget || e.relatedTarget === document.documentElement) setState('default');
   });
 
-  /* hide when leaving window */
+  /* Click ripple */
+  document.addEventListener('mousedown', () => {
+    ring.classList.add('clicking'); dot.classList.add('clicking');
+  });
+  document.addEventListener('mouseup', () => {
+    ring.classList.remove('clicking'); dot.classList.remove('clicking');
+  });
+
+  /* Hide when leaving window */
   document.addEventListener('mouseleave', () => {
-    dot.style.opacity  = '0';
-    ring.style.opacity = '0';
+    ring.style.opacity = '0'; dot.style.opacity = '0';
   });
   document.addEventListener('mouseenter', () => {
-    dot.style.opacity  = '1';
-    ring.style.opacity = '1';
+    ring.style.opacity = '1'; dot.style.opacity = '1';
   });
 }
 
