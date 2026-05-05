@@ -25,17 +25,28 @@
       </a>
       <nav class="main-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
         <a href="../../index.html" class="nav-link" data-page="home">Startseite</a>
-        <a href="../services.html" class="nav-link" data-page="services">Leistungen</a>
-        <a href="../team.html" class="nav-link" data-page="team">Team</a>
-        <a href="../praxis.html" class="nav-link" data-page="praxis">Praxis</a>
-        <a href="../faq.html" class="nav-link" data-page="faq">FAQ</a>
-        <a href="../contact.html" class="nav-link" data-page="contact">Kontakt</a>
+        <a href="../services.html" class="nav-link" data-page="services" data-i18n="nav.services">Leistungen</a>
+        <a href="../team.html" class="nav-link" data-page="team" data-i18n="nav.team">Team</a>
+        <a href="../praxis.html" class="nav-link" data-page="praxis" data-i18n="nav.practice">Praxis</a>
+        <a href="../faq.html" class="nav-link" data-page="faq" data-i18n="nav.faq">FAQ</a>
+        <a href="../contact.html" class="nav-link" data-page="contact" data-i18n="nav.contact">Kontakt</a>
         <span class="nav-sep" aria-hidden="true"></span>
         <a href="tel:+494171712120" class="nav-phone">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
           04171 / 71212
         </a>
-        <a href="tel:+494171712120" class="btn btn-primary btn-sm">Termin buchen</a>
+                <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+            <span class="lang-flag" id="langFlag" aria-hidden="true">🇩🇪</span>
+            <span class="lang-label" id="langLabel">DE</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown" role="menu">
+            <button class="lang-option" data-lang="en" role="menuitem"><span aria-hidden="true">🇺🇸</span> English</button>
+            <button class="lang-option active" data-lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</button>
+            <button class="lang-option" data-lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</button>
+          </div>
+        </div>        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
     </div>
@@ -46,12 +57,12 @@
         <div class="page-hero-icon" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
         </div>
-        <h1>Angstpatienten —<br><em>In sicheren Händen</em></h1>
-        <p class="page-hero-desc">Zahnarztangst ist weit verbreitet und absolut verständlich. Wir nehmen Ihre Angst ernst und schaffen eine Atmosphäre des Vertrauens, damit jede Behandlung so angenehm wie möglich verläuft.</p>
+        <h1 data-i18n="pages.angstpatienten.hero.h1" data-i18n-html>Angstpatienten —<br><em>In sicheren Händen</em></h1>
+        <p class="page-hero-desc" data-i18n="pages.angstpatienten.hero.desc">Zahnarztangst ist weit verbreitet und absolut verständlich. Wir nehmen Ihre Angst ernst und schaffen eine Atmosphäre des Vertrauens, damit jede Behandlung so angenehm wie möglich verläuft.</p>
         <a href="../services.html" class="back-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          ← Alle Leistungen
-        </a>
+          <span data-i18n="pages.angstpatienten.hero.back">← Alle Leistungen
+        </span></a>
       </div>
     </section>
 
@@ -176,5 +187,6 @@
     hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
     document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.1}).observe(el);});
   </script>
+  <script src="../../js/i18n.js"></script>
 </body>
 </html>

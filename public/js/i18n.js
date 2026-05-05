@@ -174,6 +174,21 @@ const TRANSLATIONS = {
         accessibility: 'Accessibility'
       },
       copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. All rights reserved.'
+    },
+    pages: {
+      services: { hero: { h1: 'Our Services — <em>Your Smile in the Best Hands</em>', desc: 'From prevention to aesthetic dentistry — comprehensive dental care tailored individually to you.', back: 'Back to Homepage' } },
+      team:     { hero: { h1: 'Our Team — <em>Experienced, Dedicated, Compassionate</em>', desc: 'Behind every healthy smile is a team working with passion and expertise. Get to know us.', back: 'Back to Homepage' } },
+      praxis:   { hero: { h1: 'Our Practice — <em>Modern, Welcoming, Trustworthy</em>', desc: 'A practice with tradition — combining modern medicine with personal care since 1980.', back: 'Back to Homepage' } },
+      faq:      { hero: { h1: 'Frequently Asked Questions — <em>All Answers at a Glance</em>', desc: 'Questions about our services, treatments, or appointments? We have the answers.', back: 'Back to Homepage' } },
+      contact:  { hero: { h1: 'Contact — <em>We Look Forward to Your Visit</em>', desc: 'Book an appointment or send us your questions — we are here for you.', back: 'Back to Homepage' } },
+      prophylaxe:        { hero: { h1: 'Prevention — <em>Prevention Is Better than Cure</em>', desc: 'Regular professional cleaning and preventive care keep your teeth healthy for life.', back: 'All Services' } },
+      implantologie:     { hero: { h1: 'Implantology — <em>Fixed Tooth Replacement Like Real Teeth</em>', desc: 'Premium implants for a permanent, natural-looking smile that lasts a lifetime.', back: 'All Services' } },
+      zahnersatz:        { hero: { h1: 'Dentures — <em>Natural Replacement for Better Quality of Life</em>', desc: 'High-quality crowns, bridges, and dentures from our own in-house laboratory.', back: 'All Services' } },
+      oralchirurgie:     { hero: { h1: 'Oral Surgery — <em>Gentle Surgical Procedures</em>', desc: 'From wisdom tooth removal to bone augmentation — performed with care and expertise.', back: 'All Services' } },
+      kinderzahnheilkunde: { hero: { h1: "Children's Dentistry — <em>Focused on Children's Special Needs</em>", desc: 'Child-friendly dental care — playful, gentle, and completely without fear.', back: 'All Services' } },
+      angstpatienten:    { hero: { h1: 'Anxious Patients — <em>With Understanding and Empathy</em>', desc: 'No pressure, no rush — we take your fears seriously and go at your own pace.', back: 'All Services' } },
+      aesthetik:         { hero: { h1: 'Aesthetic Dentistry — <em>Your Radiant Smile, Our Passion</em>', desc: 'Bleaching, veneers, and smile design for your most confident, beautiful smile.', back: 'All Services' } },
+      zahnerhaltung:     { hero: { h1: 'Tooth Preservation — <em>Keeping Natural Teeth Healthy</em>', desc: 'Modern, gentle methods to protect and preserve your natural teeth long-term.', back: 'All Services' } }
     }
   },
 
@@ -347,6 +362,21 @@ const TRANSLATIONS = {
         accessibility: 'Khả Năng Tiếp Cận'
       },
       copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Bảo lưu mọi quyền.'
+    },
+    pages: {
+      services: { hero: { h1: 'Dịch Vụ Của Chúng Tôi — <em>Nụ Cười Của Bạn Trong Tay Tốt Nhất</em>', desc: 'Từ dự phòng đến nha khoa thẩm mỹ — chăm sóc răng toàn diện, cá nhân hóa cho từng bệnh nhân.', back: 'Về Trang Chủ' } },
+      team:     { hero: { h1: 'Đội Ngũ Chúng Tôi — <em>Kinh Nghiệm, Tận Tâm, Thấu Hiểu</em>', desc: 'Đằng sau mỗi nụ cười khỏe mạnh là một đội ngũ làm việc với đam mê và chuyên môn cao. Hãy làm quen với chúng tôi.', back: 'Về Trang Chủ' } },
+      praxis:   { hero: { h1: 'Phòng Khám Của Chúng Tôi — <em>Hiện Đại, Thân Thiện, Đáng Tin</em>', desc: 'Phòng khám với truyền thống — kết hợp y học hiện đại với sự chăm sóc cá nhân từ năm 1980.', back: 'Về Trang Chủ' } },
+      faq:      { hero: { h1: 'Câu Hỏi Thường Gặp — <em>Tất Cả Câu Trả Lời Trong Tầm Tay</em>', desc: 'Câu hỏi về dịch vụ, điều trị hoặc đặt lịch hẹn? Chúng tôi có câu trả lời cho bạn.', back: 'Về Trang Chủ' } },
+      contact:  { hero: { h1: 'Liên Hệ — <em>Chúng Tôi Mong Đón Tiếp Bạn</em>', desc: 'Đặt lịch hẹn hoặc gửi câu hỏi cho chúng tôi — chúng tôi luôn sẵn sàng hỗ trợ bạn.', back: 'Về Trang Chủ' } },
+      prophylaxe:        { hero: { h1: 'Dự Phòng — <em>Phòng Bệnh Hơn Chữa Bệnh</em>', desc: 'Vệ sinh răng chuyên nghiệp định kỳ và chăm sóc phòng ngừa giúp răng khỏe mạnh suốt đời.', back: 'Tất Cả Dịch Vụ' } },
+      implantologie:     { hero: { h1: 'Cấy Ghép Implant — <em>Răng Giả Cố Định Như Răng Thật</em>', desc: 'Implant cao cấp cho nụ cười vĩnh viễn, tự nhiên và bền lâu cả đời.', back: 'Tất Cả Dịch Vụ' } },
+      zahnersatz:        { hero: { h1: 'Răng Giả — <em>Thay Thế Tự Nhiên Nâng Cao Chất Lượng Sống</em>', desc: 'Mão răng, cầu răng và hàm giả chất lượng cao từ phòng thí nghiệm riêng của chúng tôi.', back: 'Tất Cả Dịch Vụ' } },
+      oralchirurgie:     { hero: { h1: 'Phẫu Thuật Miệng — <em>Can Thiệp Nhẹ Nhàng Cho Sức Khỏe Răng</em>', desc: 'Từ nhổ răng khôn đến ghép xương — được thực hiện với sự chăm sóc và chuyên môn cao nhất.', back: 'Tất Cả Dịch Vụ' } },
+      kinderzahnheilkunde: { hero: { h1: 'Nha Khoa Trẻ Em — <em>Tập Trung Vào Nhu Cầu Đặc Biệt Của Trẻ</em>', desc: 'Chăm sóc răng thân thiện với trẻ em — vui vẻ, nhẹ nhàng, hoàn toàn không sợ hãi.', back: 'Tất Cả Dịch Vụ' } },
+      angstpatienten:    { hero: { h1: 'Bệnh Nhân Lo Lắng — <em>Với Sự Thấu Hiểu Và Đồng Cảm</em>', desc: 'Không áp lực, không vội vàng — chúng tôi tôn trọng nỗi sợ của bạn và đồng hành theo nhịp độ của bạn.', back: 'Tất Cả Dịch Vụ' } },
+      aesthetik:         { hero: { h1: 'Nha Khoa Thẩm Mỹ — <em>Nụ Cười Rạng Ngời Là Niềm Đam Mê Của Chúng Tôi</em>', desc: 'Tẩy trắng, veneer và thiết kế nụ cười cho vẻ đẹp tự tin, hoàn hảo nhất của bạn.', back: 'Tất Cả Dịch Vụ' } },
+      zahnerhaltung:     { hero: { h1: 'Bảo Tồn Răng — <em>Gìn Giữ Răng Tự Nhiên Khỏe Mạnh</em>', desc: 'Phương pháp hiện đại, nhẹ nhàng để bảo vệ và gìn giữ răng tự nhiên của bạn lâu dài.', back: 'Tất Cả Dịch Vụ' } }
     }
   },
 
@@ -520,6 +550,21 @@ const TRANSLATIONS = {
         accessibility: 'Barrierefreiheit'
       },
       copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.'
+    },
+    pages: {
+      services: { hero: { h1: 'Unsere Leistungen — <em>Ihr Lächeln in besten Händen</em>', desc: 'Von der Vorsorge über Implantate bis zur ästhetischen Zahnheilkunde — umfassende Zahnmedizin auf höchstem Niveau, individuell auf Sie abgestimmt.', back: 'Zurück zur Startseite' } },
+      team:     { hero: { h1: 'Unser Team — <em>Erfahren, Engagiert, Einfühlsam</em>', desc: 'Hinter jedem gesunden Lächeln steckt ein Team, das mit Leidenschaft und Fachkompetenz arbeitet. Lernen Sie uns kennen.', back: 'Zurück zur Startseite' } },
+      praxis:   { hero: { h1: 'Unsere Praxis — <em>Modern, Herzlich, Vertrauensvoll</em>', desc: 'Eine Praxis mit Geschichte — moderne Medizin verbunden mit persönlicher Betreuung seit 1980.', back: 'Zurück zur Startseite' } },
+      faq:      { hero: { h1: 'Häufig gestellte Fragen — <em>Alle Antworten auf einen Blick</em>', desc: 'Fragen zu unseren Leistungen, Behandlungen oder Terminen? Wir haben die Antworten für Sie.', back: 'Zurück zur Startseite' } },
+      contact:  { hero: { h1: 'Kontakt — <em>Wir freuen uns auf Sie</em>', desc: 'Vereinbaren Sie einen Termin oder senden Sie uns Ihre Fragen — wir sind für Sie da.', back: 'Zurück zur Startseite' } },
+      prophylaxe:        { hero: { h1: 'Prophylaxe — <em>Vorbeugen ist besser als Heilen</em>', desc: 'Regelmäßige professionelle Zahnreinigung und Vorsorge für lebenslang gesunde Zähne.', back: 'Alle Leistungen' } },
+      implantologie:     { hero: { h1: 'Implantologie — <em>Fester Zahnersatz wie echte Zähne</em>', desc: 'Premium-Implantate für ein dauerhaftes, natürlich aussehendes Lächeln, das ein Leben lang hält.', back: 'Alle Leistungen' } },
+      zahnersatz:        { hero: { h1: 'Zahnersatz — <em>Natürlicher Ersatz für mehr Lebensqualität</em>', desc: 'Hochwertige Kronen, Brücken und Prothesen aus unserem eigenen Praxislabor.', back: 'Alle Leistungen' } },
+      oralchirurgie:     { hero: { h1: 'Oralchirurgie — <em>Schonende chirurgische Eingriffe</em>', desc: 'Von der Weisheitszahnentfernung bis zum Knochenaufbau — in erfahrenen Händen.', back: 'Alle Leistungen' } },
+      kinderzahnheilkunde: { hero: { h1: 'Kinderzahnheilkunde — <em>Wir konzentrieren uns auf die speziellen Bedürfnisse von Kindern</em>', desc: 'Kinderfreundliche Zahnmedizin — spielerisch, sanft und ganz ohne Angst.', back: 'Alle Leistungen' } },
+      angstpatienten:    { hero: { h1: 'Angstpatienten — <em>Mit Verständnis und Einfühlungsvermögen</em>', desc: 'Kein Druck, keine Hektik — wir nehmen Ihre Ängste ernst und gehen in Ihrem Tempo vor.', back: 'Alle Leistungen' } },
+      aesthetik:         { hero: { h1: 'Ästhetische Zahnheilkunde — <em>Ihr strahlendes Lächeln, unsere Leidenschaft</em>', desc: 'Bleaching, Veneers und Smile Design für Ihr schönstes, selbstbewusstes Lächeln.', back: 'Alle Leistungen' } },
+      zahnerhaltung:     { hero: { h1: 'Zahnerhaltung — <em>Natürliche Zähne erhalten</em>', desc: 'Moderne, schonende Verfahren zum langfristigen Schutz und Erhalt Ihrer natürlichen Zähne.', back: 'Alle Leistungen' } }
     }
   }
 };
