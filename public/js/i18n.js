@@ -564,14 +564,16 @@ function updateSwitcherUI(lang) {
 }
 
 /* ── Set language (main entry point) ────────────── */
+let _langTimer = null;
 function setLanguage(lang) {
   if (!TRANSLATIONS[lang]) lang = 'en';
   updateSwitcherUI(lang);
   localStorage.setItem('lang', lang);
 
+  clearTimeout(_langTimer);
   document.body.style.transition = 'opacity .15s ease';
   document.body.style.opacity = '0';
-  setTimeout(() => {
+  _langTimer = setTimeout(() => {
     applyTranslations(lang);
     document.body.style.opacity = '1';
   }, 150);

@@ -421,6 +421,10 @@ p  { max-width:68ch }
   .main-nav a,.nav-link,.nav-phone { padding:14px 24px; border-bottom:1px solid var(--border-light); border-radius:0; font-size:1rem }
   .main-nav .lang-switcher { padding:12px 24px; border-bottom:1px solid var(--border-light) }
   .main-nav .lang-btn { background:var(--primary-light); border-color:var(--border) }
+  /* Dropdown inline on mobile — avoids overflow:hidden clipping */
+  .main-nav .lang-dropdown { position:static; box-shadow:none; border-radius:0; border:none; border-top:1px solid var(--border-light); min-width:unset; opacity:1; transform:none; pointer-events:none; display:flex; flex-direction:row; max-height:0; overflow:hidden; transition:max-height .3s ease; background:rgba(30,111,168,.04) }
+  .main-nav .lang-dropdown.open { max-height:56px; pointer-events:auto }
+  .main-nav .lang-option { flex:1; justify-content:center; padding:10px 4px; gap:4px; font-size:.82rem }
   .main-nav .btn-primary { margin:14px 20px; width:calc(100% - 40px); border-radius:var(--radius-md) }
   .hero-actions { flex-direction:column }
   .hero-trust { gap:16px }
