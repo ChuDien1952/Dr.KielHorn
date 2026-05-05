@@ -9,7 +9,9 @@
       "Bash(git init *)",
       "Bash(git config *)",
       "Bash(awk '{ins=$4; del=$6; print \"LINES:\"\\(ins+del\\)}')",
-      "Bash(awk 'END {print \"FILES:\"NR}')"
+      "Bash(awk 'END {print \"FILES:\"NR}')",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)"
     ]
   }
 }
