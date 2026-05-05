@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unsere Praxis | Dr. Kielhorn Zahnarztpraxis Winsen (Luhe)</title>
+  <meta name="description" content="Moderne Zahnarztpraxis in Winsen (Luhe) mit über 40 Jahren Familientradition, eigenem Labor, digitalem Röntgen und 3D-Diagnostik. Dr. Christopher Kielhorn." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/page.css" />
+  <style>
+    /* Reveal */
+    [data-reveal] { opacity:0; transform:translateY(24px); transition:opacity .55s ease, transform .55s ease }
+    [data-reveal].revealed { opacity:1; transform:none }
+
+    /* Section label */
+    .section-label { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:var(--primary); margin-bottom:10px; display:block }
+
+    /* ── Timeline ──────────────────────── */
+    .timeline { position:relative; padding-left:40px; margin:48px 0 }
+    .timeline::before { content:''; position:absolute; left:12px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--primary), var(--primary-light)) }
+    .timeline-item { position:relative; margin-bottom:40px }
+    .timeline-item:last-child { margin-bottom:0 }
+    .timeline-dot { position:absolute; left:-34px; top:4px; width:22px; height:22px; border-radius:50%; background:var(--primary); border:3px solid white; box-shadow:0 0 0 3px var(--primary-light) }
+    .timeline-year { font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--primary); margin-bottom:6px }
+    .timeline-item h3 { font-size:1.1rem; margin-bottom:8px }
+    .timeline-item p { font-size:.9rem; color:var(--text-muted); max-width:none; line-height:1.65 }
+
+    /* ── History split layout ── */
+    .history-layout { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start }
+    @media(max-width:768px){ .history-layout { grid-template-columns:1fr; gap:40px } }
+
+    /* ── Gallery ──────────────────────── */
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:40px 0 }
+    @media(max-width:768px){ .gallery-grid { grid-template-columns:repeat(2,1fr) } }
+    @media(max-width:480px){ .gallery-grid { grid-template-columns:1fr } }
+    .gallery-img { width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); display:block; transition:transform var(--tr), box-shadow var(--tr) }
+    .gallery-img:hover { transform:scale(1.02); box-shadow:var(--shadow-md) }
+    .gallery-caption { text-align:center; color:var(--text-muted); font-size:.85rem; margin-top:12px; font-style:italic }
+
+    /* ── Lab section ──────────────────── */
+    .lab-section { background:var(--bg); border-radius:var(--radius-xl); padding:64px 48px; margin:80px 0 }
+    @media(max-width:600px){ .lab-section { padding:40px 24px } }
+    .lab-intro { max-width:620px; margin:0 auto 48px; text-align:center }
+    .lab-intro p { max-width:none; color:var(--text-muted) }
+    .lab-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:20px }
+    @media(max-width:600px){ .lab-cards { grid-template-columns:1fr } }
+    .lab-card { background:white; border-radius:var(--radius-md); padding:28px; border:1px solid var(--border-light); box-shadow:var(--shadow-xs) }
+    .lab-card-icon { width:44px; height:44px; border-radius:var(--radius-sm); background:var(--primary-light); display:flex; align-items:center; justify-content:center; color:var(--primary); margin-bottom:16px }
+    .lab-card h4 { font-size:1rem; margin-bottom:8px }
+    .lab-card p { font-size:.875rem; color:var(--text-muted); max-width:none; line-height:1.6 }
+
+    /* ── Anfahrt / Hours ─────────────── */
+    .anfahrt-layout { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; margin-top:48px }
+    @media(max-width:768px){ .anfahrt-layout { grid-template-columns:1fr } }
+    .address-card { background:white; border-radius:var(--radius-md); padding:32px; border:1px solid var(--border-light); box-shadow:var(--shadow-sm) }
+    .address-card h3 { font-size:1.2rem; margin-bottom:20px }
+    .address-row { display:flex; gap:14px; align-items:flex-start; margin-bottom:18px }
+    .address-row svg { flex-shrink:0; margin-top:3px; color:var(--primary) }
+    .address-row-text { font-size:.9rem; line-height:1.6 }
+    .address-row-text a { color:var(--primary); font-weight:600 }
+    .hours-table { width:100%; border-collapse:collapse; margin-top:8px }
+    .hours-table tr { border-bottom:1px solid var(--border-light) }
+    .hours-table tr:last-child { border-bottom:none }
+    .hours-table td { padding:8px 4px; font-size:.875rem }
+    .hours-table td:first-child { color:var(--text-muted); width:110px }
+    .hours-table td:last-child { font-weight:500; color:var(--text) }
+    .map-wrap { border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm) }
+
+    /* ── Anfahrt page section wrapper ── */
+    .section-wrapper { margin-bottom:80px }
+    .section-header { text-align:center; margin-bottom:48px }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" />
+        <div class="logo-text"><strong>Dr. Kielhorn</strong><small>Zahnarztpraxis · Winsen (Luhe)</small></div>
+      </a>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <a href="services.html" class="nav-link">Leistungen</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="praxis.html" class="nav-link">Praxis</a>
+        <a href="../index.html#hours" class="nav-link">Sprechzeiten</a>
+        <a href="contact.html" class="nav-link">Kontakt</a>
+        <a href="tel:+494171712120" class="nav-phone">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          04171 / 71212
+        </a>
+        <a href="tel:+494171712120" class="btn btn-primary btn-sm">Termin buchen</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div class="page-hero-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h1>Unsere Praxis —<br><em>Modern, Herzlich, Vertrauensvoll</em></h1>
+        <p class="page-hero-desc">Eine Praxis mit Geschichte, Herzblut und modernster Ausstattung — seit über 40 Jahren für Ihre Zahngesundheit in Winsen (Luhe).</p>
+        <a href="../index.html" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Zurück zur Startseite
+        </a>
+      </div>
+    </section>
+
+    <!-- PAGE BODY -->
+    <div class="page-body">
+      <div class="container">
+
+        <!-- ── SECTION 1: Geschichte ── -->
+        <div class="section-wrapper" data-reveal>
+          <div class="history-layout">
+            <div>
+              <span class="section-label">Unsere Geschichte</span>
+              <h2>Eine Praxis mit <em>Tradition</em></h2>
+              <p style="color:var(--text-muted);margin-top:16px;line-height:1.7">Gegründet von Dr. Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn, heute mit Herzblut weitergeführt von ihrem Sohn Dr. Christopher Kielhorn. Seit über 40 Jahren versorgen wir Patienten in Winsen (Luhe) und der gesamten Region.</p>
+              <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;max-width:none">Was 1980 als kleine Praxis begann, ist heute ein modernes Behandlungszentrum mit eigenem Labor, digitalem Röntgen und 3D-Diagnostik.</p>
+            </div>
+            <div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <p class="timeline-year">1980</p>
+                  <h3>Gründung der Praxis</h3>
+                  <p>Dr. Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn eröffnen die Zahnarztpraxis in Winsen (Luhe) — mit dem Anspruch, Patienten wie Freunde zu behandeln.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <p class="timeline-year">1990er – 2010er</p>
+                  <h3>Wachstum &amp; Modernisierung</h3>
+                  <p>Kontinuierliche Erweiterung: eigenes Dentallabor, neue Behandlungsräume und der Einstieg in die digitale Zahnmedizin mit modernsten Geräten.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <p class="timeline-year">2023</p>
+                  <h3>Übergabe an die 2. Generation</h3>
+                  <p>Dr. Christopher Kielhorn übernimmt die Praxis und verbindet die jahrzehntelange Familientradition mit modernsten Behandlungsmethoden und frischem Elan.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <p class="timeline-year">Heute</p>
+                  <h3>Modernes Behandlungszentrum</h3>
+                  <p>Digitales Röntgen, 3D-Diagnostik, eigenes Labor und ein engagiertes Team — für höchste Qualität und echte menschliche Wärme.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SECTION 2: Einrichtung Gallery ── -->
+        <div class="section-wrapper" data-reveal>
+          <div class="section-header">
+            <span class="section-label">Einrichtung</span>
+            <h2>Moderne Räume —<br><em>für Ihren Komfort</em></h2>
+          </div>
+          <div class="gallery-grid">
+            <img src="../assets/img/img_0368-scaled.jpeg" alt="Behandlungsraum" class="gallery-img" loading="lazy" />
+            <img src="../assets/img/img_0370-scaled.jpeg" alt="Empfangsbereich" class="gallery-img" loading="lazy" />
+            <img src="../assets/img/img_0373-scaled.jpeg" alt="Wartebereich" class="gallery-img" loading="lazy" />
+            <img src="../assets/img/img_0383-scaled.jpeg" alt="Behandlungseinheit" class="gallery-img" loading="lazy" />
+            <img src="../assets/img/img_0384-scaled.jpeg" alt="Modernste Ausstattung" class="gallery-img" loading="lazy" />
+            <div style="border-radius:var(--radius-md);background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;height:220px">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p style="color:white;margin-top:16px;font-weight:600;font-size:.95rem;max-width:none">Modernste Technik für beste Ergebnisse</p>
+            </div>
+          </div>
+          <p class="gallery-caption">Moderne Behandlungsräume für optimalen Komfort — Ihre Gesundheit in bester Umgebung</p>
+        </div>
+
+        <!-- ── SECTION 3: Eigenes Labor ── -->
+        <div class="lab-section" data-reveal>
+          <div class="lab-intro">
+            <span class="section-label">Unser Labor</span>
+            <h2>Eigenes Dentallabor —<br><em>höchste Qualität</em></h2>
+            <p style="margin-top:16px">Wir betreiben ein modernes eigenes Labor — für höchste Qualität und Schnelligkeit. Kurze Wege bedeuten: schnellere Ergebnisse, persönlichere Abstimmung, bessere Passgenauigkeit.</p>
+          </div>
+          <div class="lab-cards">
+            <div class="lab-card">
+              <div class="lab-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <h4>Schnelle Ergebnisse</h4>
+              <p>Anpassungen und Reparaturen sofort, ohne externe Wartezeit — wir liefern, wenn Sie es brauchen.</p>
+            </div>
+            <div class="lab-card">
+              <div class="lab-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <h4>Hohe Qualität</h4>
+              <p>Direkte Kontrolle und Überwachung durch unser Team — höchste Präzision bei jedem Werkstück.</p>
+            </div>
+            <div class="lab-card">
+              <div class="lab-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h4>Individuelle Anpassung</h4>
+              <p>Jeder Zahnersatz genau nach Ihren Wünschen und Bedürfnissen gefertigt — für ein perfektes Ergebnis.</p>
+            </div>
+            <div class="lab-card">
+              <div class="lab-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <h4>Kurze Wege</h4>
+              <p>Direkter Kontakt zwischen Zahnarzt und Zahntechniker — für optimale Abstimmung und beste Ergebnisse.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SECTION 4: Anfahrt & Parken ── -->
+        <div class="section-wrapper" data-reveal>
+          <div class="section-header">
+            <span class="section-label">So finden Sie uns</span>
+            <h2>Anfahrt &amp; <em>Öffnungszeiten</em></h2>
+          </div>
+
+          <div class="anfahrt-layout">
+            <div>
+              <div class="address-card">
+                <h3>Praxisadresse</h3>
+                <div class="address-row">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <div class="address-row-text">
+                    <strong>Niedersachsenstraße 13a</strong><br>
+                    21423 Winsen (Luhe)
+                  </div>
+                </div>
+                <div class="address-row">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+                  <div class="address-row-text"><a href="tel:+494171712120">04171 / 71212</a></div>
+                </div>
+                <div class="address-row">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8l5 3v5h-5V8zM1 20h18"/></svg>
+                  <div class="address-row-text">Kostenfreie Parkplätze direkt vor der Praxis</div>
+                </div>
+
+                <h3 style="margin-top:28px">Öffnungszeiten</h3>
+                <table class="hours-table" aria-label="Öffnungszeiten">
+                  <tbody>
+                    <tr><td>Montag</td><td>08:00 – 13:00 / 14:00 – 18:00 Uhr</td></tr>
+                    <tr><td>Dienstag</td><td>08:00 – 13:00 / 14:00 – 17:00 Uhr</td></tr>
+                    <tr><td>Mittwoch</td><td>08:00 – 13:00 Uhr</td></tr>
+                    <tr><td>Donnerstag</td><td>08:00 – 13:00 / 14:00 – 18:00 Uhr</td></tr>
+                    <tr><td>Freitag</td><td>08:00 – 13:00 Uhr</td></tr>
+                    <tr><td>Sa / So</td><td style="color:var(--text-muted)">Geschlossen</td></tr>
+                  </tbody>
+                </table>
+
+                <a href="tel:+494171712120" class="btn btn-primary" style="margin-top:28px;width:100%;justify-content:center">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+                  Termin vereinbaren
+                </a>
+              </div>
+            </div>
+
+            <div class="map-wrap">
+              <iframe src="https://maps.google.com/maps?q=Niedersachsenstra%C3%9Fe+13a,+21423+Winsen+(Luhe)&output=embed" width="100%" height="460" style="border:0;border-radius:14px;display:block" allowfullscreen loading="lazy" title="Praxis-Standort"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align:center;margin:0 0 0;padding:60px 40px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);border-radius:var(--radius-xl);color:white" data-reveal>
+          <h2 style="color:white;margin-bottom:16px">Lernen Sie uns persönlich kennen</h2>
+          <p style="color:rgba(255,255,255,.8);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto">Vereinbaren Sie noch heute einen Termin — wir freuen uns darauf, Sie und Ihre Familie zu begleiten.</p>
+          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+            <a href="tel:+494171712120" class="btn btn-white btn-lg">04171 / 71212 — Jetzt anrufen</a>
+            <a href="team.html" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:white;border-color:rgba(255,255,255,.4)">Unser Team kennenlernen</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo logo--footer"><img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" /><span class="logo-text-footer">Dr. Kielhorn</span></a>
+          <p>Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p>
+          <address>Niedersachsenstraße 13a<br>21423 Winsen (Luhe)<br><a href="tel:+494171712120">04171 / 71212</a></address>
+        </div>
+        <div class="footer-col"><h5>Navigation</h5><nav><a href="../index.html">Startseite</a><a href="services.html">Leistungen</a><a href="team.html">Team</a><a href="praxis.html">Praxis</a><a href="../index.html#hours">Sprechzeiten</a><a href="contact.html">Kontakt</a></nav></div>
+        <div class="footer-col"><h5>Leistungen</h5><nav><a href="services/prophylaxe.html">Prophylaxe</a><a href="services/implantologie.html">Implantologie</a><a href="services/zahnersatz.html">Zahnersatz</a><a href="services/oralchirurgie.html">Oralchirurgie</a><a href="services/aesthetik.html">Ästhetik</a></nav></div>
+        <div class="footer-col"><h5>Rechtliches</h5><nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="barrierefreiheit.html">Barrierefreiheit</a></nav></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><p>© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script>
+    const header=document.getElementById('siteHeader'),scrollTop=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
+    window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTop.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
+    scrollTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
+    hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
+    document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.1}).observe(el);});
+  </script>
+</body>
+</html>

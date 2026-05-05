@@ -155,6 +155,7 @@ const TRANSLATIONS = {
         team: 'Team',
         practice: 'Practice',
         hours: 'Hours',
+        faq: 'FAQ',
         contact: 'Contact'
       },
       services_links: {
@@ -325,6 +326,7 @@ const TRANSLATIONS = {
         team: 'Đội Ngũ',
         practice: 'Phòng Khám',
         hours: 'Giờ Mở Cửa',
+        faq: 'Câu Hỏi Thường Gặp',
         contact: 'Liên Hệ'
       },
       services_links: {
@@ -495,6 +497,7 @@ const TRANSLATIONS = {
         team: 'Team',
         practice: 'Praxis',
         hours: 'Öffnungszeiten',
+        faq: 'FAQ',
         contact: 'Kontakt'
       },
       services_links: {

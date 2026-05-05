@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt &amp; Termin | Dr. Kielhorn Zahnarztpraxis Winsen (Luhe)</title>
+  <meta name="description" content="Kontaktieren Sie die Zahnarztpraxis Dr. Kielhorn in Winsen (Luhe). Rufen Sie an oder senden Sie uns eine Nachricht — wir freuen uns auf Sie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/page.css" />
+  <style>
+    /* Reveal */
+    [data-reveal] { opacity:0; transform:translateY(24px); transition:opacity .5s ease, transform .5s ease }
+    [data-reveal].revealed { opacity:1; transform:none }
+
+    /* Section label */
+    .section-label { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:var(--primary); margin-bottom:10px; display:block }
+
+    /* ── Contact layout ── */
+    .contact-layout {
+      display:grid;
+      grid-template-columns:380px 1fr;
+      gap:48px;
+      align-items:start;
+    }
+    @media(max-width:900px){ .contact-layout { grid-template-columns:1fr } }
+
+    /* Info cards */
+    .info-card {
+      background:white;
+      border-radius:var(--radius-md);
+      padding:28px;
+      border:1px solid var(--border-light);
+      box-shadow:var(--shadow-xs);
+      margin-bottom:16px;
+    }
+    .info-card:last-child { margin-bottom:0 }
+    .info-card-header {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:16px;
+    }
+    .info-card-icon {
+      width:40px;
+      height:40px;
+      border-radius:var(--radius-sm);
+      background:var(--primary-light);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--primary);
+      flex-shrink:0;
+    }
+    .info-card-header h3 { font-size:1rem; margin:0 }
+
+    /* Hours table */
+    .hours-table { width:100%; border-collapse:collapse }
+    .hours-table tr { border-bottom:1px solid var(--border-light) }
+    .hours-table tr:last-child { border-bottom:none }
+    .hours-table td { padding:7px 4px; font-size:.875rem }
+    .hours-table td:first-child { color:var(--text-muted); width:100px }
+    .hours-table td:last-child { font-weight:500 }
+
+    /* Emergency card */
+    .emergency-card {
+      background:linear-gradient(135deg,#FEF2F2,#FEE2E2);
+      border-radius:var(--radius-md);
+      padding:24px 28px;
+      border:1px solid #FECACA;
+      margin-bottom:16px;
+    }
+    .emergency-card-header { display:flex; align-items:center; gap:10px; margin-bottom:10px }
+    .emergency-card-header svg { color:#DC2626 }
+    .emergency-card h3 { font-size:.95rem; color:#DC2626; margin:0 }
+    .emergency-card p { font-size:.875rem; color:#7F1D1D; margin:0 0 12px; max-width:none; line-height:1.5 }
+    .emergency-card a { color:#DC2626; font-weight:700; font-size:.95rem }
+
+    /* Parking card */
+    .parking-card {
+      background:var(--primary-light);
+      border-radius:var(--radius-md);
+      padding:20px 24px;
+      border:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .parking-card svg { color:var(--primary); flex-shrink:0 }
+    .parking-card p { font-size:.875rem; color:var(--text); max-width:none; margin:0; line-height:1.5 }
+    .parking-card strong { color:var(--primary) }
+
+    /* ── Form ── */
+    .form-card {
+      background:white;
+      border-radius:var(--radius-lg);
+      padding:40px;
+      border:1px solid var(--border-light);
+      box-shadow:var(--shadow-sm);
+    }
+    @media(max-width:600px){ .form-card { padding:28px 20px } }
+
+    .form-card-title { margin-bottom:8px }
+    .form-card-desc { color:var(--text-muted); font-size:.9rem; margin-bottom:28px; max-width:none }
+
+    .contact-form .form-group { margin-bottom:20px }
+    .contact-form label { display:block; font-weight:600; font-size:.85rem; margin-bottom:6px; color:var(--text) }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width:100%;
+      padding:12px 16px;
+      border:1.5px solid var(--border);
+      border-radius:var(--radius-sm);
+      font-family:var(--font-body);
+      font-size:.9rem;
+      color:var(--text);
+      background:white;
+      transition:border-color var(--tr), box-shadow var(--tr);
+      appearance:none;
+    }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline:none;
+      border-color:var(--primary);
+      box-shadow:0 0 0 3px rgba(30,111,168,.12);
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color:var(--text-light); opacity:1 }
+    .contact-form select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235C7A90' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:40px; cursor:pointer }
+    .contact-form .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+    @media(max-width:520px){ .contact-form .form-row { grid-template-columns:1fr } }
+    .contact-form textarea { resize:vertical; min-height:110px }
+
+    .checkbox-label { display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; line-height:1.55 }
+    .checkbox-label input[type=checkbox] { margin-top:2px; accent-color:var(--primary); width:16px; height:16px; flex-shrink:0; cursor:pointer }
+    .form-privacy a { color:var(--primary) }
+
+    /* Submit success */
+    .form-success { display:none; background:var(--teal-light); border-radius:var(--radius-md); padding:20px 24px; border:1px solid #99F6E4; text-align:center }
+    .form-success p { color:#0F766E; font-weight:600; max-width:none; margin:0 }
+
+    /* ── Map section ── */
+    .map-section { margin-top:64px }
+    .map-section-header { text-align:center; margin-bottom:28px }
+    .map-wrap { border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md) }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" />
+        <div class="logo-text"><strong>Dr. Kielhorn</strong><small>Zahnarztpraxis · Winsen (Luhe)</small></div>
+      </a>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <a href="services.html" class="nav-link">Leistungen</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="praxis.html" class="nav-link">Praxis</a>
+        <a href="../index.html#hours" class="nav-link">Sprechzeiten</a>
+        <a href="contact.html" class="nav-link">Kontakt</a>
+        <a href="tel:+494171712120" class="nav-phone">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          04171 / 71212
+        </a>
+        <a href="tel:+494171712120" class="btn btn-primary btn-sm">Termin buchen</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div class="page-hero-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        </div>
+        <h1>Kontakt —<br><em>Wir freuen uns auf Sie</em></h1>
+        <p class="page-hero-desc">Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Wir sind für Sie da — persönlich, schnell und unkompliziert.</p>
+        <a href="../index.html" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Zurück zur Startseite
+        </a>
+      </div>
+    </section>
+
+    <!-- PAGE BODY -->
+    <div class="page-body">
+      <div class="container">
+
+        <div class="contact-layout" data-reveal>
+
+          <!-- Left: Info cards -->
+          <div>
+
+            <!-- Address -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>Adresse</h3>
+              </div>
+              <address style="font-style:normal;font-size:.9rem;line-height:1.7;color:var(--text)">
+                <strong>Zahnarztpraxis Dr. Christopher Kielhorn</strong><br>
+                Niedersachsenstraße 13a<br>
+                21423 Winsen (Luhe)
+              </address>
+            </div>
+
+            <!-- Phone -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+                </div>
+                <h3>Telefon</h3>
+              </div>
+              <a href="tel:+494171712120" style="font-size:1.2rem;font-weight:700;color:var(--primary)">04171 / 71212</a>
+            </div>
+
+            <!-- Hours -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3>Sprechzeiten</h3>
+              </div>
+              <table class="hours-table" aria-label="Sprechzeiten">
+                <tbody>
+                  <tr><td>Montag</td><td>08–13 / 14–18 Uhr</td></tr>
+                  <tr><td>Dienstag</td><td>08–13 / 14–17 Uhr</td></tr>
+                  <tr><td>Mittwoch</td><td>08–13 Uhr</td></tr>
+                  <tr><td>Donnerstag</td><td>08–13 / 14–18 Uhr</td></tr>
+                  <tr><td>Freitag</td><td>08–13 Uhr</td></tr>
+                  <tr><td>Sa / So</td><td style="color:var(--text-muted)">Geschlossen</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Emergency -->
+            <div class="emergency-card">
+              <div class="emergency-card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <h3>Akute Zahnschmerzen?</h3>
+              </div>
+              <p>Bei starken Schmerzen — bitte sofort anrufen. Wir helfen Ihnen schnell und unkompliziert.</p>
+              <a href="tel:+494171712120">04171 / 71212 — Jetzt anrufen</a>
+            </div>
+
+            <!-- Parking -->
+            <div class="parking-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8l5 3v5h-5V8zM1 20h18"/></svg>
+              <p><strong>Kostenfreie Parkplätze</strong> direkt vor der Praxis — bequem und ohne Parkstress.</p>
+            </div>
+
+          </div>
+
+          <!-- Right: Form -->
+          <div class="form-card">
+            <h2 class="form-card-title">Terminanfrage senden</h2>
+            <p class="form-card-desc">Füllen Sie das Formular aus — wir melden uns schnellstmöglich bei Ihnen. Felder mit * sind Pflichtfelder.</p>
+
+            <div class="form-success" id="formSuccess" role="alert">
+              <p>Vielen Dank! Ihre Anfrage ist bei uns eingegangen. Wir melden uns in Kürze.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Vorname *</label>
+                  <input type="text" id="fname" name="fname" required autocomplete="given-name" placeholder="Max" />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Nachname *</label>
+                  <input type="text" id="lname" name="lname" required autocomplete="family-name" placeholder="Mustermann" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon *</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="04171 / ..." />
+              </div>
+              <div class="form-group">
+                <label for="email">E-Mail (optional)</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="max@beispiel.de" />
+              </div>
+              <div class="form-group">
+                <label for="concern">Anliegen</label>
+                <select id="concern" name="concern">
+                  <option value="">Bitte auswählen...</option>
+                  <option>Erstuntersuchung</option>
+                  <option>Zahnreinigung</option>
+                  <option>Implantologie</option>
+                  <option>Zahnersatz</option>
+                  <option>Ästhetik</option>
+                  <option>Angstpatient</option>
+                  <option>Prophylaxe</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ihre Nachricht..."></textarea>
+              </div>
+              <div class="form-group form-privacy">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="privacy" required />
+                  <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme zu. *</span>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Anfrage absenden
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Map -->
+        <div class="map-section" data-reveal>
+          <div class="map-section-header">
+            <span class="section-label">Anfahrt</span>
+            <h2>So finden Sie uns</h2>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=Niedersachsenstra%C3%9Fe+13a,+21423+Winsen+(Luhe)&output=embed" width="100%" height="400" style="border:0;border-radius:14px;display:block" allowfullscreen loading="lazy" title="Praxis-Standort auf der Karte"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo logo--footer"><img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" /><span class="logo-text-footer">Dr. Kielhorn</span></a>
+          <p>Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p>
+          <address>Niedersachsenstraße 13a<br>21423 Winsen (Luhe)<br><a href="tel:+494171712120">04171 / 71212</a></address>
+        </div>
+        <div class="footer-col"><h5>Navigation</h5><nav><a href="../index.html">Startseite</a><a href="services.html">Leistungen</a><a href="team.html">Team</a><a href="praxis.html">Praxis</a><a href="../index.html#hours">Sprechzeiten</a><a href="contact.html">Kontakt</a></nav></div>
+        <div class="footer-col"><h5>Leistungen</h5><nav><a href="services/prophylaxe.html">Prophylaxe</a><a href="services/implantologie.html">Implantologie</a><a href="services/zahnersatz.html">Zahnersatz</a><a href="services/oralchirurgie.html">Oralchirurgie</a><a href="services/aesthetik.html">Ästhetik</a></nav></div>
+        <div class="footer-col"><h5>Rechtliches</h5><nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="barrierefreiheit.html">Barrierefreiheit</a></nav></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><p>© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script>
+    /* Header + progress + scroll-top */
+    const header=document.getElementById('siteHeader'),scrollTopBtn=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
+    window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTopBtn.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
+    scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    /* Mobile menu */
+    const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
+    hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
+
+    /* Scroll reveal */
+    document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.08}).observe(el);});
+
+    /* Contact form — client-side demo handler */
+    document.getElementById('contactForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const form=this;
+      /* Basic validation */
+      const fname=form.fname.value.trim();
+      const phone=form.phone.value.trim();
+      const privacy=form.privacy.checked;
+      if(!fname||!phone||!privacy){
+        if(!privacy) form.privacy.focus();
+        if(!phone) form.phone.focus();
+        if(!fname) form.fname.focus();
+        return;
+      }
+      /* Show success */
+      form.style.display='none';
+      document.getElementById('formSuccess').style.display='block';
+      window.scrollTo({top:document.getElementById('formSuccess').getBoundingClientRect().top+window.scrollY-120,behavior:'smooth'});
+    });
+  </script>
+</body>
+</html>

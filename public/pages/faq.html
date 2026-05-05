@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Häufig gestellte Fragen (FAQ) | Dr. Kielhorn Zahnarztpraxis</title>
+  <meta name="description" content="Antworten auf Ihre häufigsten Fragen rund um Zahnarztangst, Implantate, Prophylaxe, Kinderzahnheilkunde und mehr — Zahnarztpraxis Dr. Kielhorn Winsen (Luhe)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/page.css" />
+  <style>
+    /* Reveal */
+    [data-reveal] { opacity:0; transform:translateY(24px); transition:opacity .5s ease, transform .5s ease }
+    [data-reveal].revealed { opacity:1; transform:none }
+
+    /* Section label */
+    .section-label { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:var(--primary); margin-bottom:10px; display:block }
+
+    /* ── FAQ Layout ── */
+    .faq-layout { display:grid; grid-template-columns:240px 1fr; gap:48px; align-items:start }
+    @media(max-width:768px){ .faq-layout { grid-template-columns:1fr } }
+
+    /* Sticky sidebar nav */
+    .faq-sidebar { position:sticky; top:calc(var(--header-h) + 24px) }
+    @media(max-width:768px){ .faq-sidebar { position:static } }
+    .faq-nav { background:white; border-radius:var(--radius-md); padding:24px; border:1px solid var(--border-light); box-shadow:var(--shadow-xs) }
+    .faq-nav h4 { font-size:.75rem; text-transform:uppercase; letter-spacing:.12em; color:var(--text-muted); margin-bottom:14px }
+    .faq-nav-list { list-style:none; display:flex; flex-direction:column; gap:4px }
+    .faq-nav-list li a { display:block; padding:8px 12px; border-radius:var(--radius-sm); font-size:.875rem; font-weight:500; color:var(--text-muted); transition:all var(--tr) }
+    .faq-nav-list li a:hover,
+    .faq-nav-list li a.active { background:var(--primary-light); color:var(--primary) }
+
+    /* FAQ Content area */
+    .faq-content { display:flex; flex-direction:column; gap:48px }
+
+    /* Category group */
+    .faq-group {}
+    .faq-group-title {
+      font-size:1.05rem;
+      font-weight:700;
+      font-family:var(--font-body);
+      color:var(--primary);
+      padding:12px 0;
+      border-bottom:2px solid var(--primary-light);
+      margin-bottom:20px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .faq-group-title svg { flex-shrink:0 }
+
+    /* Accordion items */
+    .faq-item {
+      background:white;
+      border-radius:var(--radius-md);
+      border:1px solid var(--border-light);
+      box-shadow:var(--shadow-xs);
+      overflow:hidden;
+      transition:box-shadow var(--tr);
+    }
+    .faq-item + .faq-item { margin-top:10px }
+    .faq-item.open { box-shadow:var(--shadow-sm) }
+
+    .faq-question {
+      width:100%;
+      background:none;
+      border:none;
+      cursor:pointer;
+      text-align:left;
+      padding:20px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      font-family:var(--font-body);
+      font-size:.95rem;
+      font-weight:600;
+      color:var(--text);
+      line-height:1.4;
+      transition:color var(--tr);
+    }
+    .faq-question:hover { color:var(--primary) }
+    .faq-item.open .faq-question { color:var(--primary) }
+
+    .faq-icon {
+      flex-shrink:0;
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      background:var(--bg);
+      border:1.5px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.1rem;
+      font-weight:400;
+      line-height:1;
+      color:var(--text-muted);
+      transition:all var(--tr);
+    }
+    .faq-item.open .faq-icon {
+      background:var(--primary);
+      border-color:var(--primary);
+      color:white;
+    }
+
+    .faq-answer-wrap {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .35s cubic-bezier(.4,0,.2,1);
+    }
+    .faq-answer {
+      padding:0 24px 22px;
+      color:var(--text-muted);
+      font-size:.9rem;
+      line-height:1.7;
+    }
+    .faq-answer p { max-width:none }
+
+    /* CTA bottom */
+    .faq-cta {
+      background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);
+      border-radius:var(--radius-xl);
+      padding:56px 48px;
+      text-align:center;
+      color:white;
+      margin-top:48px;
+    }
+    .faq-cta h2 { color:white; margin-bottom:14px }
+    .faq-cta p { color:rgba(255,255,255,.8); margin:0 auto 28px; max-width:480px }
+    @media(max-width:480px){ .faq-cta { padding:40px 24px } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" />
+        <div class="logo-text"><strong>Dr. Kielhorn</strong><small>Zahnarztpraxis · Winsen (Luhe)</small></div>
+      </a>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <a href="services.html" class="nav-link">Leistungen</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="praxis.html" class="nav-link">Praxis</a>
+        <a href="../index.html#hours" class="nav-link">Sprechzeiten</a>
+        <a href="contact.html" class="nav-link">Kontakt</a>
+        <a href="tel:+494171712120" class="nav-phone">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          04171 / 71212
+        </a>
+        <a href="tel:+494171712120" class="btn btn-primary btn-sm">Termin buchen</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div class="page-hero-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h1>Häufig gestellte Fragen —<br><em>Alle Antworten auf einen Blick</em></h1>
+        <p class="page-hero-desc">Sie haben Fragen — wir haben Antworten. Hier finden Sie die häufigsten Fragen unserer Patienten übersichtlich zusammengefasst.</p>
+        <a href="../index.html" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Zurück zur Startseite
+        </a>
+      </div>
+    </section>
+
+    <!-- PAGE BODY -->
+    <div class="page-body">
+      <div class="container">
+        <div class="faq-layout" data-reveal>
+
+          <!-- Sidebar nav -->
+          <aside class="faq-sidebar" aria-label="FAQ Kategorien">
+            <div class="faq-nav">
+              <h4>Kategorien</h4>
+              <ul class="faq-nav-list">
+                <li><a href="#allgemein">Allgemein</a></li>
+                <li><a href="#kinder">Kinderzahnheilkunde</a></li>
+                <li><a href="#angst">Angstpatienten</a></li>
+                <li><a href="#prophylaxe">Prophylaxe</a></li>
+                <li><a href="#implantologie">Implantologie</a></li>
+                <li><a href="#aesthetik">Ästhetik</a></li>
+              </ul>
+            </div>
+            <div style="margin-top:16px;background:var(--primary-light);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border)">
+              <p style="font-size:.85rem;color:var(--primary);font-weight:600;margin-bottom:8px">Frage nicht dabei?</p>
+              <p style="font-size:.82rem;color:var(--text-muted);max-width:none;margin-bottom:12px">Rufen Sie uns einfach an — wir helfen gerne.</p>
+              <a href="tel:+494171712120" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">04171 / 71212</a>
+            </div>
+          </aside>
+
+          <!-- FAQ Content -->
+          <div class="faq-content">
+
+            <!-- Allgemein -->
+            <div class="faq-group" id="allgemein">
+              <h2 class="faq-group-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                Allgemein
+              </h2>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie kann ich einen Termin vereinbaren?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Sie können telefonisch unter <strong>04171 / 71212</strong> anrufen. Wir sind für Sie da: Mo, Di, Do 08–13 &amp; 14–18/17 Uhr, Mi &amp; Fr 08–13 Uhr. Alternativ können Sie uns auch über das <a href="contact.html">Kontaktformular</a> eine Nachricht schicken.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wo finde ich die Praxis? Gibt es Parkplätze?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Wir befinden uns in der <strong>Niedersachsenstraße 13a, 21423 Winsen (Luhe)</strong>. Kostenfreie Parkplätze befinden sich direkt vor der Praxis — Sie müssen sich also keine Sorgen ums Parken machen.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Welche Krankenkassen werden akzeptiert?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Wir behandeln sowohl gesetzlich als auch privat Versicherte. Alle großen gesetzlichen Krankenkassen werden akzeptiert. Bei Fragen zur Kostenübernahme beraten wir Sie gerne im persönlichen Gespräch.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kinderzahnheilkunde -->
+            <div class="faq-group" id="kinder">
+              <h2 class="faq-group-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                Kinderzahnheilkunde
+              </h2>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Ab welchem Alter sollte mein Kind zum Zahnarzt?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Idealerweise sobald der erste Milchzahn durchbricht — meist zwischen dem <strong>6. und 12. Lebensmonat</strong>. Frühe Besuche helfen Ihrem Kind, den Zahnarzt als vertraute und positive Umgebung kennen zu lernen.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Sind Milchzähne wirklich so wichtig?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Ja! Milchzähne sind <strong>Platzhalter für die bleibenden Zähne</strong> und wichtig für Sprachentwicklung, Kauen und Kieferwachstum. Werden Milchzähne frühzeitig verloren, können sich bleibende Zähne falsch positionieren.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie bereite ich mein Kind auf den Zahnarztbesuch vor?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Sprechen Sie positiv über den Zahnarzt. Erklären Sie spielerisch, dass der Zahnarzt die Zähne zählt und sauber macht. Vermeiden Sie Wörter wie "Spritze" oder "Schmerz". Unser Team ist speziell auf die Betreuung von Kindern eingestellt.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Angstpatienten -->
+            <div class="faq-group" id="angst">
+              <h2 class="faq-group-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                Angstpatienten
+              </h2>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Was kann ich tun, wenn ich große Angst vor dem Zahnarzt habe?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Vereinbaren Sie zunächst einen <strong>Termin nur für ein Gespräch</strong> — ohne Behandlung. Gemeinsam finden wir einen Weg Schritt für Schritt. Dr. Kielhorn ist bekannt für seinen einfühlsamen Umgang mit ängstlichen Patienten.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Ist eine Behandlung unter Sedierung sicher?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Ja, Sedierung ist eine sichere und erprobte Methode. Sie werden während der gesamten Behandlung professionell überwacht. Viele Patienten beschreiben die Sedierung als sehr angenehm und entspannend.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie lange dauert es, bis die Betäubung nachlässt?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Eine lokale Betäubung lässt nach etwa <strong>2–3 Stunden</strong> nach. In dieser Zeit sollten Sie möglichst nichts essen, um sich nicht unbeabsichtigt zu verletzen. Wir informieren Sie vor der Behandlung über alles Wichtige.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prophylaxe -->
+            <div class="faq-group" id="prophylaxe">
+              <h2 class="faq-group-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Prophylaxe
+              </h2>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie oft sollte ich zur Prophylaxe?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Empfohlen wird eine professionelle Zahnreinigung <strong>alle 6 Monate</strong>. Bei erhöhtem Karies- oder Parodontitisrisiko kann eine Behandlung alle 3–4 Monate sinnvoll sein. Wir beraten Sie individuell.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Ist die Prophylaxe schmerzhaft?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Nein, die professionelle Zahnreinigung ist <strong>in der Regel schmerzfrei</strong>. Bei empfindlichen Zähnen oder entzündetem Zahnfleisch kann ein leichtes Druckgefühl entstehen. Sprechen Sie uns an — wir passen die Behandlung an Ihre Bedürfnisse an.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Übernimmt die Krankenkasse die Kosten?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Viele Krankenkassen bezuschussen die Prophylaxe mit <strong>30–100 Euro pro Jahr</strong>. Die genaue Übernahme hängt von Ihrer Kasse ab. Private Zusatzversicherungen übernehmen die Kosten häufig vollständig. Sprechen Sie uns gerne an.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Implantologie -->
+            <div class="faq-group" id="implantologie">
+              <h2 class="faq-group-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Implantologie
+              </h2>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Tut das Setzen eines Implantats weh?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Nein, der Eingriff erfolgt unter <strong>örtlicher Betäubung</strong> und ist schmerzfrei. Nach dem Eingriff kann eine leichte Schwellung auftreten, die sich innerhalb weniger Tage zurückbildet. Auf Wunsch bieten wir auch eine Sedierung an.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie lange halten Implantate?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Bei guter Mundhygiene und regelmäßigen Kontrollen können Implantate <strong>ein Leben lang halten</strong>. Wissenschaftliche Studien belegen Erfolgsraten von über <strong>95% nach 10 Jahren</strong>.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Bin ich für Implantate geeignet?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Die <strong>meisten Menschen</strong> können Implantate erhalten. Wir prüfen Ihre individuelle Situation — Knochendichte, allgemeiner Gesundheitszustand und weitere Faktoren — in einem umfassenden Beratungsgespräch. Vereinbaren Sie einfach einen Termin.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ästhetik -->
+            <div class="faq-group" id="aesthetik">
+              <h2 class="faq-group-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+                Ästhetische Zahnheilkunde
+              </h2>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie lange hält ein Bleaching?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Je nach Lebensgewohnheiten (Kaffee, Tee, Rotwein, Rauchen) hält ein Bleaching <strong>1–3 Jahre</strong>. Mit gelegentlichen Auffrischungsbehandlungen können Sie das Ergebnis deutlich verlängern.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Wie lange halten Veneers?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap" role="region">
+                  <div class="faq-answer">
+                    <p>Bei guter Pflege und regelmäßigen Kontrollen halten Veneers <strong>10–15 Jahre oder länger</strong>. Unsere hochwertigen Keramikveneers aus dem eigenen Labor sind besonders langlebig und naturgetreu.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="faq-cta" data-reveal>
+              <h2>Ihre Frage war nicht dabei?</h2>
+              <p>Kein Problem — wir beantworten Ihre Fragen gerne persönlich. Rufen Sie uns an oder schicken Sie uns eine Nachricht.</p>
+              <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+                <a href="tel:+494171712120" class="btn btn-white btn-lg">04171 / 71212 — Jetzt anrufen</a>
+                <a href="contact.html" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:white;border-color:rgba(255,255,255,.4)">Nachricht senden</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo logo--footer"><img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" /><span class="logo-text-footer">Dr. Kielhorn</span></a>
+          <p>Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p>
+          <address>Niedersachsenstraße 13a<br>21423 Winsen (Luhe)<br><a href="tel:+494171712120">04171 / 71212</a></address>
+        </div>
+        <div class="footer-col"><h5>Navigation</h5><nav><a href="../index.html">Startseite</a><a href="services.html">Leistungen</a><a href="team.html">Team</a><a href="praxis.html">Praxis</a><a href="../index.html#hours">Sprechzeiten</a><a href="contact.html">Kontakt</a></nav></div>
+        <div class="footer-col"><h5>Leistungen</h5><nav><a href="services/prophylaxe.html">Prophylaxe</a><a href="services/implantologie.html">Implantologie</a><a href="services/zahnersatz.html">Zahnersatz</a><a href="services/oralchirurgie.html">Oralchirurgie</a><a href="services/aesthetik.html">Ästhetik</a></nav></div>
+        <div class="footer-col"><h5>Rechtliches</h5><nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="barrierefreiheit.html">Barrierefreiheit</a></nav></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><p>© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script>
+    /* Header + scroll progress + back-to-top */
+    const header=document.getElementById('siteHeader'),scrollTopBtn=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
+    window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTopBtn.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
+    scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    /* Mobile menu */
+    const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
+    hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
+
+    /* Scroll reveal */
+    document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.05}).observe(el);});
+
+    /* ── FAQ Accordion ── */
+    document.querySelectorAll('.faq-question').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const item=btn.closest('.faq-item');
+        const isOpen=item.classList.contains('open');
+
+        /* Close all */
+        document.querySelectorAll('.faq-item.open').forEach(openItem=>{
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded','false');
+          openItem.querySelector('.faq-icon').textContent='+';
+          openItem.querySelector('.faq-answer-wrap').style.maxHeight='0';
+        });
+
+        /* Open clicked (if it was closed) */
+        if(!isOpen){
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+          item.querySelector('.faq-icon').textContent='−';
+          const wrap=item.querySelector('.faq-answer-wrap');
+          wrap.style.maxHeight=wrap.scrollHeight+'px';
+        }
+      });
+    });
+
+    /* FAQ sidebar active link on scroll */
+    const groups=document.querySelectorAll('.faq-group[id]');
+    const navLinks=document.querySelectorAll('.faq-nav-list a');
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          navLinks.forEach(a=>a.classList.remove('active'));
+          const active=document.querySelector('.faq-nav-list a[href="#'+e.target.id+'"]');
+          if(active)active.classList.add('active');
+        }
+      });
+    },{rootMargin:'-20% 0px -60% 0px'});
+    groups.forEach(g=>observer.observe(g));
+  </script>
+</body>
+</html>
