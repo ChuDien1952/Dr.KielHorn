@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Scroll progress bar injected by JS, but element can be here for no-JS fallback -->
+  <style>.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1E6FA8 0%,#0D9488 100%);transform-origin:left;transform:scaleX(0);z-index:9999;pointer-events:none}</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -222,7 +224,7 @@
             </div>
             <h3 data-i18n="services.svc1.title">Prevention &amp; Cleaning</h3>
             <p data-i18n="services.svc1.desc">Regular professional cleaning and early detection keep your teeth healthy for life.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/prophylaxe.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -235,7 +237,7 @@
             </div>
             <h3 data-i18n="services.svc2.title">Implantology</h3>
             <p data-i18n="services.svc2.desc">Permanent tooth replacements that look and feel natural, using premium implant systems.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/implantologie.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -248,7 +250,7 @@
             </div>
             <h3 data-i18n="services.svc3.title">Dentures</h3>
             <p data-i18n="services.svc3.desc">Custom-fitted partial and full dentures for a natural appearance and comfortable fit.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/zahnersatz.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -261,7 +263,7 @@
             </div>
             <h3 data-i18n="services.svc4.title">Oral Surgery</h3>
             <p data-i18n="services.svc4.desc">Tooth extractions, wisdom tooth removal, and surgical procedures in a gentle manner.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/oralchirurgie.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -274,7 +276,7 @@
             </div>
             <h3 data-i18n="services.svc5.title">Children's Dentistry</h3>
             <p data-i18n="services.svc5.desc">Fun, fear-free dental care for children — building healthy habits from an early age.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/kinderzahnheilkunde.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -287,7 +289,7 @@
             </div>
             <h3 data-i18n="services.svc6.title">Anxious Patients</h3>
             <p data-i18n="services.svc6.desc">Special techniques and a calming environment for patients who fear the dentist.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/angstpatienten.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -300,7 +302,7 @@
             </div>
             <h3 data-i18n="services.svc7.title">Aesthetic Dentistry</h3>
             <p data-i18n="services.svc7.desc">Veneers, whitening, and cosmetic corrections for your perfect confident smile.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/aesthetik.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -313,7 +315,7 @@
             </div>
             <h3 data-i18n="services.svc8.title">Tooth Preservation</h3>
             <p data-i18n="services.svc8.desc">Fillings, root canal treatments, and inlays to save and strengthen your natural teeth.</p>
-            <a href="#contact" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/zahnerhaltung.html" class="svc-more" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
@@ -763,20 +765,20 @@
         <div class="footer-col">
           <h5 data-i18n="footer.services_title">Services</h5>
           <nav>
-            <a href="#services" data-i18n="footer.services_links.prevention">Prevention</a>
-            <a href="#services" data-i18n="footer.services_links.implantology">Implantology</a>
-            <a href="#services" data-i18n="footer.services_links.dentures">Dentures</a>
-            <a href="#services" data-i18n="footer.services_links.surgery">Oral Surgery</a>
-            <a href="#services" data-i18n="footer.services_links.children">Children's Dentistry</a>
-            <a href="#services" data-i18n="footer.services_links.anxiety">Anxious Patients</a>
+            <a href="pages/services/prophylaxe.html" data-i18n="footer.services_links.prevention">Prevention</a>
+            <a href="pages/services/implantologie.html" data-i18n="footer.services_links.implantology">Implantology</a>
+            <a href="pages/services/zahnersatz.html" data-i18n="footer.services_links.dentures">Dentures</a>
+            <a href="pages/services/oralchirurgie.html" data-i18n="footer.services_links.surgery">Oral Surgery</a>
+            <a href="pages/services/kinderzahnheilkunde.html" data-i18n="footer.services_links.children">Children's Dentistry</a>
+            <a href="pages/services/angstpatienten.html" data-i18n="footer.services_links.anxiety">Anxious Patients</a>
           </nav>
         </div>
         <div class="footer-col">
           <h5 data-i18n="footer.legal_title">Legal</h5>
           <nav>
-            <a href="#" data-i18n="footer.legal_links.imprint">Imprint</a>
-            <a href="#" data-i18n="footer.legal_links.privacy">Privacy Policy</a>
-            <a href="#" data-i18n="footer.legal_links.accessibility">Accessibility</a>
+            <a href="pages/impressum.html" data-i18n="footer.legal_links.imprint">Imprint</a>
+            <a href="pages/datenschutz.html" data-i18n="footer.legal_links.privacy">Privacy Policy</a>
+            <a href="pages/barrierefreiheit.html" data-i18n="footer.legal_links.accessibility">Accessibility</a>
           </nav>
         </div>
       </div>
@@ -785,8 +787,8 @@
       <div class="container footer-bottom-inner">
         <p data-i18n="footer.copyright">© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. All rights reserved.</p>
         <div class="footer-links">
-          <a href="#" data-i18n="footer.legal_links.imprint">Imprint</a>
-          <a href="#" data-i18n="footer.legal_links.privacy">Privacy Policy</a>
+          <a href="pages/impressum.html" data-i18n="footer.legal_links.imprint">Imprint</a>
+          <a href="pages/datenschutz.html" data-i18n="footer.legal_links.privacy">Privacy Policy</a>
         </div>
       </div>
     </div>

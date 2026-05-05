@@ -448,6 +448,156 @@ p  { max-width:68ch }
 }
 
 /* ══════════════════════════════════════════════════
+   SCROLL PROGRESS BAR
+══════════════════════════════════════════════════ */
+.scroll-progress {
+  position:fixed;
+  top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--primary) 0%,var(--teal) 100%);
+  transform-origin:left center;
+  transform:scaleX(0);
+  z-index:9999;
+  pointer-events:none;
+  transition:transform .1s linear;
+}
+
+/* ══════════════════════════════════════════════════
+   CUSTOM CURSOR (desktop only)
+══════════════════════════════════════════════════ */
+@media (hover:hover) and (pointer:fine) {
+  body { cursor:none }
+  a,button,[role="button"],.svc-more,.gallery-item { cursor:none }
+}
+.cursor-dot {
+  position:fixed;
+  width:8px; height:8px;
+  background:var(--primary);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:10000;
+  transform:translate(-50%,-50%);
+  transition:opacity .2s;
+  will-change:left,top;
+}
+.cursor-ring {
+  position:fixed;
+  width:40px; height:40px;
+  border:2px solid var(--primary);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:width .2s,height .2s,border-color .2s,background .2s,opacity .2s;
+  will-change:left,top;
+}
+.cursor-ring.hovered {
+  width:60px; height:60px;
+  background:rgba(30,111,168,.15);
+  border-color:var(--primary-dark);
+}
+.cursor-ring.image-hovered {
+  width:54px; height:54px;
+  border-width:1.5px;
+  border-style:dashed;
+}
+@media (hover:none),(pointer:coarse) {
+  .cursor-dot,.cursor-ring { display:none }
+}
+
+/* ══════════════════════════════════════════════════
+   CARD TILT — glare element
+══════════════════════════════════════════════════ */
+.service-card .svc-glare {
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:3;
+  background:radial-gradient(circle at 50% 50%, rgba(255,255,255,.18) 0%, transparent 60%);
+  opacity:0;
+  transition:opacity .3s;
+}
+.service-card:hover .svc-glare { opacity:1 }
+
+/* ══════════════════════════════════════════════════
+   TESTIMONIALS CAROUSEL
+══════════════════════════════════════════════════ */
+.reviews-carousel-wrap {
+  position:relative;
+  overflow:hidden;
+}
+.reviews-grid.carousel-track {
+  display:flex;
+  gap:20px;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  will-change:transform;
+}
+.reviews-grid.carousel-track .review-card {
+  flex:0 0 calc(33.333% - 14px);
+  min-width:260px;
+}
+.carousel-dots {
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:24px;
+}
+.carousel-dot {
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--border);
+  border:none;
+  cursor:pointer;
+  transition:all var(--tr);
+  padding:0;
+}
+.carousel-dot.active {
+  background:var(--primary);
+  width:24px;
+  border-radius:4px;
+}
+
+/* ══════════════════════════════════════════════════
+   CLIP REVEAL VARIANT
+══════════════════════════════════════════════════ */
+[data-reveal="clip"] {
+  opacity:1;
+  transform:none;
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path .7s cubic-bezier(.4,0,.2,1);
+}
+[data-reveal="clip"].revealed {
+  clip-path:inset(0 0 0% 0);
+}
+
+/* ══════════════════════════════════════════════════
+   HERO CANVAS PARTICLES
+══════════════════════════════════════════════════ */
+#hero-canvas {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ══════════════════════════════════════════════════
+   EYEBROW LETTER ANIMATION
+══════════════════════════════════════════════════ */
+.section-eyebrow .letter {
+  display:inline-block;
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .3s,transform .3s;
+}
+.section-eyebrow.letters-revealed .letter {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ══════════════════════════════════════════════════
    RESPONSIVE — SMALL MOBILE (≤480px)
 ══════════════════════════════════════════════════ */
 @media (max-width:480px) {
