@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   i18n.js — Bilingual system: English + Vietnamese
+   i18n.js — Trilingual: English + Vietnamese + German
    Dr. Kielhorn Dental Practice Website
 ═══════════════════════════════════════════════════ */
 
@@ -342,6 +342,176 @@ const TRANSLATIONS = {
       },
       copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Bảo lưu mọi quyền.'
     }
+  },
+
+  de: {
+    header: {
+      subtitle: 'Zahnarztpraxis · Winsen (Luhe)'
+    },
+    nav: {
+      services: 'Leistungen',
+      team: 'Team',
+      practice: 'Praxis',
+      hours: 'Öffnungszeiten',
+      contact: 'Kontakt',
+      cta: 'Termin buchen'
+    },
+    hero: {
+      tag: 'Zahnarztpraxis in Winsen (Luhe)',
+      title: 'Ihr Zahnarzt in<br>Winsen (Luhe) —<br><em>Mit Herz &amp; Kompetenz</em>',
+      desc: 'Moderne Zahnmedizin, persönliche Betreuung und ein Team, dem Ihr Wohlbefinden wirklich am Herzen liegt. Dr. Christopher Kielhorn und sein Team freuen sich auf Ihren Besuch.',
+      cta1: 'Termin buchen',
+      cta2: 'Jetzt anrufen',
+      card1_title: 'Nächster Termin',
+      card1_sub: 'Heute noch verfügbar',
+      card2_title: 'Schmerzfrei',
+      card2_sub: 'Modernste Methoden',
+      scroll: 'Mehr entdecken',
+      trust: {
+        rating: '4,9 / 5 Bewertung',
+        tradition: 'Familientradition',
+        patients: 'Patienten'
+      }
+    },
+    benefits: {
+      title1: 'Exzellente Qualität',
+      desc1: 'Modernste zahnmedizinische Behandlungen nach neuesten Methoden.',
+      title2: 'Einfühlsame Betreuung',
+      desc2: 'Besonders für Angstpatienten — Ihr Komfort steht immer an erster Stelle.',
+      title3: 'Moderne Technologie',
+      desc3: 'Digitales Röntgen, 3D-Planung und schonende Behandlungsverfahren.',
+      title4: 'Kurze Wartezeiten',
+      desc4: 'Flexible Termine — auch früh morgens. Wir respektieren Ihre Zeit.'
+    },
+    services: {
+      eyebrow: 'Was Wir Für Sie Tun',
+      title: 'Unsere Leistungen in Winsen (Luhe)',
+      desc: 'Von der Vorsorge bis zur ästhetischen Zahnheilkunde — wir begleiten Sie zu einem gesunden, strahlenden Lächeln.',
+      more: 'Mehr erfahren →',
+      svc1: { title: 'Prophylaxe & Reinigung', desc: 'Regelmäßige professionelle Zahnreinigung und Früherkennungsuntersuchungen halten Ihre Zähne lebenslang gesund.' },
+      svc2: { title: 'Implantologie', desc: 'Dauerhafter Zahnersatz, der natürlich aussieht und sich anfühlt — mit hochwertigen Implantatsystemen.' },
+      svc3: { title: 'Zahnersatz', desc: 'Individuell angepasste Teil- und Vollprothesen für ein natürliches Aussehen und optimalen Tragekomfort.' },
+      svc4: { title: 'Oralchirurgie', desc: 'Zahnentfernungen, Weisheitszähne und chirurgische Eingriffe — schonend und professionell durchgeführt.' },
+      svc5: { title: 'Kinderzahnheilkunde', desc: 'Spielerische, angstfreie Zahnpflege für Kinder — gesunde Gewohnheiten von klein auf aufbauen.' },
+      svc6: { title: 'Angstpatienten', desc: 'Besondere Techniken und eine beruhigende Atmosphäre für Patienten mit Zahnarztangst.' },
+      svc7: { title: 'Ästhetische Zahnheilkunde', desc: 'Veneers, Bleaching und kosmetische Korrekturen für Ihr strahlendes Lächeln.' },
+      svc8: { title: 'Zahnerhaltung', desc: 'Füllungen, Wurzelbehandlungen und Inlays, um Ihre natürlichen Zähne zu erhalten und zu stärken.' }
+    },
+    team: {
+      eyebrow: 'Unser Team',
+      title: 'Erfahrene Profis, Fürsorgliche Hände',
+      doctor: {
+        role: 'Zahnarzt & Praxisinhaber',
+        name: 'Dr. Christopher Kielhorn',
+        desc1: 'Dr. Christopher Kielhorn praktiziert seit über 20 Jahren Zahnmedizin in Winsen (Luhe) und setzt damit eine familiäre Zahnarzt-Tradition fort. Seine Arbeit verbindet klinische Präzision mit echtem Einfühlungsvermögen.',
+        desc2: 'Mit Spezialisierung auf Implantologie, ästhetische Zahnheilkunde und die Betreuung von Angstpatienten sorgt er dafür, dass jeder Patient mit einem Lächeln die Praxis verlässt.',
+        cred1: 'Spezialist für Implantologie',
+        cred2: '20+ Jahre Erfahrung',
+        cred3: 'Zahnarzt in 2. Generation',
+        cred4: '4,9★ Patientenbewertung'
+      },
+      staff: {
+        role_dentist: 'Zahnärztin',
+        role_hygienist: 'Dentalhygienikerin',
+        role_assistant: 'Zahnmedizinische Fachangestellte',
+        role_reception: 'Patientenkoordinatorin'
+      }
+    },
+    practice: {
+      eyebrow: 'Unsere Praxis',
+      title: 'Moderne Ausstattung, Herzliche Atmosphäre',
+      desc: 'Unsere Praxis verbindet modernste Zahntechnologie mit einer einladenden, angenehmen Umgebung.',
+      feat1: { title: 'Digitales Röntgen', desc: '90 % weniger Strahlung als herkömmliches Röntgen' },
+      feat2: { title: '3D-Planung', desc: 'Präzise Implantat- und Behandlungsplanung' },
+      feat3: { title: 'Schmerzfreie Behandlung', desc: 'Neueste Anästhesie- und Sedierungsverfahren' },
+      feat4: { title: 'Hygienestandards', desc: 'Zertifizierte Sterilisation und Infektionskontrolle' },
+      quote: 'Unser Ziel sind nicht nur gesunde Zähne, sondern selbstbewusste Lächeln, die ein Leben lang halten.',
+      quote_author: 'Dr. Christopher Kielhorn'
+    },
+    hours: {
+      eyebrow: 'Öffnungszeiten',
+      title: 'Wir Sind Für Sie Da',
+      mon: 'Montag',
+      tue: 'Dienstag',
+      wed: 'Mittwoch',
+      thu: 'Donnerstag',
+      fri: 'Freitag',
+      sat: 'Samstag',
+      sun: 'Sonntag',
+      closed: 'Geschlossen',
+      emergency: {
+        title: 'Zahnärztlicher Notfall?',
+        desc: 'Bei akuten Zahnschmerzen außerhalb unserer Öffnungszeiten rufen Sie bitte unsere Notfallnummer an oder wenden Sie sich an den zahnärztlichen Notfalldienst.',
+        cta: 'Notfallnummer: 04171 / 71212'
+      }
+    },
+    reviews: {
+      eyebrow: 'Patientenbewertungen',
+      title: 'Was Unsere Patienten Sagen',
+      score_label: 'Basierend auf 127 Google-Bewertungen',
+      r1: { name: 'Maria S.', text: 'Absolut die beste Zahnarztpraxis, die ich je besucht habe. Dr. Kielhorn ist unglaublich einfühlsam und professionell. Ich hatte früher Angst vor dem Zahnarzt — das ist jetzt vorbei!', date: 'März 2025' },
+      r2: { name: 'Thomas B.', text: 'Wunderbares Team, kurze Wartezeiten und hervorragende Ergebnisse. Meine Implantate sehen völlig natürlich aus. Ich empfehle die Praxis jedem weiter.', date: 'Februar 2025' },
+      r3: { name: 'Anna K.', text: 'Meine Kinder freuen sich jetzt tatsächlich auf ihre Zahnarzttermine. Das Team ist so herzlich und geduldig. Wir gehen nirgendwo anders hin.', date: 'Januar 2025' }
+    },
+    process: {
+      eyebrow: 'Ihr Erster Besuch',
+      title: 'Einfach, Schritt für Schritt',
+      step1: { title: 'Online oder telefonisch buchen', desc: 'Wählen Sie einen passenden Termin über unsere Website oder rufen Sie 04171 / 71212 an.' },
+      step2: { title: 'Erstberatung', desc: 'Wir hören zu, untersuchen und besprechen Ihre Zahngesundheitsziele.' },
+      step3: { title: 'Behandlungsplanung', desc: 'Ein individueller, transparenter Plan, abgestimmt auf Ihre Bedürfnisse und Ihr Budget.' },
+      step4: { title: 'Langfristige Betreuung', desc: 'Regelmäßige Kontrolltermine, damit Ihr Lächeln dauerhaft gesund bleibt.' }
+    },
+    contact: {
+      eyebrow: 'Kontakt',
+      title: 'Wir Freuen Uns Auf Ihren Besuch',
+      address_label: 'Adresse',
+      address: 'Niedersachsenstraße 13a<br>21423 Winsen (Luhe)',
+      phone_label: 'Telefon',
+      phone: '04171 / 71212',
+      email_label: 'E-Mail',
+      email: 'info@zahnarzt-kielhorn-winsen.de',
+      form: {
+        title: 'Schreiben Sie Uns',
+        note: 'Wir antworten in der Regel innerhalb von 24 Stunden.',
+        name: 'Ihr Name',
+        email_label: 'E-Mail-Adresse',
+        email: 'E-Mail-Adresse',
+        phone_label: 'Telefonnummer',
+        phone: 'Telefonnummer',
+        message_label: 'Ihre Nachricht',
+        message: 'Ihre Nachricht',
+        submit: 'Nachricht senden',
+        success: 'Vielen Dank! Wir melden uns so schnell wie möglich bei Ihnen.'
+      }
+    },
+    footer: {
+      tagline: 'Qualitäts-Zahnmedizin mit persönlicher Note in Winsen (Luhe).',
+      nav_title: 'Navigation',
+      services_title: 'Leistungen',
+      legal_title: 'Rechtliches',
+      links: {
+        home: 'Startseite',
+        services: 'Leistungen',
+        team: 'Team',
+        practice: 'Praxis',
+        hours: 'Öffnungszeiten',
+        contact: 'Kontakt'
+      },
+      services_links: {
+        prevention: 'Prophylaxe',
+        implantology: 'Implantologie',
+        dentures: 'Zahnersatz',
+        surgery: 'Oralchirurgie',
+        children: 'Kinderzahnheilkunde',
+        anxiety: 'Angstpatienten'
+      },
+      legal_links: {
+        imprint: 'Impressum',
+        privacy: 'Datenschutz',
+        accessibility: 'Barrierefreiheit'
+      },
+      copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.'
+    }
   }
 };
 
@@ -377,17 +547,20 @@ function applyTranslations(lang) {
 }
 
 /* ── Update switcher UI ─────────────────────────── */
+const LANG_FLAGS = { en: '🇺🇸', vi: '🇻🇳', de: '🇩🇪' };
+const LANG_CODES = { en: 'en', vi: 'vi', de: 'de' };
+
 function updateSwitcherUI(lang) {
   const flag  = document.getElementById('langFlag');
   const label = document.getElementById('langLabel');
-  if (flag)  flag.textContent  = lang === 'en' ? '🇺🇸' : '🇻🇳';
+  if (flag)  flag.textContent  = LANG_FLAGS[lang] || '🇺🇸';
   if (label) label.textContent = lang.toUpperCase();
 
   document.querySelectorAll('.lang-option').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
-  document.documentElement.lang = lang === 'vi' ? 'vi' : 'en';
+  document.documentElement.lang = LANG_CODES[lang] || 'en';
 }
 
 /* ── Set language (main entry point) ────────────── */
