@@ -336,6 +336,7 @@ function initHeroParallax() {
   const blob1   = document.querySelector('.hero-blob--1');
   const blob2   = document.querySelector('.hero-blob--2');
   const visual  = document.querySelector('.hero-visual');
+  const bubble  = document.getElementById('heroTeamBubble');
   if (!hero) return;
 
   hero.addEventListener('mousemove', e => {
@@ -348,12 +349,14 @@ function initHeroParallax() {
     if (blob1)  blob1.style.transform  = `translate(${dx * 40}px, ${dy * 40}px) scale(1)`;
     if (blob2)  blob2.style.transform  = `translate(${dx * 24}px, ${dy * 24}px) scale(1)`;
     if (visual) visual.style.transform = `translate(${dx * 18}px, ${dy * 18}px)`;
+    if (bubble) bubble.style.transform = `translate(${dx * 30}px, ${dy * 26}px)`;
   });
 
   hero.addEventListener('mouseleave', () => {
     if (blob1)  blob1.style.transform  = '';
     if (blob2)  blob2.style.transform  = '';
     if (visual) visual.style.transform = '';
+    if (bubble) bubble.style.transform = '';
   });
 }
 
