@@ -88,7 +88,22 @@ const TRANSLATIONS = {
         title: 'A 10-Person Team Ready for You',
         desc: 'Dentists, hygienists, assistants, and coordinators — all with one goal: your well-being and a healthy, beautiful smile.'
       },
-      cta: 'Meet Our Entire Team →'
+      cta: 'Meet Our Entire Team →',
+      values: {
+        eyebrow: 'What Makes Us Special',
+        title: 'Our Values &amp; <em style="color:var(--primary);font-style:italic">Guiding Principles</em>',
+        v1_title: 'Compassionate Care',
+        v1_desc: 'We listen before we act. Every patient is seen as a person — not a case. Trust is built through respect and genuine interest.',
+        v2_title: 'Clinical Excellence',
+        v2_desc: 'Regular training for all team members and cutting-edge technology ensure the highest treatment quality — always at the forefront of science.',
+        v3_title: 'Transparency & Honesty',
+        v3_desc: 'We explain every treatment step clearly and provide transparent cost estimates. You decide informed — that is our promise.'
+      },
+      team_cta: {
+        title: 'Get to Know Us in Person',
+        desc: 'Book an appointment today — we look forward to welcoming you and your family.',
+        phone: '04171 / 71212 — Call Now'
+      }
     },
     practice: {
       eyebrow: 'Our Practice',
@@ -290,7 +305,22 @@ const TRANSLATIONS = {
         title: 'Unser 10-köpfiges Team für Sie',
         desc: 'Zahnärzte, Hygieniker, Assistenten und Koordinatoren — alle mit einem Ziel: Ihr Wohlbefinden und ein gesundes, schönes Lächeln.'
       },
-      cta: 'Unser gesamtes Team kennenlernen →'
+      cta: 'Unser gesamtes Team kennenlernen →',
+      values: {
+        eyebrow: 'Was uns ausmacht',
+        title: 'Unsere Werte &amp; <em style="color:var(--primary);font-style:italic">Leitgedanken</em>',
+        v1_title: 'Einfühlsame Behandlung',
+        v1_desc: 'Wir hören zu, bevor wir handeln. Jeder Patient wird als Mensch gesehen — nicht als Fall. Vertrauen entsteht durch Respekt und echtes Interesse.',
+        v2_title: 'Fachliche Exzellenz',
+        v2_desc: 'Regelmäßige Fortbildungen aller Teammitglieder und der Einsatz modernster Technik sichern höchste Behandlungsqualität — immer auf aktuellem Stand der Wissenschaft.',
+        v3_title: 'Transparenz & Ehrlichkeit',
+        v3_desc: 'Wir erklären jeden Behandlungsschritt verständlich und erstellen transparente Kostenpläne. Sie entscheiden informiert — das ist unser Versprechen.'
+      },
+      team_cta: {
+        title: 'Lernen Sie uns persönlich kennen',
+        desc: 'Vereinbaren Sie noch heute einen Termin — wir freuen uns darauf, Sie und Ihre Familie zu begleiten.',
+        phone: '04171 / 71212 — Jetzt anrufen'
+      }
     },
     practice: {
       eyebrow: 'Unsere Praxis',
