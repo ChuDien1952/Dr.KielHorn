@@ -253,7 +253,72 @@ const TRANSLATIONS = {
           btn2: 'Meet Our Team'
         }
       },
-      faq:      { hero: { h1: 'Frequently Asked Questions — <em>All Answers at a Glance</em>', desc: 'Questions about our services, treatments, or appointments? We have the answers.', back: 'Back to Homepage' } },
+      faq: {
+        hero: { h1: 'Frequently Asked Questions — <em>All Answers at a Glance</em>', desc: 'Questions about our services, treatments, or appointments? We have the answers.', back: 'Back to Homepage' },
+        sidebar: {
+          categories: 'Categories',
+          nav1: 'General', nav2: "Children's Dentistry", nav3: 'Anxious Patients',
+          nav4: 'Prevention', nav5: 'Implantology', nav6: 'Aesthetics',
+          box_title: 'Question not listed?', box_p: 'Simply give us a call — we\'re happy to help.'
+        },
+        g1: {
+          title: 'General',
+          q1: 'How can I make an appointment?',
+          a1: '<p>You can call us on <strong>04171 / 71212</strong>. We are available: Mon, Tue, Thu 08–13 &amp; 14–18/17, Wed &amp; Fri 08–13. Alternatively, send us a message via the <a href="contact.html">contact form</a>.</p>',
+          q2: 'Where is the practice? Is there parking?',
+          a2: '<p>We are located at <strong>Niedersachsenstraße 13a, 21423 Winsen (Luhe)</strong>. Free parking spaces are directly in front of the practice — no need to worry about parking.</p>',
+          q3: 'Which health insurance is accepted?',
+          a3: '<p>We treat both publicly and privately insured patients. All major statutory health insurers are accepted. We are happy to advise you personally on cost coverage.</p>'
+        },
+        g2: {
+          title: "Children's Dentistry",
+          q1: 'From what age should my child visit the dentist?',
+          a1: '<p>Ideally as soon as the first baby tooth appears — usually between the <strong>6th and 12th month</strong> of life. Early visits help your child feel comfortable at the dentist.</p>',
+          q2: 'Are baby teeth really that important?',
+          a2: '<p>Yes! Baby teeth are <strong>placeholders for permanent teeth</strong> and are important for speech, chewing, and jaw growth. If lost too early, permanent teeth may be misaligned.</p>',
+          q3: 'How do I prepare my child for a dental visit?',
+          a3: '<p>Speak positively about the dentist. Explain playfully that the dentist counts and cleans the teeth. Avoid words like "injection" or "pain". Our team is specially trained in caring for children.</p>'
+        },
+        g3: {
+          title: 'Anxious Patients',
+          q1: 'What can I do if I am very anxious about the dentist?',
+          a1: '<p>Start with a <strong>consultation appointment only</strong> — without treatment. Together we will find a step-by-step approach. Dr. Kielhorn is known for his empathetic care of anxious patients.</p>',
+          q2: 'Is treatment under sedation safe?',
+          a2: '<p>Yes, sedation is a safe and proven method. You will be professionally monitored throughout the entire treatment. Many patients describe it as very pleasant and relaxing.</p>',
+          q3: 'How long does the anaesthetic take to wear off?',
+          a3: '<p>A local anaesthetic wears off after approximately <strong>2–3 hours</strong>. During this time, avoid eating to prevent accidentally injuring yourself. We will inform you of everything important beforehand.</p>'
+        },
+        g4: {
+          title: 'Prevention',
+          q1: 'How often should I come for prevention?',
+          a1: '<p>Professional cleaning is recommended <strong>every 6 months</strong>. With higher risk of caries or gum disease, every 3–4 months may be advisable. We advise you individually.</p>',
+          q2: 'Is professional cleaning painful?',
+          a2: '<p>No, professional cleaning is <strong>generally pain-free</strong>. With sensitive teeth or inflamed gums, mild pressure may occur. Let us know — we adapt the treatment to your needs.</p>',
+          q3: 'Does health insurance cover the costs?',
+          a3: '<p>Many insurers subsidise prevention by <strong>30–100 euros per year</strong>. Supplementary private insurance often covers the full cost. Please ask us for details.</p>'
+        },
+        g5: {
+          title: 'Implantology',
+          q1: 'Does placing an implant hurt?',
+          a1: '<p>No, the procedure is performed under <strong>local anaesthetic</strong> and is pain-free. Minor swelling may occur afterwards, subsiding within a few days. Sedation is available on request.</p>',
+          q2: 'How long do implants last?',
+          a2: '<p>With good oral hygiene and regular check-ups, implants can last <strong>a lifetime</strong>. Studies confirm success rates of over <strong>95% after 10 years</strong>.</p>',
+          q3: 'Am I suitable for implants?',
+          a3: '<p><strong>Most people</strong> can receive implants. We assess your individual situation — bone density, health, and other factors — in a comprehensive consultation. Simply book an appointment.</p>'
+        },
+        g6: {
+          title: 'Aesthetic Dentistry',
+          q1: 'How long does bleaching last?',
+          a1: '<p>Depending on habits (coffee, tea, red wine, smoking), bleaching lasts <strong>1–3 years</strong>. With occasional top-up treatments, you can extend the result significantly.</p>',
+          q2: 'How long do veneers last?',
+          a2: '<p>With good care and regular check-ups, veneers last <strong>10–15 years or longer</strong>. Our ceramic veneers from our own laboratory are particularly durable and lifelike.</p>'
+        },
+        cta: {
+          h2: 'Your question wasn\'t listed?',
+          p: 'No problem — we are happy to answer your questions personally. Call us or send us a message.',
+          btn1: '04171 / 71212 — Call Now', btn2: 'Send Message'
+        }
+      },
       contact:  { hero: { h1: 'Contact — <em>We Look Forward to Your Visit</em>', desc: 'Book an appointment or send us your questions — we are here for you.', back: 'Back to Homepage' } },
       prophylaxe:        { hero: { h1: 'Prevention — <em>Prevention Is Better than Cure</em>', desc: 'Regular professional cleaning and preventive care keep your teeth healthy for life.', back: 'All Services' } },
       implantologie:     { hero: { h1: 'Implantology — <em>Fixed Tooth Replacement Like Real Teeth</em>', desc: 'Premium implants for a permanent, natural-looking smile that lasts a lifetime.', back: 'All Services' } },
@@ -515,7 +580,72 @@ const TRANSLATIONS = {
           btn2: 'Unser Team kennenlernen'
         }
       },
-      faq:      { hero: { h1: 'Häufig gestellte Fragen — <em>Alle Antworten auf einen Blick</em>', desc: 'Fragen zu unseren Leistungen, Behandlungen oder Terminen? Wir haben die Antworten für Sie.', back: 'Zurück zur Startseite' } },
+      faq: {
+        hero: { h1: 'Häufig gestellte Fragen — <em>Alle Antworten auf einen Blick</em>', desc: 'Fragen zu unseren Leistungen, Behandlungen oder Terminen? Wir haben die Antworten für Sie.', back: 'Zurück zur Startseite' },
+        sidebar: {
+          categories: 'Kategorien',
+          nav1: 'Allgemein', nav2: 'Kinderzahnheilkunde', nav3: 'Angstpatienten',
+          nav4: 'Prophylaxe', nav5: 'Implantologie', nav6: 'Ästhetik',
+          box_title: 'Frage nicht dabei?', box_p: 'Rufen Sie uns einfach an — wir helfen gerne.'
+        },
+        g1: {
+          title: 'Allgemein',
+          q1: 'Wie kann ich einen Termin vereinbaren?',
+          a1: '<p>Sie können telefonisch unter <strong>04171 / 71212</strong> anrufen. Wir sind für Sie da: Mo, Di, Do 08–13 &amp; 14–18/17 Uhr, Mi &amp; Fr 08–13 Uhr. Alternativ können Sie uns auch über das <a href="contact.html">Kontaktformular</a> eine Nachricht schicken.</p>',
+          q2: 'Wo finde ich die Praxis? Gibt es Parkplätze?',
+          a2: '<p>Wir befinden uns in der <strong>Niedersachsenstraße 13a, 21423 Winsen (Luhe)</strong>. Kostenfreie Parkplätze befinden sich direkt vor der Praxis — Sie müssen sich also keine Sorgen ums Parken machen.</p>',
+          q3: 'Welche Krankenkassen werden akzeptiert?',
+          a3: '<p>Wir behandeln sowohl gesetzlich als auch privat Versicherte. Alle großen gesetzlichen Krankenkassen werden akzeptiert. Bei Fragen zur Kostenübernahme beraten wir Sie gerne im persönlichen Gespräch.</p>'
+        },
+        g2: {
+          title: 'Kinderzahnheilkunde',
+          q1: 'Ab welchem Alter sollte mein Kind zum Zahnarzt?',
+          a1: '<p>Idealerweise sobald der erste Milchzahn durchbricht — meist zwischen dem <strong>6. und 12. Lebensmonat</strong>. Frühe Besuche helfen Ihrem Kind, den Zahnarzt als vertraute und positive Umgebung kennen zu lernen.</p>',
+          q2: 'Sind Milchzähne wirklich so wichtig?',
+          a2: '<p>Ja! Milchzähne sind <strong>Platzhalter für die bleibenden Zähne</strong> und wichtig für Sprachentwicklung, Kauen und Kieferwachstum. Werden Milchzähne frühzeitig verloren, können sich bleibende Zähne falsch positionieren.</p>',
+          q3: 'Wie bereite ich mein Kind auf den Zahnarztbesuch vor?',
+          a3: '<p>Sprechen Sie positiv über den Zahnarzt. Erklären Sie spielerisch, dass der Zahnarzt die Zähne zählt und sauber macht. Vermeiden Sie Wörter wie "Spritze" oder "Schmerz". Unser Team ist speziell auf die Betreuung von Kindern eingestellt.</p>'
+        },
+        g3: {
+          title: 'Angstpatienten',
+          q1: 'Was kann ich tun, wenn ich große Angst vor dem Zahnarzt habe?',
+          a1: '<p>Vereinbaren Sie zunächst einen <strong>Termin nur für ein Gespräch</strong> — ohne Behandlung. Gemeinsam finden wir einen Weg Schritt für Schritt. Dr. Kielhorn ist bekannt für seinen einfühlsamen Umgang mit ängstlichen Patienten.</p>',
+          q2: 'Ist eine Behandlung unter Sedierung sicher?',
+          a2: '<p>Ja, Sedierung ist eine sichere und erprobte Methode. Sie werden während der gesamten Behandlung professionell überwacht. Viele Patienten beschreiben die Sedierung als sehr angenehm und entspannend.</p>',
+          q3: 'Wie lange dauert es, bis die Betäubung nachlässt?',
+          a3: '<p>Eine lokale Betäubung lässt nach etwa <strong>2–3 Stunden</strong> nach. In dieser Zeit sollten Sie möglichst nichts essen, um sich nicht unbeabsichtigt zu verletzen. Wir informieren Sie vor der Behandlung über alles Wichtige.</p>'
+        },
+        g4: {
+          title: 'Prophylaxe',
+          q1: 'Wie oft sollte ich zur Prophylaxe?',
+          a1: '<p>Empfohlen wird eine professionelle Zahnreinigung <strong>alle 6 Monate</strong>. Bei erhöhtem Karies- oder Parodontitisrisiko kann eine Behandlung alle 3–4 Monate sinnvoll sein. Wir beraten Sie individuell.</p>',
+          q2: 'Ist die Prophylaxe schmerzhaft?',
+          a2: '<p>Nein, die professionelle Zahnreinigung ist <strong>in der Regel schmerzfrei</strong>. Bei empfindlichen Zähnen oder entzündetem Zahnfleisch kann ein leichtes Druckgefühl entstehen. Sprechen Sie uns an — wir passen die Behandlung an Ihre Bedürfnisse an.</p>',
+          q3: 'Übernimmt die Krankenkasse die Kosten?',
+          a3: '<p>Viele Krankenkassen bezuschussen die Prophylaxe mit <strong>30–100 Euro pro Jahr</strong>. Die genaue Übernahme hängt von Ihrer Kasse ab. Private Zusatzversicherungen übernehmen die Kosten häufig vollständig. Sprechen Sie uns gerne an.</p>'
+        },
+        g5: {
+          title: 'Implantologie',
+          q1: 'Tut das Setzen eines Implantats weh?',
+          a1: '<p>Nein, der Eingriff erfolgt unter <strong>örtlicher Betäubung</strong> und ist schmerzfrei. Nach dem Eingriff kann eine leichte Schwellung auftreten, die sich innerhalb weniger Tage zurückbildet. Auf Wunsch bieten wir auch eine Sedierung an.</p>',
+          q2: 'Wie lange halten Implantate?',
+          a2: '<p>Bei guter Mundhygiene und regelmäßigen Kontrollen können Implantate <strong>ein Leben lang halten</strong>. Wissenschaftliche Studien belegen Erfolgsraten von über <strong>95% nach 10 Jahren</strong>.</p>',
+          q3: 'Bin ich für Implantate geeignet?',
+          a3: '<p>Die <strong>meisten Menschen</strong> können Implantate erhalten. Wir prüfen Ihre individuelle Situation — Knochendichte, allgemeiner Gesundheitszustand und weitere Faktoren — in einem umfassenden Beratungsgespräch. Vereinbaren Sie einfach einen Termin.</p>'
+        },
+        g6: {
+          title: 'Ästhetische Zahnheilkunde',
+          q1: 'Wie lange hält ein Bleaching?',
+          a1: '<p>Je nach Lebensgewohnheiten (Kaffee, Tee, Rotwein, Rauchen) hält ein Bleaching <strong>1–3 Jahre</strong>. Mit gelegentlichen Auffrischungsbehandlungen können Sie das Ergebnis deutlich verlängern.</p>',
+          q2: 'Wie lange halten Veneers?',
+          a2: '<p>Bei guter Pflege und regelmäßigen Kontrollen halten Veneers <strong>10–15 Jahre oder länger</strong>. Unsere hochwertigen Keramikveneers aus dem eigenen Labor sind besonders langlebig und naturgetreu.</p>'
+        },
+        cta: {
+          h2: 'Ihre Frage war nicht dabei?',
+          p: 'Kein Problem — wir beantworten Ihre Fragen gerne persönlich. Rufen Sie uns an oder schicken Sie uns eine Nachricht.',
+          btn1: '04171 / 71212 — Jetzt anrufen', btn2: 'Nachricht senden'
+        }
+      },
       contact:  { hero: { h1: 'Kontakt — <em>Wir freuen uns auf Sie</em>', desc: 'Vereinbaren Sie einen Termin oder senden Sie uns Ihre Fragen — wir sind für Sie da.', back: 'Zurück zur Startseite' } },
       prophylaxe:        { hero: { h1: 'Prophylaxe — <em>Vorbeugen ist besser als Heilen</em>', desc: 'Regelmäßige professionelle Zahnreinigung und Vorsorge für lebenslang gesunde Zähne.', back: 'Alle Leistungen' } },
       implantologie:     { hero: { h1: 'Implantologie — <em>Fester Zahnersatz wie echte Zähne</em>', desc: 'Premium-Implantate für ein dauerhaftes, natürlich aussehendes Lächeln, das ein Leben lang hält.', back: 'Alle Leistungen' } },
