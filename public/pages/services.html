@@ -99,6 +99,42 @@
     .services-cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap }
     @media(max-width:480px){ .services-cta { padding:48px 24px } }
 
+    /* ── CTA background image ── */
+    .services-cta {
+      position:relative;
+      overflow:hidden;
+    }
+    .svc-cta-bg {
+      position:absolute;
+      inset:0;
+      z-index:0;
+    }
+    .svc-cta-bg img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 30%;
+      filter:brightness(.55) saturate(.75);
+      transform:scale(1.05);
+      transition:transform 12s ease;
+    }
+    .services-cta:hover .svc-cta-bg img { transform:scale(1.01) }
+    .svc-cta-overlay {
+      position:absolute;
+      inset:0;
+      z-index:1;
+      background:linear-gradient(
+        135deg,
+        rgba(30,111,168,.82) 0%,
+        rgba(13,148,136,.70) 55%,
+        rgba(7,22,42,.78) 100%
+      );
+    }
+    .svc-cta-inner {
+      position:relative;
+      z-index:2;
+    }
+
     /* Reveal animation */
     [data-reveal] { opacity:0; transform:translateY(24px); transition:opacity .5s ease, transform .5s ease }
     [data-reveal].revealed { opacity:1; transform:none }
@@ -397,11 +433,19 @@
 
         <!-- CTA -->
         <div class="services-cta" data-reveal>
-          <h2>Haben Sie Fragen zu unseren Leistungen?</h2>
-          <p>Wir beraten Sie gerne persönlich und erstellen einen individuellen Behandlungsplan — transparent, verständlich und ohne versteckte Kosten.</p>
-          <div class="services-cta-btns">
-            <a href="tel:+494171712120" class="btn btn-white btn-lg">04171 / 71212 — Jetzt anrufen</a>
-            <a href="faq.html" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:white;border-color:rgba(255,255,255,.4)">Häufige Fragen (FAQ)</a>
+          <!-- Background image -->
+          <div class="svc-cta-bg" aria-hidden="true">
+            <img src="../assets/img/dr-kielhorn.jpeg" alt="" />
+          </div>
+          <div class="svc-cta-overlay" aria-hidden="true"></div>
+          <!-- Content -->
+          <div class="svc-cta-inner">
+            <h2 data-i18n="services.cta_question">Haben Sie Fragen zu unseren Leistungen?</h2>
+            <p data-i18n="services.cta_desc">Wir beraten Sie gerne persönlich und erstellen einen individuellen Behandlungsplan — transparent, verständlich und ohne versteckte Kosten.</p>
+            <div class="services-cta-btns">
+              <a href="tel:+494171712120" class="btn btn-white btn-lg" data-i18n="services.cta_call">04171 / 71212 — Jetzt anrufen</a>
+              <a href="faq.html" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:white;border-color:rgba(255,255,255,.4)" data-i18n="services.cta_faq">Häufige Fragen (FAQ)</a>
+            </div>
           </div>
         </div>
 
@@ -414,15 +458,15 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <a href="../index.html" class="logo logo--footer"><img src="../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" /><span class="logo-text-footer">Dr. Kielhorn</span></a>
-          <p>Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p>
+          <p data-i18n="footer.tagline">Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p>
           <address>Niedersachsenstraße 13a<br>21423 Winsen (Luhe)<br><a href="tel:+494171712120">04171 / 71212</a></address>
         </div>
-        <div class="footer-col"><h5>Navigation</h5><nav><a href="../index.html">Startseite</a><a href="services.html">Leistungen</a><a href="team.html">Team</a><a href="praxis.html">Praxis</a><a href="../index.html#hours">Sprechzeiten</a><a href="contact.html">Kontakt</a></nav></div>
-        <div class="footer-col"><h5>Leistungen</h5><nav><a href="services/prophylaxe.html">Prophylaxe</a><a href="services/implantologie.html">Implantologie</a><a href="services/zahnersatz.html">Zahnersatz</a><a href="services/oralchirurgie.html">Oralchirurgie</a><a href="services/aesthetik.html">Ästhetik</a></nav></div>
-        <div class="footer-col"><h5>Rechtliches</h5><nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="barrierefreiheit.html">Barrierefreiheit</a></nav></div>
+        <div class="footer-col"><h5 data-i18n="footer.nav_title">Navigation</h5><nav><a href="../index.html" data-i18n="footer.links.home">Startseite</a><a href="services.html" data-i18n="footer.links.services">Leistungen</a><a href="team.html" data-i18n="footer.links.team">Team</a><a href="praxis.html" data-i18n="footer.links.practice">Praxis</a><a href="../index.html#hours" data-i18n="nav.hours">Sprechzeiten</a><a href="contact.html" data-i18n="footer.links.contact">Kontakt</a></nav></div>
+        <div class="footer-col"><h5 data-i18n="footer.services_title">Leistungen</h5><nav><a href="services/prophylaxe.html" data-i18n="footer.services_links.prevention">Prophylaxe</a><a href="services/implantologie.html" data-i18n="footer.services_links.implantology">Implantologie</a><a href="services/zahnersatz.html" data-i18n="footer.services_links.dentures">Zahnersatz</a><a href="services/oralchirurgie.html" data-i18n="footer.services_links.surgery">Oralchirurgie</a><a href="services/aesthetik.html" data-i18n="footer.services_links.children">Ästhetik</a></nav></div>
+        <div class="footer-col"><h5 data-i18n="footer.legal_title">Rechtliches</h5><nav><a href="impressum.html" data-i18n="footer.legal_links.imprint">Impressum</a><a href="datenschutz.html" data-i18n="footer.legal_links.privacy">Datenschutz</a><a href="barrierefreiheit.html" data-i18n="footer.legal_links.accessibility">Barrierefreiheit</a></nav></div>
       </div>
     </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><p>© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><p data-i18n="footer.copyright">© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="impressum.html" data-i18n="footer.legal_links.imprint">Impressum</a><a href="datenschutz.html" data-i18n="footer.legal_links.privacy">Datenschutz</a></div></div></div>
   </footer>
 
   <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>

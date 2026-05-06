@@ -58,7 +58,11 @@ const TRANSLATIONS = {
       svc5: { title: "Children's Dentistry", desc: 'Fun, fear-free dental care for children — building healthy habits from an early age.' },
       svc6: { title: 'Anxious Patients', desc: 'Special techniques and a calming environment for patients who fear the dentist.' },
       svc7: { title: 'Aesthetic Dentistry', desc: 'Veneers, whitening, and cosmetic corrections for your perfect confident smile.' },
-      svc8: { title: 'Tooth Preservation', desc: 'Fillings, root canal treatments, and inlays to save and strengthen your natural teeth.' }
+      svc8: { title: 'Tooth Preservation', desc: 'Fillings, root canal treatments, and inlays to save and strengthen your natural teeth.' },
+      cta_question: 'Have Questions About Our Services?',
+      cta_desc: 'We are happy to advise you personally and create an individual treatment plan — transparent, clear, and without hidden costs.',
+      cta_call: '04171 / 71212 — Call Now',
+      cta_faq: 'Frequently Asked Questions (FAQ)'
     },
     team: {
       eyebrow: 'Our Team',
@@ -275,7 +279,11 @@ const TRANSLATIONS = {
       svc6: { title: 'Angstpatienten', desc: 'Besondere Techniken und eine beruhigende Atmosphäre für Patienten mit Zahnarztangst.' },
       svc7: { title: 'Ästhetische Zahnheilkunde', desc: 'Veneers, Bleaching und kosmetische Korrekturen für Ihr strahlendes Lächeln.' },
       svc8: { title: 'Zahnerhaltung', desc: 'Füllungen, Wurzelbehandlungen und Inlays, um Ihre natürlichen Zähne zu erhalten und zu stärken.' },
-      cta: 'Alle 8 Leistungen entdecken →'
+      cta: 'Alle 8 Leistungen entdecken →',
+      cta_question: 'Haben Sie Fragen zu unseren Leistungen?',
+      cta_desc: 'Wir beraten Sie gerne persönlich und erstellen einen individuellen Behandlungsplan — transparent, verständlich und ohne versteckte Kosten.',
+      cta_call: '04171 / 71212 — Jetzt anrufen',
+      cta_faq: 'Häufige Fragen (FAQ)'
     },
     team: {
       eyebrow: 'Unser Team',
