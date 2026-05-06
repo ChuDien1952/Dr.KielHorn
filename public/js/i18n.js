@@ -211,7 +211,48 @@ const TRANSLATIONS = {
     pages: {
       services: { hero: { h1: 'Our Services — <em>Your Smile in the Best Hands</em>', desc: 'From prevention to aesthetic dentistry — comprehensive dental care tailored individually to you.', back: 'Back to Homepage' } },
       team:     { hero: { h1: 'Our Team — <em>Experienced, Dedicated, Compassionate</em>', desc: 'Behind every healthy smile is a team working with passion and expertise. Get to know us.', back: 'Back to Homepage' } },
-      praxis:   { hero: { h1: 'Our Practice — <em>Modern, Welcoming, Trustworthy</em>', desc: 'A practice with tradition — combining modern medicine with personal care since 1980.', back: 'Back to Homepage' } },
+      praxis: {
+        hero: { h1: 'Our Practice — <em>Modern, Welcoming, Trustworthy</em>', desc: 'A practice with tradition — combining modern medicine with personal care since 1980.', back: 'Back to Homepage' },
+        history: {
+          label: 'Our History',
+          h2: 'A Practice with <em>Tradition</em>',
+          p1: 'Founded by Dr. Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn, now passionately continued by their son Dr. Christopher Kielhorn. For over 40 years, we have been caring for patients in Winsen (Luhe) and the surrounding region.',
+          p2: 'What began as a small practice in 1980 is today a modern treatment centre with its own laboratory, digital X-ray, and 3D diagnostics.',
+          t1_year: '1980', t1_h3: 'Founding of the Practice', t1_p: 'Dr. Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn open the dental practice in Winsen (Luhe) — with the aspiration to treat patients like friends.',
+          t2_year: '1990s – 2010s', t2_h3: 'Growth &amp; Modernisation', t2_p: 'Continuous expansion: own dental laboratory, new treatment rooms, and entry into digital dentistry with state-of-the-art equipment.',
+          t3_year: '2023', t3_h3: 'Handover to the 2nd Generation', t3_p: 'Dr. Christopher Kielhorn takes over the practice, combining decades of family tradition with modern treatment methods and fresh energy.',
+          t4_year: 'Today', t4_h3: 'Modern Treatment Centre', t4_p: 'Digital X-ray, 3D diagnostics, own laboratory and a dedicated team — for the highest quality and genuine human warmth.'
+        },
+        gallery: {
+          label: 'Our Facilities',
+          h2: 'Modern Spaces — <em>For Your Comfort</em>',
+          caption: 'Modern treatment rooms for optimal comfort — your health in the best environment'
+        },
+        lab: {
+          label: 'Our Laboratory',
+          h2: 'In-House Dental Lab — <em>Highest Quality</em>',
+          p: 'We operate a modern in-house laboratory — for the highest quality and speed. Short distances mean faster results, more personalised coordination, and better fit.',
+          c1_h4: 'Fast Results', c1_p: 'Adjustments and repairs done immediately, without external waiting time — we deliver when you need it.',
+          c2_h4: 'High Quality', c2_p: 'Direct control and monitoring by our team — highest precision with every piece of work.',
+          c3_h4: 'Individual Customisation', c3_p: 'Every prosthesis crafted exactly to your wishes and needs — for a perfect result.',
+          c4_h4: 'Short Distances', c4_p: 'Direct contact between dentist and dental technician — for optimal coordination and best results.'
+        },
+        anfahrt: {
+          label: 'How to Find Us',
+          h2: 'Directions &amp; <em>Opening Hours</em>',
+          addr_h3: 'Practice Address',
+          parking: 'Free parking spaces directly in front of the practice',
+          hours_h3: 'Opening Hours',
+          mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday', fri: 'Friday', sat_sun: 'Sat / Sun', closed: 'Closed',
+          btn: 'Book Appointment'
+        },
+        cta: {
+          h2: 'Get to Know Us in Person',
+          p: 'Book an appointment today — we look forward to welcoming you and your family.',
+          btn1: '04171 / 71212 — Call Now',
+          btn2: 'Meet Our Team'
+        }
+      },
       faq:      { hero: { h1: 'Frequently Asked Questions — <em>All Answers at a Glance</em>', desc: 'Questions about our services, treatments, or appointments? We have the answers.', back: 'Back to Homepage' } },
       contact:  { hero: { h1: 'Contact — <em>We Look Forward to Your Visit</em>', desc: 'Book an appointment or send us your questions — we are here for you.', back: 'Back to Homepage' } },
       prophylaxe:        { hero: { h1: 'Prevention — <em>Prevention Is Better than Cure</em>', desc: 'Regular professional cleaning and preventive care keep your teeth healthy for life.', back: 'All Services' } },
@@ -432,7 +473,48 @@ const TRANSLATIONS = {
     pages: {
       services: { hero: { h1: 'Unsere Leistungen — <em>Ihr Lächeln in besten Händen</em>', desc: 'Von der Vorsorge über Implantate bis zur ästhetischen Zahnheilkunde — umfassende Zahnmedizin auf höchstem Niveau, individuell auf Sie abgestimmt.', back: 'Zurück zur Startseite' } },
       team:     { hero: { h1: 'Unser Team — <em>Erfahren, Engagiert, Einfühlsam</em>', desc: 'Hinter jedem gesunden Lächeln steckt ein Team, das mit Leidenschaft und Fachkompetenz arbeitet. Lernen Sie uns kennen.', back: 'Zurück zur Startseite' } },
-      praxis:   { hero: { h1: 'Unsere Praxis — <em>Modern, Herzlich, Vertrauensvoll</em>', desc: 'Eine Praxis mit Geschichte — moderne Medizin verbunden mit persönlicher Betreuung seit 1980.', back: 'Zurück zur Startseite' } },
+      praxis: {
+        hero: { h1: 'Unsere Praxis — <em>Modern, Herzlich, Vertrauensvoll</em>', desc: 'Eine Praxis mit Geschichte — moderne Medizin verbunden mit persönlicher Betreuung seit 1980.', back: 'Zurück zur Startseite' },
+        history: {
+          label: 'Unsere Geschichte',
+          h2: 'Eine Praxis mit <em>Tradition</em>',
+          p1: 'Gegründet von Dr. Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn, heute mit Herzblut weitergeführt von ihrem Sohn Dr. Christopher Kielhorn. Seit über 40 Jahren versorgen wir Patienten in Winsen (Luhe) und der gesamten Region.',
+          p2: 'Was 1980 als kleine Praxis begann, ist heute ein modernes Behandlungszentrum mit eigenem Labor, digitalem Röntgen und 3D-Diagnostik.',
+          t1_year: '1980', t1_h3: 'Gründung der Praxis', t1_p: 'Dr. Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn eröffnen die Zahnarztpraxis in Winsen (Luhe) — mit dem Anspruch, Patienten wie Freunde zu behandeln.',
+          t2_year: '1990er – 2010er', t2_h3: 'Wachstum &amp; Modernisierung', t2_p: 'Kontinuierliche Erweiterung: eigenes Dentallabor, neue Behandlungsräume und der Einstieg in die digitale Zahnmedizin mit modernsten Geräten.',
+          t3_year: '2023', t3_h3: 'Übergabe an die 2. Generation', t3_p: 'Dr. Christopher Kielhorn übernimmt die Praxis und verbindet die jahrzehntelange Familientradition mit modernsten Behandlungsmethoden und frischem Elan.',
+          t4_year: 'Heute', t4_h3: 'Modernes Behandlungszentrum', t4_p: 'Digitales Röntgen, 3D-Diagnostik, eigenes Labor und ein engagiertes Team — für höchste Qualität und echte menschliche Wärme.'
+        },
+        gallery: {
+          label: 'Einrichtung',
+          h2: 'Moderne Räume — <em>für Ihren Komfort</em>',
+          caption: 'Moderne Behandlungsräume für optimalen Komfort — Ihre Gesundheit in bester Umgebung'
+        },
+        lab: {
+          label: 'Unser Labor',
+          h2: 'Eigenes Dentallabor — <em>höchste Qualität</em>',
+          p: 'Wir betreiben ein modernes eigenes Labor — für höchste Qualität und Schnelligkeit. Kurze Wege bedeuten: schnellere Ergebnisse, persönlichere Abstimmung, bessere Passgenauigkeit.',
+          c1_h4: 'Schnelle Ergebnisse', c1_p: 'Anpassungen und Reparaturen sofort, ohne externe Wartezeit — wir liefern, wenn Sie es brauchen.',
+          c2_h4: 'Hohe Qualität', c2_p: 'Direkte Kontrolle und Überwachung durch unser Team — höchste Präzision bei jedem Werkstück.',
+          c3_h4: 'Individuelle Anpassung', c3_p: 'Jeder Zahnersatz genau nach Ihren Wünschen und Bedürfnissen gefertigt — für ein perfektes Ergebnis.',
+          c4_h4: 'Kurze Wege', c4_p: 'Direkter Kontakt zwischen Zahnarzt und Zahntechniker — für optimale Abstimmung und beste Ergebnisse.'
+        },
+        anfahrt: {
+          label: 'So finden Sie uns',
+          h2: 'Anfahrt &amp; <em>Öffnungszeiten</em>',
+          addr_h3: 'Praxisadresse',
+          parking: 'Kostenfreie Parkplätze direkt vor der Praxis',
+          hours_h3: 'Öffnungszeiten',
+          mon: 'Montag', tue: 'Dienstag', wed: 'Mittwoch', thu: 'Donnerstag', fri: 'Freitag', sat_sun: 'Sa / So', closed: 'Geschlossen',
+          btn: 'Termin vereinbaren'
+        },
+        cta: {
+          h2: 'Lernen Sie uns persönlich kennen',
+          p: 'Vereinbaren Sie noch heute einen Termin — wir freuen uns darauf, Sie und Ihre Familie zu begleiten.',
+          btn1: '04171 / 71212 — Jetzt anrufen',
+          btn2: 'Unser Team kennenlernen'
+        }
+      },
       faq:      { hero: { h1: 'Häufig gestellte Fragen — <em>Alle Antworten auf einen Blick</em>', desc: 'Fragen zu unseren Leistungen, Behandlungen oder Terminen? Wir haben die Antworten für Sie.', back: 'Zurück zur Startseite' } },
       contact:  { hero: { h1: 'Kontakt — <em>Wir freuen uns auf Sie</em>', desc: 'Vereinbaren Sie einen Termin oder senden Sie uns Ihre Fragen — wir sind für Sie da.', back: 'Zurück zur Startseite' } },
       prophylaxe:        { hero: { h1: 'Prophylaxe — <em>Vorbeugen ist besser als Heilen</em>', desc: 'Regelmäßige professionelle Zahnreinigung und Vorsorge für lebenslang gesunde Zähne.', back: 'Alle Leistungen' } },
