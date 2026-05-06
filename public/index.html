@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -72,21 +72,12 @@
         <!-- Language Switcher (desktop inside nav) -->
         <div class="lang-switcher" id="langSwitcher">
           <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
-            <span class="lang-flag" id="langFlag" aria-hidden="true">🇺🇸</span>
-            <span class="lang-label" id="langLabel">EN</span>
+            <img class="lang-flag-img" id="langFlagImg" src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true">
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown" role="menu">
-            <button class="lang-option active" data-lang="en" role="menuitem">
-              <span aria-hidden="true">🇺🇸</span> English
-            </button>
-            <button class="lang-option" data-lang="de" role="menuitem">
-              <span aria-hidden="true">🇩🇪</span> Deutsch
-            </button>
-            <button class="lang-option" data-lang="vi" role="menuitem">
-              <span aria-hidden="true">🇻🇳</span> Tiếng Việt
-            </button>
-          </div>
+            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/us.png" alt="EN" aria-hidden="true"> English</button>
+            <button class="lang-option active" data-lang="de" role="menuitem"><img src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true"> Deutsch</button>          </div>
         </div>
         <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
@@ -212,7 +203,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       SERVICES
+       SERVICES TEASER (3 highlights → link to services page)
   ═══════════════════════════════════════════════ -->
   <section class="section" id="services">
     <div class="container">
@@ -221,118 +212,64 @@
         <h2 data-i18n="services.title">Our Services in Winsen (Luhe)</h2>
         <p class="section-desc" data-i18n="services.desc">From prevention to aesthetic dentistry — we guide you towards a healthy, radiant smile.</p>
       </div>
-      <div class="services-grid">
 
-        <article class="service-card" data-reveal style="--img:url('../assets/img/svc-prevention.jpg')">
-          <img src="assets/img/svc-prevention.jpg" alt="Prevention" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="svc-teaser-grid">
+
+        <article class="svc-teaser-card" data-reveal>
+          <div class="svc-teaser-img">
+            <img src="assets/img/svc-prevention.jpg" alt="Prevention" loading="lazy" />
+            <span class="svc-teaser-num" aria-hidden="true">01</span>
+          </div>
+          <div class="svc-teaser-body">
+            <div class="svc-teaser-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h3 data-i18n="services.svc1.title">Prevention &amp; Cleaning</h3>
             <p data-i18n="services.svc1.desc">Regular professional cleaning and early detection keep your teeth healthy for life.</p>
-            <a href="pages/services/prophylaxe.html" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/prophylaxe.html" class="svc-teaser-link" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
-        <article class="service-card" data-reveal data-delay="100" style="--img:url('../assets/img/svc-implant.jpg')">
-          <img src="assets/img/svc-implant.jpg" alt="Implantology" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <article class="svc-teaser-card" data-reveal data-delay="120">
+          <div class="svc-teaser-img">
+            <img src="assets/img/svc-implant.jpg" alt="Implantology" loading="lazy" />
+            <span class="svc-teaser-num" aria-hidden="true">02</span>
+          </div>
+          <div class="svc-teaser-body">
+            <div class="svc-teaser-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
             <h3 data-i18n="services.svc2.title">Implantology</h3>
             <p data-i18n="services.svc2.desc">Permanent tooth replacements that look and feel natural, using premium implant systems.</p>
-            <a href="pages/services/implantologie.html" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/implantologie.html" class="svc-teaser-link" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
-        <article class="service-card" data-reveal data-delay="200" style="--img:url('../assets/img/svc-dentures.jpg')">
-          <img src="assets/img/svc-dentures.jpg" alt="Dentures" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
-            </div>
-            <h3 data-i18n="services.svc3.title">Dentures</h3>
-            <p data-i18n="services.svc3.desc">Custom-fitted partial and full dentures for a natural appearance and comfortable fit.</p>
-            <a href="pages/services/zahnersatz.html" class="svc-more" data-i18n="services.more">Learn more →</a>
+        <article class="svc-teaser-card" data-reveal data-delay="240">
+          <div class="svc-teaser-img">
+            <img src="assets/img/svc-anxiety.jpg" alt="Anxious Patients" loading="lazy" />
+            <span class="svc-teaser-num" aria-hidden="true">03</span>
           </div>
-        </article>
-
-        <article class="service-card" data-reveal style="--img:url('../assets/img/svc-surgery.jpg')">
-          <img src="assets/img/svc-surgery.jpg" alt="Oral Surgery" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5zm-5 0c-.83 0-1.5-.67-1.5-1.5v-5C8 2.67 8.67 2 9.5 2S11 2.67 11 3.5v5c0 .83-.67 1.5-1.5 1.5zM21 12v-1a1 1 0 00-1-1H4a1 1 0 00-1 1v1m18 0a9 9 0 01-18 0"/></svg>
-            </div>
-            <h3 data-i18n="services.svc4.title">Oral Surgery</h3>
-            <p data-i18n="services.svc4.desc">Tooth extractions, wisdom tooth removal, and surgical procedures in a gentle manner.</p>
-            <a href="pages/services/oralchirurgie.html" class="svc-more" data-i18n="services.more">Learn more →</a>
-          </div>
-        </article>
-
-        <article class="service-card" data-reveal data-delay="100" style="--img:url('../assets/img/svc-children.jpg')">
-          <img src="assets/img/svc-children.jpg" alt="Children's Dentistry" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <h3 data-i18n="services.svc5.title">Children's Dentistry</h3>
-            <p data-i18n="services.svc5.desc">Fun, fear-free dental care for children — building healthy habits from an early age.</p>
-            <a href="pages/services/kinderzahnheilkunde.html" class="svc-more" data-i18n="services.more">Learn more →</a>
-          </div>
-        </article>
-
-        <article class="service-card" data-reveal data-delay="200" style="--img:url('../assets/img/svc-anxiety.jpg')">
-          <img src="assets/img/svc-anxiety.jpg" alt="Anxious Patients" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="svc-teaser-body">
+            <div class="svc-teaser-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
             </div>
             <h3 data-i18n="services.svc6.title">Anxious Patients</h3>
             <p data-i18n="services.svc6.desc">Special techniques and a calming environment for patients who fear the dentist.</p>
-            <a href="pages/services/angstpatienten.html" class="svc-more" data-i18n="services.more">Learn more →</a>
+            <a href="pages/services/angstpatienten.html" class="svc-teaser-link" data-i18n="services.more">Learn more →</a>
           </div>
         </article>
 
-        <article class="service-card" data-reveal style="--img:url('../assets/img/svc-aesthetic.jpg')">
-          <img src="assets/img/svc-aesthetic.jpg" alt="Aesthetic Dentistry" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <h3 data-i18n="services.svc7.title">Aesthetic Dentistry</h3>
-            <p data-i18n="services.svc7.desc">Veneers, whitening, and cosmetic corrections for your perfect confident smile.</p>
-            <a href="pages/services/aesthetik.html" class="svc-more" data-i18n="services.more">Learn more →</a>
-          </div>
-        </article>
+      </div>
 
-        <article class="service-card" data-reveal data-delay="100" style="--img:url('../assets/img/svc-preservation.jpg')">
-          <img src="assets/img/svc-preservation.jpg" alt="Tooth Preservation" class="svc-bg" />
-          <div class="svc-overlay"></div>
-          <div class="svc-content">
-            <div class="svc-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-            </div>
-            <h3 data-i18n="services.svc8.title">Tooth Preservation</h3>
-            <p data-i18n="services.svc8.desc">Fillings, root canal treatments, and inlays to save and strengthen your natural teeth.</p>
-            <a href="pages/services/zahnerhaltung.html" class="svc-more" data-i18n="services.more">Learn more →</a>
-          </div>
-        </article>
-
+      <div class="svc-teaser-cta" data-reveal>
+        <a href="pages/services.html" class="btn btn-outline btn-lg" data-i18n="services.cta">Discover all 8 Services →</a>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       TEAM
+       TEAM TEASER (Dr. Kielhorn featured + overview → link to team page)
   ═══════════════════════════════════════════════ -->
   <section class="section team-section" id="team">
     <div class="container">
@@ -341,165 +278,100 @@
         <h2 data-i18n="team.title">Experienced Professionals, Caring Hands</h2>
       </div>
 
-      <!-- Featured: Dr. Kielhorn -->
-      <div class="team-featured" data-reveal>
-        <div class="tf-photo">
-          <img src="assets/img/dr-kielhorn.jpeg" alt="Dr. Christopher Kielhorn" class="team-photo" />
-        </div>
-        <div class="tf-content">
-          <span class="team-role-badge" data-i18n="team.doctor.role">Principal Dentist &amp; Practice Owner</span>
-          <h3 data-i18n="team.doctor.name">Dr. Christopher Kielhorn</h3>
-          <p data-i18n="team.doctor.desc1">Dr. Christopher Kielhorn has been practicing dentistry in Winsen (Luhe) for over 20 years, continuing a family tradition of dental excellence. His approach combines clinical precision with genuine patient empathy.</p>
-          <p data-i18n="team.doctor.desc2">Specializing in implantology, aesthetic dentistry, and anxious patient care, he ensures every patient leaves with a smile — literally.</p>
-          <div class="tf-credentials">
-            <div class="tf-cred">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-i18n="team.doctor.cred1">Specialist in Implantology</span>
-            </div>
-            <div class="tf-cred">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-i18n="team.doctor.cred2">20+ Years Experience</span>
-            </div>
-            <div class="tf-cred">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-i18n="team.doctor.cred3">2nd Generation Dentist</span>
-            </div>
-            <div class="tf-cred">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-i18n="team.doctor.cred4">4.9★ Patient Rating</span>
-            </div>
-          </div>
-          <a href="#contact" class="btn btn-primary" style="margin-top:24px" data-i18n="nav.cta">Book Appointment</a>
-        </div>
-      </div>
+      <div class="team-teaser-layout">
 
-      <!-- Staff Grid -->
-      <div class="team-grid">
-        <div class="team-card" data-reveal>
-          <div class="tc-photo"><img src="assets/img/team-lozhnikova.jpg" alt="Dr. Lozhnikova" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>Dr. Lozhnikova</h4>
-            <p data-i18n="team.staff.role_dentist">Associate Dentist</p>
+        <!-- Featured: Dr. Kielhorn -->
+        <div class="team-featured" data-reveal>
+          <div class="tf-photo">
+            <img src="assets/img/dr-kielhorn.jpeg" alt="Dr. Christopher Kielhorn" class="team-photo" />
+          </div>
+          <div class="tf-content">
+            <span class="team-role-badge" data-i18n="team.doctor.role">Principal Dentist &amp; Practice Owner</span>
+            <h3 data-i18n="team.doctor.name">Dr. Christopher Kielhorn</h3>
+            <p data-i18n="team.doctor.desc1">Dr. Christopher Kielhorn has been practicing dentistry in Winsen (Luhe) for over 20 years, continuing a family tradition of dental excellence.</p>
+            <div class="tf-credentials">
+              <div class="tf-cred">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="team.doctor.cred1">Specialist in Implantology</span>
+              </div>
+              <div class="tf-cred">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="team.doctor.cred2">20+ Years Experience</span>
+              </div>
+              <div class="tf-cred">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="team.doctor.cred3">2nd Generation Dentist</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary" style="margin-top:24px" data-i18n="nav.cta">Book Appointment</a>
           </div>
         </div>
-        <div class="team-card" data-reveal data-delay="100">
-          <div class="tc-photo"><img src="assets/img/team-jochim.jpg" alt="Frau Jochim" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>Frau Jochim</h4>
-            <p data-i18n="team.staff.role_assistant">Dental Assistant</p>
+
+        <!-- Team overview card -->
+        <div class="team-overview-card" data-reveal data-delay="150">
+          <div class="tov-avatars">
+            <img src="assets/img/team-lozhnikova.jpg" alt="Team member" class="tov-avatar" />
+            <img src="assets/img/team-jochim.jpg" alt="Team member" class="tov-avatar" />
+            <img src="assets/img/team-varoquier.jpg" alt="Team member" class="tov-avatar" />
+            <img src="assets/img/team-sirak.jpeg" alt="Team member" class="tov-avatar" />
+            <div class="tov-avatar tov-more" aria-hidden="true">+6</div>
           </div>
+          <h3 data-i18n="team.overview.title">A 10-Person Team Ready for You</h3>
+          <p data-i18n="team.overview.desc">Dentists, hygienists, assistants, and coordinators — all with one goal: your well-being and a healthy, beautiful smile.</p>
+          <a href="pages/team.html" class="btn btn-outline" data-i18n="team.cta">Meet Our Entire Team →</a>
         </div>
-        <div class="team-card" data-reveal data-delay="200">
-          <div class="tc-photo"><img src="assets/img/team-varoquier.jpg" alt="M. Varoquier-Fett" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>M. Varoquier-Fett</h4>
-            <p data-i18n="team.staff.role_hygienist">Dental Hygienist</p>
-          </div>
-        </div>
-        <div class="team-card" data-reveal data-delay="300">
-          <div class="tc-photo"><img src="assets/img/team-sirak.jpeg" alt="Sirak" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>Sirak</h4>
-            <p data-i18n="team.staff.role_assistant">Dental Assistant</p>
-          </div>
-        </div>
-        <div class="team-card" data-reveal>
-          <div class="tc-photo"><img src="assets/img/team-ikkardes.jpeg" alt="İkkardeş" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>İkkardeş</h4>
-            <p data-i18n="team.staff.role_reception">Patient Coordinator</p>
-          </div>
-        </div>
-        <div class="team-card" data-reveal data-delay="100">
-          <div class="tc-photo"><img src="assets/img/team-taifour.jpeg" alt="Taifour" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>Taifour</h4>
-            <p data-i18n="team.staff.role_assistant">Dental Assistant</p>
-          </div>
-        </div>
-        <div class="team-card" data-reveal data-delay="200">
-          <div class="tc-photo"><img src="assets/img/team-thiemann.jpeg" alt="Thiemann" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>Thiemann</h4>
-            <p data-i18n="team.staff.role_hygienist">Dental Hygienist</p>
-          </div>
-        </div>
-        <div class="team-card" data-reveal data-delay="300">
-          <div class="tc-photo"><img src="assets/img/team-kukadiya.jpg" alt="Kukadiya" class="team-photo-sm" /></div>
-          <div class="tc-body">
-            <h4>Kukadiya</h4>
-            <p data-i18n="team.staff.role_assistant">Dental Assistant</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       PRACTICE GALLERY
+       PRACTICE PREVIEW (split teaser → link to praxis page)
   ═══════════════════════════════════════════════ -->
-  <section class="section practice-section" id="practice">
+  <section class="section practice-preview-section" id="practice">
     <div class="container">
-      <div class="section-header" data-reveal>
-        <p class="section-eyebrow" data-i18n="practice.eyebrow">Our Practice</p>
-        <h2 data-i18n="practice.title">Modern Equipment, Warm Atmosphere</h2>
-        <p class="section-desc" data-i18n="practice.desc">Our practice combines cutting-edge dental technology with a welcoming, comfortable environment.</p>
-      </div>
+      <div class="practice-preview-split">
 
-      <div class="gallery-grid" data-reveal>
-        <div class="gallery-item gallery-item--tall">
-          <img src="assets/img/practice-1.jpeg" alt="Practice interior" loading="lazy" />
+        <div class="pp-images" data-reveal>
+          <div class="pp-main-img">
+            <img src="assets/img/img_0383-scaled.jpeg" alt="Behandlungsraum Dr. Kielhorn" loading="lazy" />
+          </div>
+          <div class="pp-sub-imgs">
+            <img src="assets/img/img_0373-scaled.jpeg" alt="Empfangsbereich" loading="lazy" />
+            <img src="assets/img/img_0368-scaled.jpeg" alt="Wartebereich" loading="lazy" />
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/img/practice-2.jpeg" alt="Dental equipment" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="assets/img/practice-3.jpeg" alt="Treatment room" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="assets/img/practice-4.jpeg" alt="Reception area" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="assets/img/practice-5.jpeg" alt="Waiting area" loading="lazy" />
-        </div>
-      </div>
 
-      <div class="practice-features">
-        <div class="pf-card" data-reveal>
-          <div class="pf-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
-          </div>
-          <h4 data-i18n="practice.feat1.title">Digital X-Ray</h4>
-          <p data-i18n="practice.feat1.desc">90% less radiation than conventional X-ray</p>
+        <div class="pp-content" data-reveal data-delay="150">
+          <p class="section-eyebrow" data-i18n="practice.eyebrow">Our Practice</p>
+          <h2 data-i18n="practice.title">Modern Equipment, Warm Atmosphere</h2>
+          <p data-i18n="practice.desc">Our practice combines cutting-edge dental technology with a welcoming, comfortable environment.</p>
+          <ul class="pp-tech-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="practice.feat1.title">Digital X-Ray</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="practice.feat2.title">3D Planning</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="practice.feat3.title">Pain-Free Treatment</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="practice.lab_title">In-House Laboratory</span>
+            </li>
+          </ul>
+          <blockquote class="pp-quote">
+            <p data-i18n="practice.quote">Our goal is not just healthy teeth, but confident smiles that last a lifetime.</p>
+            <cite>— <span data-i18n="practice.quote_author">Dr. Christopher Kielhorn</span></cite>
+          </blockquote>
+          <a href="pages/praxis.html" class="btn btn-primary" data-i18n="practice.cta">Discover Our Practice →</a>
         </div>
-        <div class="pf-card" data-reveal data-delay="100">
-          <div class="pf-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-          </div>
-          <h4 data-i18n="practice.feat2.title">3D Planning</h4>
-          <p data-i18n="practice.feat2.desc">Precise implant and treatment planning</p>
-        </div>
-        <div class="pf-card" data-reveal data-delay="200">
-          <div class="pf-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h4 data-i18n="practice.feat3.title">Pain-Free Treatment</h4>
-          <p data-i18n="practice.feat3.desc">Latest anaesthesia and sedation options</p>
-        </div>
-        <div class="pf-card" data-reveal data-delay="300">
-          <div class="pf-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h4 data-i18n="practice.feat4.title">Hygienic Standards</h4>
-          <p data-i18n="practice.feat4.desc">Certified sterilisation and infection control</p>
-        </div>
-      </div>
 
-      <blockquote class="practice-quote" data-reveal>
-        <div class="pq-mark" aria-hidden="true">"</div>
-        <p data-i18n="practice.quote">Our goal is not just healthy teeth, but confident smiles that last a lifetime.</p>
-        <footer>— <cite data-i18n="practice.quote_author">Dr. Christopher Kielhorn</cite></footer>
-      </blockquote>
+      </div>
     </div>
   </section>
 
@@ -660,7 +532,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       CONTACT
+       CONTACT (info + map + CTA → link to full contact page)
   ═══════════════════════════════════════════════ -->
   <section class="section contact-section" id="contact">
     <div class="container">
@@ -668,8 +540,9 @@
         <p class="section-eyebrow" data-i18n="contact.eyebrow">Contact Us</p>
         <h2 data-i18n="contact.title">We Look Forward to Your Visit</h2>
       </div>
-      <div class="contact-grid">
-        <div class="contact-info" data-reveal>
+
+      <div class="contact-teaser-grid">
+        <div class="contact-info-strip" data-reveal>
           <div class="ci-card">
             <div class="ci-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -697,42 +570,22 @@
               <a href="mailto:info@zahnarzt-kielhorn-winsen.de" data-i18n="contact.email">info@zahnarzt-kielhorn-winsen.de</a>
             </div>
           </div>
+        </div>
+
+        <div class="contact-map-cta" data-reveal data-delay="100">
           <div class="ci-card ci-card--map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.4!2d10.2095!3d53.3574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNiedersachsenstra%C3%9Fe+13a%2C+21423+Winsen+%28Luhe%29!5e0!3m2!1sen!2sde!4v1620000000000!5m2!1sen!2sde"
-              width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+              width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="Practice location map" aria-label="Map showing practice location"></iframe>
           </div>
-        </div>
-
-        <div class="contact-form-wrap" data-reveal data-delay="200">
-          <h3 data-i18n="contact.form.title">Send Us a Message</h3>
-          <p class="form-note" data-i18n="contact.form.note">We usually respond within 24 hours.</p>
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="formName" data-i18n="contact.form.name">Your Name</label>
-                <input type="text" id="formName" name="name" data-i18n-placeholder="contact.form.name" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <label for="formEmail" data-i18n="contact.form.email_label">Email Address</label>
-                <input type="email" id="formEmail" name="email" data-i18n-placeholder="contact.form.email" placeholder="Email Address" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="formPhone" data-i18n="contact.form.phone_label">Phone Number</label>
-              <input type="tel" id="formPhone" name="phone" data-i18n-placeholder="contact.form.phone" placeholder="Phone Number" />
-            </div>
-            <div class="form-group">
-              <label for="formMessage" data-i18n="contact.form.message_label">Your Message</label>
-              <textarea id="formMessage" name="message" rows="5" data-i18n-placeholder="contact.form.message" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.submit">Send Message</button>
-          </form>
-          <div class="form-success" id="formSuccess" role="alert" aria-live="polite" style="display:none">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-i18n="contact.form.success">Thank you! We will get back to you shortly.</span>
+          <div class="contact-cta-buttons">
+            <a href="pages/contact.html" class="btn btn-primary btn-lg" data-i18n="contact.cta_page">Book Appointment Online →</a>
+            <a href="tel:+494171712120" class="btn btn-outline btn-lg">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              04171 / 71212
+            </a>
           </div>
         </div>
       </div>

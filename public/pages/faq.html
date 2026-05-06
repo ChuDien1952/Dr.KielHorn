@@ -159,15 +159,12 @@
         </a>
                 <div class="lang-switcher" id="langSwitcher">
           <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
-            <span class="lang-flag" id="langFlag" aria-hidden="true">🇩🇪</span>
-            <span class="lang-label" id="langLabel">DE</span>
+            <img class="lang-flag-img" id="langFlagImg" src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true">
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown" role="menu">
-            <button class="lang-option" data-lang="en" role="menuitem"><span aria-hidden="true">🇺🇸</span> English</button>
-            <button class="lang-option active" data-lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</button>
-            <button class="lang-option" data-lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</button>
-          </div>
+            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/us.png" alt="EN" aria-hidden="true"> English</button>
+            <button class="lang-option active" data-lang="de" role="menuitem"><img src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true"> Deutsch</button>          </div>
         </div>        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
@@ -468,6 +465,12 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+            <!-- Practice photo strip -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 40px" data-reveal>
+              <img src="../assets/img/img_0368-scaled.jpeg" alt="Zahnarztpraxis Dr. Kielhorn" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-md);display:block;box-shadow:var(--shadow-sm)" loading="lazy" />
+              <img src="../assets/img/img_0383-scaled.jpeg" alt="Behandlungsraum Dr. Kielhorn" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-md);display:block;box-shadow:var(--shadow-sm)" loading="lazy" />
             </div>
 
             <!-- CTA -->

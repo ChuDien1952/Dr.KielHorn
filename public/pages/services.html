@@ -139,15 +139,12 @@
         </a>
                 <div class="lang-switcher" id="langSwitcher">
           <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
-            <span class="lang-flag" id="langFlag" aria-hidden="true">🇩🇪</span>
-            <span class="lang-label" id="langLabel">DE</span>
+            <img class="lang-flag-img" id="langFlagImg" src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true">
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown" role="menu">
-            <button class="lang-option" data-lang="en" role="menuitem"><span aria-hidden="true">🇺🇸</span> English</button>
-            <button class="lang-option active" data-lang="de" role="menuitem"><span aria-hidden="true">🇩🇪</span> Deutsch</button>
-            <button class="lang-option" data-lang="vi" role="menuitem"><span aria-hidden="true">🇻🇳</span> Tiếng Việt</button>
-          </div>
+            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/us.png" alt="EN" aria-hidden="true"> English</button>
+            <button class="lang-option active" data-lang="de" role="menuitem"><img src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true"> Deutsch</button>          </div>
         </div>        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
@@ -176,9 +173,9 @@
 
         <!-- Intro -->
         <div class="services-intro" data-reveal>
-          <p class="section-label">Unser Angebot</p>
-          <h2>Umfassende Zahnmedizin —<br><em>alles unter einem Dach</em></h2>
-          <p>Von der professionellen Zahnreinigung bis zur Implantologie bieten wir Ihnen alle zahnmedizinischen Leistungen in einer Praxis. Unser erfahrenes Team steht Ihnen mit modernster Technik und echtem Einfühlungsvermögen zur Seite.</p>
+          <p class="section-label" data-i18n="services.eyebrow">Unser Angebot</p>
+          <h2 data-i18n="services.title">Unsere Leistungen in Winsen (Luhe)</h2>
+          <p data-i18n="services.desc">Von der professionellen Zahnreinigung bis zur Implantologie bieten wir Ihnen alle zahnmedizinischen Leistungen in einer Praxis. Unser erfahrenes Team steht Ihnen mit modernster Technik und echtem Einfühlungsvermögen zur Seite.</p>
         </div>
 
         <!-- Services grid -->
@@ -187,10 +184,10 @@
           <article class="service-card" data-reveal data-reveal-delay="1">
             <img src="../assets/img/prophylaxe.jpg" alt="Prophylaxe" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Prophylaxe</h3>
-              <p>Professionelle Zahnreinigung &amp; Vorsorge für lebenslang gesunde Zähne</p>
+              <h3 data-i18n="services.svc1.title">Prophylaxe</h3>
+              <p data-i18n="services.svc1.desc">Professionelle Zahnreinigung &amp; Vorsorge für lebenslang gesunde Zähne</p>
               <a href="services/prophylaxe.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -199,10 +196,10 @@
           <article class="service-card" data-reveal data-reveal-delay="2">
             <img src="../assets/img/implantologie.jpg" alt="Implantologie" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Implantologie</h3>
-              <p>Fester Zahnersatz wie echte Zähne — für ein Leben lang</p>
+              <h3 data-i18n="services.svc2.title">Implantologie</h3>
+              <p data-i18n="services.svc2.desc">Fester Zahnersatz wie echte Zähne — für ein Leben lang</p>
               <a href="services/implantologie.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -211,10 +208,10 @@
           <article class="service-card" data-reveal data-reveal-delay="3">
             <img src="../assets/img/zahnersatz.jpg" alt="Zahnersatz" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Zahnersatz</h3>
-              <p>Hochwertige Kronen, Brücken und Prothesen aus eigenem Labor</p>
+              <h3 data-i18n="services.svc3.title">Zahnersatz</h3>
+              <p data-i18n="services.svc3.desc">Hochwertige Kronen, Brücken und Prothesen aus eigenem Labor</p>
               <a href="services/zahnersatz.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -223,10 +220,10 @@
           <article class="service-card" data-reveal data-reveal-delay="4">
             <img src="../assets/img/oralchirurgie.jpg" alt="Oralchirurgie" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Oralchirurgie</h3>
-              <p>Schonende chirurgische Eingriffe — von Weisheitszahn bis Knochenaufbau</p>
+              <h3 data-i18n="services.svc4.title">Oralchirurgie</h3>
+              <p data-i18n="services.svc4.desc">Schonende chirurgische Eingriffe — von Weisheitszahn bis Knochenaufbau</p>
               <a href="services/oralchirurgie.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -235,10 +232,10 @@
           <article class="service-card" data-reveal data-reveal-delay="5">
             <img src="../assets/img/kinderzahnheilkunde.jpg" alt="Kinderzahnheilkunde" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Kinderzahnheilkunde</h3>
-              <p>Kinderfreundliche Zahnmedizin — spielerisch und ohne Angst</p>
+              <h3 data-i18n="services.svc5.title">Kinderzahnheilkunde</h3>
+              <p data-i18n="services.svc5.desc">Kinderfreundliche Zahnmedizin — spielerisch und ohne Angst</p>
               <a href="services/kinderzahnheilkunde.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -247,10 +244,10 @@
           <article class="service-card" data-reveal data-reveal-delay="6">
             <img src="../assets/img/angstpatienten.jpg" alt="Angstpatienten" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Angstpatienten</h3>
-              <p>Mit Einfühlungsvermögen gegen Zahnarztangst — in Ihrem Tempo</p>
+              <h3 data-i18n="services.svc6.title">Angstpatienten</h3>
+              <p data-i18n="services.svc6.desc">Mit Einfühlungsvermögen gegen Zahnarztangst — in Ihrem Tempo</p>
               <a href="services/angstpatienten.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -259,10 +256,10 @@
           <article class="service-card" data-reveal data-reveal-delay="7">
             <img src="../assets/img/img_0384-scaled.jpeg" alt="Ästhetische Zahnheilkunde" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Ästhetische Zahnheilkunde</h3>
-              <p>Bleaching, Veneers &amp; Smile Design für Ihr strahlendes Lächeln</p>
+              <h3 data-i18n="services.svc7.title">Ästhetische Zahnheilkunde</h3>
+              <p data-i18n="services.svc7.desc">Bleaching, Veneers &amp; Smile Design für Ihr strahlendes Lächeln</p>
               <a href="services/aesthetik.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -271,10 +268,10 @@
           <article class="service-card" data-reveal data-reveal-delay="8">
             <img src="../assets/img/zahnerhaltung.jpg" alt="Zahnerhaltung" class="service-card-img" loading="lazy" />
             <div class="service-card-body">
-              <h3>Zahnerhaltung</h3>
-              <p>Natürliche Zähne erhalten — mit modernsten, schonenden Verfahren</p>
+              <h3 data-i18n="services.svc8.title">Zahnerhaltung</h3>
+              <p data-i18n="services.svc8.desc">Natürliche Zähne erhalten — mit modernsten, schonenden Verfahren</p>
               <a href="services/zahnerhaltung.html" class="service-card-link">
-                Mehr erfahren
+                <span data-i18n="services.more">Mehr erfahren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
