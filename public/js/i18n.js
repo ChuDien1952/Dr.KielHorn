@@ -319,7 +319,33 @@ const TRANSLATIONS = {
           btn1: '04171 / 71212 — Call Now', btn2: 'Send Message'
         }
       },
-      contact:  { hero: { h1: 'Contact — <em>We Look Forward to Your Visit</em>', desc: 'Book an appointment or send us your questions — we are here for you.', back: 'Back to Homepage' } },
+      contact: {
+        hero: { h1: 'Contact — <em>We Look Forward to Your Visit</em>', desc: 'Book an appointment or send us your questions — we are here for you.', back: 'Back to Homepage' },
+        info: {
+          addr_h3: 'Address', phone_h3: 'Phone', hours_h3: 'Opening Hours',
+          mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday', fri: 'Friday', sat_sun: 'Sat / Sun', closed: 'Closed',
+          emergency_h3: 'Acute Toothache?',
+          emergency_p: 'For severe pain — please call immediately. We will help you quickly and straightforwardly.',
+          emergency_link: '04171 / 71212 — Call Now',
+          parking: '<strong>Free parking</strong> directly in front of the practice — convenient and stress-free.'
+        },
+        form: {
+          title: 'Send Appointment Request',
+          desc: 'Fill in the form — we will get back to you as soon as possible. Fields marked with * are required.',
+          success: 'Thank you! Your request has been received. We will be in touch shortly.',
+          fname: 'First Name *', fname_ph: 'John',
+          lname: 'Last Name *', lname_ph: 'Smith',
+          phone_label: 'Phone *', phone_ph: '04171 / ...',
+          email_label: 'E-Mail (optional)', email_ph: 'john@example.com',
+          concern: 'Concern', concern_ph: 'Please select...',
+          o1: 'Initial Examination', o2: 'Teeth Cleaning', o3: 'Implantology',
+          o4: 'Dentures', o5: 'Aesthetics', o6: 'Anxious Patient', o7: 'Prevention', o8: 'Other',
+          message_label: 'Message', message_ph: 'Your message...',
+          privacy: 'I have read the <a href="datenschutz.html">Privacy Policy</a> and agree. *',
+          submit: 'Send Request'
+        },
+        map: { label: 'Directions', h2: 'How to Find Us' }
+      },
       prophylaxe:        { hero: { h1: 'Prevention — <em>Prevention Is Better than Cure</em>', desc: 'Regular professional cleaning and preventive care keep your teeth healthy for life.', back: 'All Services' } },
       implantologie:     { hero: { h1: 'Implantology — <em>Fixed Tooth Replacement Like Real Teeth</em>', desc: 'Premium implants for a permanent, natural-looking smile that lasts a lifetime.', back: 'All Services' } },
       zahnersatz:        { hero: { h1: 'Dentures — <em>Natural Replacement for Better Quality of Life</em>', desc: 'High-quality crowns, bridges, and dentures from our own in-house laboratory.', back: 'All Services' } },
@@ -646,7 +672,33 @@ const TRANSLATIONS = {
           btn1: '04171 / 71212 — Jetzt anrufen', btn2: 'Nachricht senden'
         }
       },
-      contact:  { hero: { h1: 'Kontakt — <em>Wir freuen uns auf Sie</em>', desc: 'Vereinbaren Sie einen Termin oder senden Sie uns Ihre Fragen — wir sind für Sie da.', back: 'Zurück zur Startseite' } },
+      contact: {
+        hero: { h1: 'Kontakt — <em>Wir freuen uns auf Sie</em>', desc: 'Vereinbaren Sie einen Termin oder senden Sie uns Ihre Fragen — wir sind für Sie da.', back: 'Zurück zur Startseite' },
+        info: {
+          addr_h3: 'Adresse', phone_h3: 'Telefon', hours_h3: 'Sprechzeiten',
+          mon: 'Montag', tue: 'Dienstag', wed: 'Mittwoch', thu: 'Donnerstag', fri: 'Freitag', sat_sun: 'Sa / So', closed: 'Geschlossen',
+          emergency_h3: 'Akute Zahnschmerzen?',
+          emergency_p: 'Bei starken Schmerzen — bitte sofort anrufen. Wir helfen Ihnen schnell und unkompliziert.',
+          emergency_link: '04171 / 71212 — Jetzt anrufen',
+          parking: '<strong>Kostenfreie Parkplätze</strong> direkt vor der Praxis — bequem und ohne Parkstress.'
+        },
+        form: {
+          title: 'Terminanfrage senden',
+          desc: 'Füllen Sie das Formular aus — wir melden uns schnellstmöglich bei Ihnen. Felder mit * sind Pflichtfelder.',
+          success: 'Vielen Dank! Ihre Anfrage ist bei uns eingegangen. Wir melden uns in Kürze.',
+          fname: 'Vorname *', fname_ph: 'Max',
+          lname: 'Nachname *', lname_ph: 'Mustermann',
+          phone_label: 'Telefon *', phone_ph: '04171 / ...',
+          email_label: 'E-Mail (optional)', email_ph: 'max@beispiel.de',
+          concern: 'Anliegen', concern_ph: 'Bitte auswählen...',
+          o1: 'Erstuntersuchung', o2: 'Zahnreinigung', o3: 'Implantologie',
+          o4: 'Zahnersatz', o5: 'Ästhetik', o6: 'Angstpatient', o7: 'Prophylaxe', o8: 'Sonstiges',
+          message_label: 'Nachricht', message_ph: 'Ihre Nachricht...',
+          privacy: 'Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme zu. *',
+          submit: 'Anfrage absenden'
+        },
+        map: { label: 'Anfahrt', h2: 'So finden Sie uns' }
+      },
       prophylaxe:        { hero: { h1: 'Prophylaxe — <em>Vorbeugen ist besser als Heilen</em>', desc: 'Regelmäßige professionelle Zahnreinigung und Vorsorge für lebenslang gesunde Zähne.', back: 'Alle Leistungen' } },
       implantologie:     { hero: { h1: 'Implantologie — <em>Fester Zahnersatz wie echte Zähne</em>', desc: 'Premium-Implantate für ein dauerhaftes, natürlich aussehendes Lächeln, das ein Leben lang hält.', back: 'Alle Leistungen' } },
       zahnersatz:        { hero: { h1: 'Zahnersatz — <em>Natürlicher Ersatz für mehr Lebensqualität</em>', desc: 'Hochwertige Kronen, Brücken und Prothesen aus unserem eigenen Praxislabor.', back: 'Alle Leistungen' } },
