@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -11,12 +11,9 @@
   <link rel="stylesheet" href="../../css/page.css" />
 </head>
 <body>
-
   <a href="#main" class="skip-link">Zum Inhalt springen</a>
-
   <div class="header-accent" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="../../index.html" class="logo">
@@ -25,44 +22,60 @@
       </a>
       <nav class="main-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
         <a href="../../index.html" class="nav-link" data-page="home">Startseite</a>
-        <a href="../services.html" class="nav-link" data-page="services" data-i18n="nav.services">Leistungen</a>
+        <a href="../services.html" class="nav-link active" data-page="services" data-i18n="nav.services">Leistungen</a>
         <a href="../team.html" class="nav-link" data-page="team" data-i18n="nav.team">Team</a>
         <a href="../praxis.html" class="nav-link" data-page="praxis" data-i18n="nav.practice">Praxis</a>
         <a href="../faq.html" class="nav-link" data-page="faq" data-i18n="nav.faq">FAQ</a>
         <a href="../contact.html" class="nav-link" data-page="contact" data-i18n="nav.contact">Kontakt</a>
         <span class="nav-sep" aria-hidden="true"></span>
-        <a href="tel:+494171712120" class="nav-phone">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          04171 / 71212
-        </a>
-                <div class="lang-switcher" id="langSwitcher">
+        <a href="tel:+494171712120" class="nav-phone"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>04171 / 71212</a>
+        <div class="lang-switcher" id="langSwitcher">
           <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
             <img class="lang-flag-img" id="langFlagImg" src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true">
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown" role="menu">
             <button class="lang-option active" data-lang="de" role="menuitem"><img src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true"> Deutsch</button>
-            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/gb.png" alt="EN" aria-hidden="true"> English</button>          </div>
-        </div>        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
+            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/gb.png" alt="EN" aria-hidden="true"> English</button>
+          </div>
+        </div>
+        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
     </div>
   </header>
-<main id="main">
-    <section class="page-hero">
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="svc-detail-hero">
+      <div class="svc-detail-bg" aria-hidden="true"><img src="../../assets/img/svc-aesthetic.jpg" alt="" loading="eager" /></div>
+      <div class="svc-detail-overlay" aria-hidden="true"></div>
+      <div class="svc-detail-fade" aria-hidden="true"></div>
       <div class="container page-hero-inner">
-        <div class="page-hero-icon" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="svc-detail-glass">
+          <div class="page-hero-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h1 data-i18n="pages.aesthetik.hero.h1" data-i18n-html>Ästhetische Zahnheilkunde —<br><em>Ihr strahlendes Lächeln</em></h1>
+          <p class="page-hero-desc" data-i18n="pages.aesthetik.hero.desc">Moderne ästhetische Zahnheilkunde verbindet Funktion und Schönheit. Von dezenten Korrekturen bis zum kompletten Smile Makeover — wir verwirklichen Ihr Wunschlächeln.</p>
+          <a href="../services.html" class="back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg><span data-i18n="pages.aesthetik.hero.back">← Alle Leistungen</span></a>
         </div>
-        <h1 data-i18n="pages.aesthetik.hero.h1" data-i18n-html>Ästhetische Zahnheilkunde —<br><em>Ihr strahlendes Lächeln</em></h1>
-        <p class="page-hero-desc" data-i18n="pages.aesthetik.hero.desc">Moderne ästhetische Zahnheilkunde verbindet Funktion und Schönheit. Von dezenten Korrekturen bis zum kompletten Smile Makeover — wir verwirklichen Ihr Wunschlächeln.</p>
-        <a href="../services.html" class="back-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          <span data-i18n="pages.aesthetik.hero.back">← Alle Leistungen
-        </span></a>
       </div>
     </section>
 
+    <!-- SERVICE NAV -->
+    <nav class="svc-nav-bar" aria-label="Leistungsnavigation">
+      <div class="container svc-nav-inner">
+        <a href="prophylaxe.html" class="svc-nav-item" title="Prophylaxe"><div class="svc-nav-circle">1</div><span class="svc-nav-label">Prophylaxe</span></a>
+        <a href="implantologie.html" class="svc-nav-item" title="Implantologie"><div class="svc-nav-circle">2</div><span class="svc-nav-label">Implantologie</span></a>
+        <a href="zahnersatz.html" class="svc-nav-item" title="Zahnersatz"><div class="svc-nav-circle">3</div><span class="svc-nav-label">Zahnersatz</span></a>
+        <a href="oralchirurgie.html" class="svc-nav-item" title="Oralchirurgie"><div class="svc-nav-circle">4</div><span class="svc-nav-label">Oral&shy;chirurgie</span></a>
+        <a href="kinderzahnheilkunde.html" class="svc-nav-item" title="Kinderzahnheilkunde"><div class="svc-nav-circle">5</div><span class="svc-nav-label">Kinder</span></a>
+        <a href="angstpatienten.html" class="svc-nav-item" title="Angstpatienten"><div class="svc-nav-circle">6</div><span class="svc-nav-label">Angst&shy;pat.</span></a>
+        <a href="aesthetik.html" class="svc-nav-item active" title="Ästhetische Zahnheilkunde"><div class="svc-nav-circle">7</div><span class="svc-nav-label">Ästhetik</span></a>
+        <a href="zahnerhaltung.html" class="svc-nav-item" title="Zahnerhaltung"><div class="svc-nav-circle">8</div><span class="svc-nav-label">Zahnerhalt.</span></a>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
     <div class="page-body">
       <div class="container">
         <div class="page-layout">
@@ -80,7 +93,7 @@
                 <ul>
                   <li data-i18n="pages.aesthetik.content.li1_1">Porzellanveneers (Keramik): langlebig, natürliche Lichtbrechung</li>
                   <li data-i18n="pages.aesthetik.content.li1_2">Kompositveneers: weniger invasiv, kostengünstiger</li>
-                  <li data-i18n="pages.aesthetik.content.li1_3">No-Prep-Veneers: gänzlich ohne Zahnschlifff</li>
+                  <li data-i18n="pages.aesthetik.content.li1_3">No-Prep-Veneers: gänzlich ohne Zahnschliff</li>
                   <li data-i18n="pages.aesthetik.content.li1_4">Haltbarkeit von 10–20 Jahren bei guter Pflege</li>
                 </ul>
 
@@ -105,6 +118,58 @@
 
                 <h2 data-i18n="pages.aesthetik.content.h2_3">Beratung und Planung</h2>
                 <p data-i18n="pages.aesthetik.content.p6">Jede ästhetische Behandlung beginnt mit einem ausführlichen Beratungsgespräch. Wir hören Ihnen zu, analysieren die aktuelle Situation und entwickeln gemeinsam mit Ihnen einen maßgeschneiderten Plan — transparent bezüglich Kosten, Zeitaufwand und Ergebnis.</p>
+
+                <!-- BENEFITS -->
+                <h2 style="margin-top:40px;padding-top:40px;border-top:1px solid var(--border)">Ihr Lächeln — Ihre Investition</h2>
+                <div class="svc-benefits-grid">
+                  <div class="svc-benefit-card">
+                    <div class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+                    <h4>Strahlendes Lächeln</h4>
+                    <p>Ein schönes Lächeln verändert Ihr Leben — mehr Selbstbewusstsein, bessere Ausstrahlung, positiver erster Eindruck.</p>
+                  </div>
+                  <div class="svc-benefit-card">
+                    <div class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                    <h4>Digital Smile Design</h4>
+                    <p>Mit moderner Software sehen Sie Ihr neues Lächeln schon vor der ersten Behandlung — Sie behalten die Kontrolle.</p>
+                  </div>
+                  <div class="svc-benefit-card">
+                    <div class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/></svg></div>
+                    <h4>Natürlich &amp; dauerhaft</h4>
+                    <p>Wir arbeiten mit hochwertigen Keramikmaterialien — das Ergebnis sieht natürlich aus und hält mit guter Pflege viele Jahre.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ -->
+                <h2 style="margin-top:40px;padding-top:40px;border-top:1px solid var(--border)">Häufige Fragen zur Ästhetik</h2>
+                <div class="svc-faq-list">
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">
+                      <span>Was ist der Unterschied zwischen Veneer und Bonding?</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="svc-faq-a">
+                      <p>Veneers sind im Labor gefertigte Keramikschalen, die dauerhaft auf den Zahn aufgeklebt werden — hochpräzise, langlebig (10–20 Jahre), aber kostenintensiver. Bonding ist eine direkte Methode: Kompositmaterial wird direkt auf den Zahn aufgetragen und geformt — günstiger, schneller (oft einmalig), aber weniger langlebig (5–8 Jahre) und weniger resistent gegen Verfärbungen.</p>
+                    </div>
+                  </div>
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">
+                      <span>Ist Bleaching schädlich für den Zahnschmelz?</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="svc-faq-a">
+                      <p>Professionelles Bleaching, das von einem Zahnarzt durchgeführt wird, ist bei gesunden Zähnen sicher. Die verwendeten Peroxid-Konzentrationen sind so gewählt, dass der Zahnschmelz nicht dauerhaft geschädigt wird. Temporäre Empfindlichkeit ist möglich. Wir prüfen vor dem Bleaching, ob Ihre Zähne geeignet sind und wählen die schonendste Methode.</p>
+                    </div>
+                  </div>
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">
+                      <span>Wie lange halten Veneers?</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="svc-faq-a">
+                      <p>Keramik-Veneers halten bei guter Pflege 10–20 Jahre oder länger. Entscheidend sind: regelmäßige Prophylaxe, Verwendung einer Aufbissschiene bei Bruxismus (Zähnepressen), Vermeidung von harten Speisen (Nüsse beißen) und guter häuslicher Mundhygiene. Kompositveneers halten 5–8 Jahre und können repariert oder erneuert werden.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -146,13 +211,13 @@
                 </nav>
               </div>
             </div>
-
             <div class="sidebar-card sidebar-card--nopad">
               <img src="../../assets/img/img_0383-scaled.jpeg" alt="Unsere Praxis in Winsen (Luhe)" style="width:100%;height:190px;object-fit:cover;border-radius:var(--radius-md);display:block" loading="lazy" />
               <div style="padding:14px 16px 16px;background:var(--bg);border-radius:0 0 var(--radius-md) var(--radius-md)">
                 <p style="font-size:.8rem;color:var(--text-muted);text-align:center;margin:0" data-i18n="svc_sidebar.img_caption">Zahnarztpraxis Dr. Kielhorn · Winsen (Luhe)</p>
               </div>
-            </div>          </aside>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
@@ -169,16 +234,17 @@
     </div>
     <div class="footer-bottom"><div class="container footer-bottom-inner"><p data-i18n="footer.copyright">© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="../impressum.html" data-i18n="footer.legal_links.impressum">Impressum</a><a href="../datenschutz.html" data-i18n="footer.legal_links.datenschutz">Datenschutz</a></div></div></div>
   </footer>
+
   <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
   <script>
-  /* Active nav */
   (function(){var p=location.pathname;document.querySelectorAll('.nav-link[data-page]').forEach(function(a){var pg=a.dataset.page;if(pg==='home'&&(p==='/'||p.endsWith('index.html'))){a.classList.add('active');}else if(pg!=='home'&&p.indexOf(pg)!==-1){a.classList.add('active');}});})();
-    const header=document.getElementById('siteHeader'),scrollTop=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
-    window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTop.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
-    scrollTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-    const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
-    hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
-    document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.1}).observe(el);});
+  const header=document.getElementById('siteHeader'),scrollTop=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
+  window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTop.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
+  scrollTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
+  hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
+  document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.1}).observe(el);});
+  document.querySelectorAll('.svc-faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.svc-faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.svc-faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.svc-faq-q').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});
   </script>
   <script src="../../js/i18n.js"></script>
 </body>

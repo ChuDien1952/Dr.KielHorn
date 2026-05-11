@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -11,12 +11,9 @@
   <link rel="stylesheet" href="../../css/page.css" />
 </head>
 <body>
-
   <a href="#main" class="skip-link">Zum Inhalt springen</a>
-
   <div class="header-accent" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="../../index.html" class="logo">
@@ -25,106 +22,82 @@
       </a>
       <nav class="main-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
         <a href="../../index.html" class="nav-link" data-page="home">Startseite</a>
-        <a href="../services.html" class="nav-link" data-page="services" data-i18n="nav.services">Leistungen</a>
+        <a href="../services.html" class="nav-link active" data-page="services" data-i18n="nav.services">Leistungen</a>
         <a href="../team.html" class="nav-link" data-page="team" data-i18n="nav.team">Team</a>
         <a href="../praxis.html" class="nav-link" data-page="praxis" data-i18n="nav.practice">Praxis</a>
         <a href="../faq.html" class="nav-link" data-page="faq" data-i18n="nav.faq">FAQ</a>
         <a href="../contact.html" class="nav-link" data-page="contact" data-i18n="nav.contact">Kontakt</a>
         <span class="nav-sep" aria-hidden="true"></span>
-        <a href="tel:+494171712120" class="nav-phone">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          04171 / 71212
-        </a>
-                <div class="lang-switcher" id="langSwitcher">
+        <a href="tel:+494171712120" class="nav-phone"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>04171 / 71212</a>
+        <div class="lang-switcher" id="langSwitcher">
           <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
             <img class="lang-flag-img" id="langFlagImg" src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true">
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="lang-dropdown" id="langDropdown" role="menu">
             <button class="lang-option active" data-lang="de" role="menuitem"><img src="https://flagcdn.com/w20/de.png" alt="DE" aria-hidden="true"> Deutsch</button>
-            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/gb.png" alt="EN" aria-hidden="true"> English</button>          </div>
-        </div>        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
+            <button class="lang-option" data-lang="en" role="menuitem"><img src="https://flagcdn.com/w20/gb.png" alt="EN" aria-hidden="true"> English</button>
+          </div>
+        </div>
+        <a href="tel:+494171712120" class="btn btn-primary btn-sm" data-i18n="nav.cta">Termin buchen</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
     </div>
   </header>
-<main id="main">
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
+  <main id="main">
+    <!-- HERO -->
+    <section class="svc-detail-hero">
+      <div class="svc-detail-bg" aria-hidden="true"><img src="../../assets/img/svc-prevention.jpg" alt="" loading="eager" /></div>
+      <div class="svc-detail-overlay" aria-hidden="true"></div>
+      <div class="svc-detail-fade" aria-hidden="true"></div>
       <div class="container page-hero-inner">
-        <div class="page-hero-icon" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="svc-detail-glass">
+          <div class="page-hero-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h1 data-i18n="pages.prophylaxe.hero.h1" data-i18n-html>Prophylaxe &amp; Professionelle<br><em>Zahnreinigung</em></h1>
+          <p class="page-hero-desc" data-i18n="pages.prophylaxe.hero.desc">Gesunde Zähne beginnen mit konsequenter Vorsorge. Unsere professionelle Zahnreinigung entfernt hartnäckige Beläge und schützt Ihre Zähne langfristig.</p>
+          <a href="../services.html" class="back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg><span data-i18n="pages.prophylaxe.hero.back">← Alle Leistungen</span></a>
         </div>
-        <h1 data-i18n="pages.prophylaxe.hero.h1" data-i18n-html>Prophylaxe &amp; Professionelle<br><em>Zahnreinigung</em></h1>
-        <p class="page-hero-desc" data-i18n="pages.prophylaxe.hero.desc">Gesunde Zähne beginnen mit konsequenter Vorsorge. Unsere professionelle Zahnreinigung entfernt hartnäckige Beläge und schützt Ihre Zähne langfristig.</p>
-        <a href="../services.html" class="back-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          <span data-i18n="pages.prophylaxe.hero.back">← Alle Leistungen
-        </span></a>
       </div>
     </section>
 
-    <!-- PAGE BODY -->
+    <!-- SERVICE NAV -->
+    <nav class="svc-nav-bar" aria-label="Leistungsnavigation">
+      <div class="container svc-nav-inner">
+        <a href="prophylaxe.html" class="svc-nav-item active" title="Prophylaxe"><div class="svc-nav-circle">1</div><span class="svc-nav-label">Prophylaxe</span></a>
+        <a href="implantologie.html" class="svc-nav-item" title="Implantologie"><div class="svc-nav-circle">2</div><span class="svc-nav-label">Implantologie</span></a>
+        <a href="zahnersatz.html" class="svc-nav-item" title="Zahnersatz"><div class="svc-nav-circle">3</div><span class="svc-nav-label">Zahnersatz</span></a>
+        <a href="oralchirurgie.html" class="svc-nav-item" title="Oralchirurgie"><div class="svc-nav-circle">4</div><span class="svc-nav-label">Oral&shy;chirurgie</span></a>
+        <a href="kinderzahnheilkunde.html" class="svc-nav-item" title="Kinderzahnheilkunde"><div class="svc-nav-circle">5</div><span class="svc-nav-label">Kinder</span></a>
+        <a href="angstpatienten.html" class="svc-nav-item" title="Angstpatienten"><div class="svc-nav-circle">6</div><span class="svc-nav-label">Angst&shy;pat.</span></a>
+        <a href="aesthetik.html" class="svc-nav-item" title="Ästhetische Zahnheilkunde"><div class="svc-nav-circle">7</div><span class="svc-nav-label">Ästhetik</span></a>
+        <a href="zahnerhaltung.html" class="svc-nav-item" title="Zahnerhaltung"><div class="svc-nav-circle">8</div><span class="svc-nav-label">Zahnerhalt.</span></a>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
     <div class="page-body">
       <div class="container">
         <div class="page-layout">
-
-          <!-- MAIN CONTENT -->
           <div>
             <div class="content-card" data-reveal>
               <img src="../../assets/img/svc-prevention.jpg" alt="Professionelle Zahnreinigung" class="svc-page-image" />
-
               <div class="page-content">
                 <h2 data-i18n="pages.prophylaxe.content.h2_1">Warum professionelle Zahnreinigung so wichtig ist</h2>
                 <p data-i18n="pages.prophylaxe.content.p1">Auch bei sorgfältigster täglicher Mundhygiene können sich an schwer erreichbaren Stellen Zahnbeläge (Plaque) und Zahnstein bilden. Diese können mit normalen Zahnbürsten und Zahnseide nicht vollständig entfernt werden. Nur eine professionelle Zahnreinigung (PZR) kann diese hartnäckigen Ablagerungen gründlich beseitigen und so Ihrer Mundgesundheit langfristig zugutekommen.</p>
                 <p data-i18n="pages.prophylaxe.content.p2">Wissenschaftliche Studien belegen, dass regelmäßige PZR das Risiko von Karies, Parodontitis und Zahnverlust deutlich senkt. Sie ist eine Investition in Ihre Zahngesundheit — und damit in Ihre Lebensqualität.</p>
-
                 <div class="highlight-box">
                   <p data-i18n="pages.prophylaxe.content.box" data-i18n-html><strong>Empfehlung:</strong> Für die meisten Patienten empfehlen wir eine professionelle Zahnreinigung 2× pro Jahr. Bei erhöhtem Karies- oder Parodontitisrisiko kann eine häufigere Behandlung sinnvoll sein.</p>
                 </div>
-
                 <h2 data-i18n="pages.prophylaxe.content.h2_2">Was erwartet Sie bei der PZR?</h2>
                 <p data-i18n="pages.prophylaxe.content.p3">Unsere erfahrenen Zahnarzthelfer:innen führen die professionelle Zahnreinigung schonend und gründlich durch. Der Ablauf:</p>
-
                 <div class="steps-list">
-                  <div class="step-item">
-                    <div class="step-num">1</div>
-                    <div class="step-text">
-                      <h4 data-i18n="pages.prophylaxe.content.s1_h4">Befundaufnahme</h4>
-                      <p data-i18n="pages.prophylaxe.content.s1_p">Zunächst wird der aktuelle Zustand Ihrer Zähne und Ihres Zahnfleisches beurteilt.</p>
-                    </div>
-                  </div>
-                  <div class="step-item">
-                    <div class="step-num">2</div>
-                    <div class="step-text">
-                      <h4 data-i18n="pages.prophylaxe.content.s2_h4">Entfernung von Zahnstein</h4>
-                      <p data-i18n="pages.prophylaxe.content.s2_p">Mit Ultraschall und speziellen Handinstrumenten wird Zahnstein oberhalb und unterhalb des Zahnfleischrandes schonend abgetragen.</p>
-                    </div>
-                  </div>
-                  <div class="step-item">
-                    <div class="step-num">3</div>
-                    <div class="step-text">
-                      <h4 data-i18n="pages.prophylaxe.content.s3_h4">Politur</h4>
-                      <p data-i18n="pages.prophylaxe.content.s3_p">Alle Zahnoberflächen werden mit einer speziellen Paste poliert — so haften künftig weniger Beläge an.</p>
-                    </div>
-                  </div>
-                  <div class="step-item">
-                    <div class="step-num">4</div>
-                    <div class="step-text">
-                      <h4 data-i18n="pages.prophylaxe.content.s4_h4">Fluoridierung</h4>
-                      <p data-i18n="pages.prophylaxe.content.s4_p">Abschließend werden die Zähne mit Fluoridgel oder -lack behandelt, um den Zahnschmelz zu stärken.</p>
-                    </div>
-                  </div>
-                  <div class="step-item">
-                    <div class="step-num">5</div>
-                    <div class="step-text">
-                      <h4 data-i18n="pages.prophylaxe.content.s5_h4">Mundhygieneberatung</h4>
-                      <p data-i18n="pages.prophylaxe.content.s5_p">Sie erhalten individuelle Tipps für Ihre häusliche Mundhygiene — Zahnbürste, Zahnseide, Mundspülung.</p>
-                    </div>
-                  </div>
+                  <div class="step-item"><div class="step-num">1</div><div class="step-text"><h4 data-i18n="pages.prophylaxe.content.s1_h4">Befundaufnahme</h4><p data-i18n="pages.prophylaxe.content.s1_p">Zunächst wird der aktuelle Zustand Ihrer Zähne und Ihres Zahnfleisches beurteilt.</p></div></div>
+                  <div class="step-item"><div class="step-num">2</div><div class="step-text"><h4 data-i18n="pages.prophylaxe.content.s2_h4">Entfernung von Zahnstein</h4><p data-i18n="pages.prophylaxe.content.s2_p">Mit Ultraschall und speziellen Handinstrumenten wird Zahnstein oberhalb und unterhalb des Zahnfleischrandes schonend abgetragen.</p></div></div>
+                  <div class="step-item"><div class="step-num">3</div><div class="step-text"><h4 data-i18n="pages.prophylaxe.content.s3_h4">Politur</h4><p data-i18n="pages.prophylaxe.content.s3_p">Alle Zahnoberflächen werden mit einer speziellen Paste poliert — so haften künftig weniger Beläge an.</p></div></div>
+                  <div class="step-item"><div class="step-num">4</div><div class="step-text"><h4 data-i18n="pages.prophylaxe.content.s4_h4">Fluoridierung</h4><p data-i18n="pages.prophylaxe.content.s4_p">Abschließend werden die Zähne mit Fluoridgel oder -lack behandelt, um den Zahnschmelz zu stärken.</p></div></div>
+                  <div class="step-item"><div class="step-num">5</div><div class="step-text"><h4 data-i18n="pages.prophylaxe.content.s5_h4">Mundhygieneberatung</h4><p data-i18n="pages.prophylaxe.content.s5_p">Sie erhalten individuelle Tipps für Ihre häusliche Mundhygiene — Zahnbürste, Zahnseide, Mundspülung.</p></div></div>
                 </div>
-
                 <h2 data-i18n="pages.prophylaxe.content.h2_3">Vorbeugung gegen Parodontitis</h2>
                 <p data-i18n="pages.prophylaxe.content.p4">Parodontitis ist eine Entzündung des Zahnhalteapparats und eine der häufigsten Ursachen für Zahnverlust im Erwachsenenalter. Sie entsteht durch Bakterien in Zahnbelägen, die das Zahnfleisch und den Knochen angreifen. Regelmäßige Prophylaxe ist die wirksamste Vorbeugung.</p>
                 <ul>
@@ -134,9 +107,49 @@
                   <li data-i18n="pages.prophylaxe.content.li4">Erhalt und Verbesserung der Zahnästhetik</li>
                   <li data-i18n="pages.prophylaxe.content.li5">Systemische Gesundheitsvorteile (Herz, Diabetes)</li>
                 </ul>
-
                 <h2 data-i18n="pages.prophylaxe.content.h2_4">Kosten und Kostenübernahme</h2>
                 <p data-i18n="pages.prophylaxe.content.p5">Die professionelle Zahnreinigung ist eine Privatleistung, die von der gesetzlichen Krankenkasse in der Regel nicht übernommen wird. Die Kosten variieren je nach Aufwand. Viele private Zusatzversicherungen übernehmen die Kosten ganz oder teilweise. Sprechen Sie uns gerne an — wir beraten Sie transparent zu den Kosten.</p>
+
+                <!-- BENEFITS -->
+                <h2 style="margin-top:40px;padding-top:40px;border-top:1px solid var(--border)">Warum Prophylaxe bei Dr. Kielhorn?</h2>
+                <div class="svc-benefits-grid">
+                  <div class="svc-benefit-card">
+                    <div class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <h4>Langfristige Gesundheit</h4>
+                    <p>Regelmäßige PZR reduziert das Karies- und Parodontitisrisiko nachweislich und schützt Ihre Zähne ein Leben lang.</p>
+                  </div>
+                  <div class="svc-benefit-card">
+                    <div class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+                    <h4>Strahlend weiße Zähne</h4>
+                    <p>Zahnstein und Verfärbungen werden gründlich entfernt — für ein frisches, weißeres Lächeln nach jeder Sitzung.</p>
+                  </div>
+                  <div class="svc-benefit-card">
+                    <div class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                    <h4>Kosten sparen</h4>
+                    <p>Vorsorge ist günstiger als Behandlung. Eine PZR kostet einen Bruchteil einer aufwendigen Parodontitis-Therapie.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ -->
+                <h2 style="margin-top:40px;padding-top:40px;border-top:1px solid var(--border)">Häufige Fragen zur Prophylaxe</h2>
+                <div class="svc-faq">
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">Wie oft sollte ich zur professionellen Zahnreinigung?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="svc-faq-a">Für die meisten Patienten empfehlen wir 2× pro Jahr. Bei erhöhtem Risiko (Raucher, Diabetiker, Parodontitis-Patienten) kann eine häufigere Behandlung — bis zu 4× jährlich — sinnvoll sein. Wir beraten Sie individuell.</div>
+                  </div>
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">Ist die PZR schmerzhaft?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="svc-faq-a">Die professionelle Zahnreinigung ist in der Regel nicht schmerzhaft. Bei empfindlichen Zähnen oder entzündetem Zahnfleisch kann es zu leichten Missempfindungen kommen — sprechen Sie uns an, wir passen die Behandlung entsprechend an.</div>
+                  </div>
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">Übernimmt die Krankenkasse die Kosten?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="svc-faq-a">Die GKV übernimmt die PZR in der Regel nicht. Viele private Zusatzversicherungen übernehmen die Kosten jedoch vollständig oder teilweise. Die meisten Zahnzusatzversicherungen decken 2 PZR pro Jahr ab.</div>
+                  </div>
+                  <div class="svc-faq-item">
+                    <button class="svc-faq-q" aria-expanded="false">Wie lange dauert eine PZR?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="svc-faq-a">Eine professionelle Zahnreinigung dauert je nach Aufwand 45 bis 90 Minuten. Beim ersten Termin nehmen wir uns besonders viel Zeit, um Ihre individuelle Mundsituation kennenzulernen.</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -144,30 +157,19 @@
           <!-- SIDEBAR -->
           <aside class="sidebar">
             <div class="sidebar-card">
-              <div class="sidebar-card-header">
-                <h3 data-i18n="pages.prophylaxe.sidebar.card1_h3">Termin vereinbaren</h3>
-              </div>
+              <div class="sidebar-card-header"><h3 data-i18n="pages.prophylaxe.sidebar.card1_h3">Termin vereinbaren</h3></div>
               <div class="sidebar-card-body">
                 <p data-i18n="pages.prophylaxe.sidebar.card1_p">Möchten Sie einen Termin für Ihre professionelle Zahnreinigung vereinbaren? Wir freuen uns auf Sie!</p>
-                <div class="contact-detail">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-                  <div><a href="tel:+494171712120">04171 / 71212</a></div>
-                </div>
-                <div class="contact-detail">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  <div><a href="mailto:info@zahnarzt-kielhorn-winsen.de">info@zahnarzt-kielhorn-winsen.de</a></div>
-                </div>
+                <div class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg><div><a href="tel:+494171712120">04171 / 71212</a></div></div>
+                <div class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><a href="mailto:info@zahnarzt-kielhorn-winsen.de">info@zahnarzt-kielhorn-winsen.de</a></div></div>
                 <div class="sidebar-cta">
                   <a href="tel:+494171712120" class="btn btn-primary" data-i18n="svc_sidebar.call">Jetzt anrufen</a>
                   <a href="../contact.html" class="btn btn-outline" data-i18n="svc_sidebar.msg">Nachricht senden</a>
                 </div>
               </div>
             </div>
-
             <div class="sidebar-card">
-              <div class="sidebar-card-header">
-                <h3 data-i18n="svc_sidebar.hours_h3">Sprechzeiten</h3>
-              </div>
+              <div class="sidebar-card-header"><h3 data-i18n="svc_sidebar.hours_h3">Sprechzeiten</h3></div>
               <div class="sidebar-card-body">
                 <div class="info-list">
                   <div class="info-row"><span data-i18n="svc_sidebar.mon">Montag</span><span>08–13 / 14–18 Uhr</span></div>
@@ -179,11 +181,8 @@
                 </div>
               </div>
             </div>
-
             <div class="sidebar-card">
-              <div class="sidebar-card-header">
-                <h3 data-i18n="pages.prophylaxe.sidebar.card3_h3">Weitere Leistungen</h3>
-              </div>
+              <div class="sidebar-card-header"><h3 data-i18n="pages.prophylaxe.sidebar.card3_h3">Weitere Leistungen</h3></div>
               <div class="sidebar-card-body">
                 <nav style="display:flex;flex-direction:column;gap:8px">
                   <a href="implantologie.html" style="font-size:.88rem;color:var(--primary);font-weight:500" data-i18n="svc_names.implantologie">Implantologie</a>
@@ -194,113 +193,36 @@
                 </nav>
               </div>
             </div>
-
             <div class="sidebar-card sidebar-card--nopad">
               <img src="../../assets/img/img_0368-scaled.jpeg" alt="Unsere Praxis in Winsen (Luhe)" style="width:100%;height:190px;object-fit:cover;border-radius:var(--radius-md);display:block" loading="lazy" />
-              <div style="padding:14px 16px 16px;background:var(--bg);border-radius:0 0 var(--radius-md) var(--radius-md)">
-                <p style="font-size:.8rem;color:var(--text-muted);text-align:center;margin:0">Zahnarztpraxis Dr. Kielhorn · Winsen (Luhe)</p>
-              </div>
-            </div>          </aside>
-
+              <div style="padding:14px 16px 16px;background:var(--bg);border-radius:0 0 var(--radius-md) var(--radius-md)"><p style="font-size:.8rem;color:var(--text-muted);text-align:center;margin:0" data-i18n="svc_sidebar.img_caption">Zahnarztpraxis Dr. Kielhorn · Winsen (Luhe)</p></div>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-top">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <a href="../../index.html" class="logo logo--footer">
-            <img src="../../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" />
-            <span class="logo-text-footer">Dr. Kielhorn</span>
-          </a>
-          <p data-i18n="footer.tagline">Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p>
-          <address>
-            Niedersachsenstraße 13a<br>
-            21423 Winsen (Luhe)<br>
-            <a href="tel:+494171712120">04171 / 71212</a>
-          </address>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n="footer.nav_title">Navigation</h5>
-          <nav>
-            <a href="../../index.html" data-i18n="footer.links.home">Startseite</a>
-            <a href="../../index.html#services" data-i18n="footer.links.services">Leistungen</a>
-            <a href="../../index.html#team" data-i18n="footer.links.team">Team</a>
-            <a href="../../index.html#contact" data-i18n="footer.links.contact">Kontakt</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n="footer.services_title">Leistungen</h5>
-          <nav>
-            <a href="prophylaxe.html" data-i18n="footer.services_links.prevention">Prophylaxe</a>
-            <a href="implantologie.html" data-i18n="footer.services_links.implantology">Implantologie</a>
-            <a href="zahnersatz.html" data-i18n="footer.services_links.dentures">Zahnersatz</a>
-            <a href="oralchirurgie.html" data-i18n="footer.services_links.surgery">Oralchirurgie</a>
-            <a href="kinderzahnheilkunde.html" data-i18n="footer.services_links.children">Kinderzahnheilkunde</a>
-            <a href="angstpatienten.html" data-i18n="footer.services_links.anxiety">Angstpatienten</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n="footer.legal_title">Rechtliches</h5>
-          <nav>
-            <a href="../impressum.html" data-i18n="footer.legal_links.imprint">Impressum</a>
-            <a href="../datenschutz.html" data-i18n="footer.legal_links.privacy">Datenschutz</a>
-            <a href="../barrierefreiheit.html" data-i18n="footer.legal_links.accessibility">Barrierefreiheit</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p data-i18n="footer.copyright">© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p>
-        <div class="footer-links">
-          <a href="../impressum.html" data-i18n="footer.legal_links.imprint">Impressum</a>
-          <a href="../datenschutz.html" data-i18n="footer.legal_links.privacy">Datenschutz</a>
-        </div>
-      </div>
-    </div>
+    <div class="footer-top"><div class="container footer-inner">
+      <div class="footer-brand"><a href="../../index.html" class="logo logo--footer"><img src="../../assets/img/logo.svg" alt="Dr. Kielhorn" class="logo-img" onerror="this.style.display='none'" /><span class="logo-text-footer">Dr. Kielhorn</span></a><p data-i18n="footer.tagline">Qualitätszahnmedizin mit persönlicher Note in Winsen (Luhe).</p><address>Niedersachsenstraße 13a<br>21423 Winsen (Luhe)<br><a href="tel:+494171712120">04171 / 71212</a></address></div>
+      <div class="footer-col"><h5 data-i18n="footer.nav_title">Navigation</h5><nav><a href="../../index.html" data-i18n="nav.home">Startseite</a><a href="../../index.html#services" data-i18n="nav.services">Leistungen</a><a href="../../index.html#team" data-i18n="nav.team">Team</a><a href="../../index.html#contact" data-i18n="nav.contact">Kontakt</a></nav></div>
+      <div class="footer-col"><h5 data-i18n="footer.services_title">Leistungen</h5><nav><a href="prophylaxe.html" data-i18n="footer.services_links.prophylaxe">Prophylaxe</a><a href="implantologie.html" data-i18n="footer.services_links.implantologie">Implantologie</a><a href="zahnersatz.html" data-i18n="footer.services_links.zahnersatz">Zahnersatz</a><a href="oralchirurgie.html" data-i18n="footer.services_links.oralchirurgie">Oralchirurgie</a><a href="aesthetik.html" data-i18n="footer.services_links.aesthetics">Ästhetik</a></nav></div>
+      <div class="footer-col"><h5 data-i18n="footer.legal_title">Rechtliches</h5><nav><a href="../impressum.html" data-i18n="footer.legal_links.impressum">Impressum</a><a href="../datenschutz.html" data-i18n="footer.legal_links.datenschutz">Datenschutz</a><a href="../barrierefreiheit.html" data-i18n="footer.legal_links.barrierefreiheit">Barrierefreiheit</a></nav></div>
+    </div></div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><p data-i18n="footer.copyright">© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.</p><div class="footer-links"><a href="../impressum.html" data-i18n="footer.legal_links.impressum">Impressum</a><a href="../datenschutz.html" data-i18n="footer.legal_links.datenschutz">Datenschutz</a></div></div></div>
   </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-
+  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
   <script>
-  /* Active nav */
   (function(){var p=location.pathname;document.querySelectorAll('.nav-link[data-page]').forEach(function(a){var pg=a.dataset.page;if(pg==='home'&&(p==='/'||p.endsWith('index.html'))){a.classList.add('active');}else if(pg!=='home'&&p.indexOf(pg)!==-1){a.classList.add('active');}});})();
-    // Header scroll
-    const header = document.getElementById('siteHeader');
-    const scrollTop = document.getElementById('scrollTop');
-    const progress = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 20);
-      scrollTop.classList.toggle('visible', window.scrollY > 500);
-      if (progress) {
-        const total = document.documentElement.scrollHeight - window.innerHeight;
-        progress.style.transform = 'scaleX(' + (window.scrollY / total) + ')';
-      }
-    }, { passive: true });
-    scrollTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('mainNav');
-    hamburger.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      hamburger.setAttribute('aria-expanded', String(open));
-    });
-
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('[data-reveal]');
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    revealEls.forEach(el => revealObs.observe(el));
+  const header=document.getElementById('siteHeader'),scrollTop=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
+  window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTop.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
+  scrollTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
+  hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
+  document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.1}).observe(el);});
+  document.querySelectorAll('.svc-faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.svc-faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.svc-faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.svc-faq-q').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});
   </script>
   <script src="../../js/i18n.js"></script>
 </body>
