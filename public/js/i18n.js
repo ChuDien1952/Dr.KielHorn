@@ -6,7 +6,7 @@
 const TRANSLATIONS = {
   en: {
     header: {
-      subtitle: 'Zahnarztpraxis Â· Winsen (Luhe)'
+      subtitle: 'Zahnarztpraxis • Winsen (Luhe)'
     },
     nav: {
       home: 'Home',
@@ -208,7 +208,7 @@ const TRANSLATIONS = {
         privacy: 'Privacy Policy',
         accessibility: 'Accessibility'
       },
-      copyright: 'Â© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. All rights reserved.'
+      copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. All rights reserved.'
     },
     svc_sidebar: {
       call: 'Call Now',
@@ -218,7 +218,7 @@ const TRANSLATIONS = {
       more_h3: 'More Services',
       mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday', fri: 'Friday',
       sat_sun: 'Sat / Sun', closed: 'Closed',
-      img_caption: 'Dental Practice Dr. Kielhorn · Winsen (Luhe)'
+      img_caption: 'Dental Practice Dr. Kielhorn • Winsen (Luhe)'
     },
     svc_names: {
       prophylaxe: 'Prevention', prophylaxe_full: 'Prevention & Dental Cleaning',
@@ -650,7 +650,7 @@ const TRANSLATIONS = {
 
   de: {
     header: {
-      subtitle: 'Zahnarztpraxis Â· Winsen (Luhe)'
+      subtitle: 'Zahnarztpraxis • Winsen (Luhe)'
     },
     nav: {
       home: 'Startseite',
@@ -852,7 +852,7 @@ const TRANSLATIONS = {
         privacy: 'Datenschutz',
         accessibility: 'Barrierefreiheit'
       },
-      copyright: 'Â© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.'
+      copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.'
     },
     svc_sidebar: {
       call: 'Jetzt anrufen',
@@ -862,7 +862,7 @@ const TRANSLATIONS = {
       more_h3: 'Weitere Leistungen',
       mon: 'Montag', tue: 'Dienstag', wed: 'Mittwoch', thu: 'Donnerstag', fri: 'Freitag',
       sat_sun: 'Sa / So', closed: 'Geschlossen',
-      img_caption: 'Zahnarztpraxis Dr. Kielhorn · Winsen (Luhe)'
+      img_caption: 'Zahnarztpraxis Dr. Kielhorn • Winsen (Luhe)'
     },
     svc_names: {
       prophylaxe: 'Prophylaxe', prophylaxe_full: 'Prophylaxe & Zahnreinigung',
