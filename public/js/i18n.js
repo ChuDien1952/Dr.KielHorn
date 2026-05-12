@@ -386,6 +386,19 @@ const TRANSLATIONS = {
           li4: 'Preservation and improvement of dental aesthetics', li5: 'Systemic health benefits (heart, diabetes)',
           h2_4: 'Costs and coverage',
           p5: 'Professional dental cleaning is a private service generally not covered by statutory health insurance. Costs vary depending on the effort involved. Many supplementary private insurance policies cover costs fully or partially. Please ask us — we will advise you transparently about the costs.'
+        },
+        benefits: {
+          h2: 'Why Prevention at Dr. Kielhorn?',
+          b1_h4: 'Long-Term Health', b1_p: 'Regular PDC demonstrably reduces the risk of tooth decay and periodontitis, protecting your teeth for life.',
+          b2_h4: 'Radiant White Teeth', b2_p: 'Tartar and stains are thoroughly removed — for a fresh, whiter smile after every session.',
+          b3_h4: 'Save Money', b3_p: 'Prevention is cheaper than treatment. A PDC costs a fraction of an elaborate periodontitis therapy.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions about Prevention',
+          q1: 'How often should I have professional dental cleaning?', a1: 'For most patients we recommend twice a year. With increased risk (smokers, diabetics, periodontitis patients) more frequent treatment — up to 4 times a year — may be advisable. We advise you individually.',
+          q2: 'Is the PDC painful?', a2: 'Professional dental cleaning is generally not painful. With sensitive teeth or inflamed gums there may be slight discomfort — please talk to us and we will adjust the treatment accordingly.',
+          q3: 'Does health insurance cover the costs?', a3: 'Statutory health insurance generally does not cover PDC. However, many supplementary private insurance policies cover the costs fully or partially. Most dental supplementary insurances cover 2 PDC sessions per year.',
+          q4: 'How long does a PDC take?', a4: 'A professional dental cleaning takes 45 to 90 minutes depending on the effort. At the first appointment we take extra time to get to know your individual oral situation.'
         }
       },
       implantologie: {
@@ -409,6 +422,19 @@ const TRANSLATIONS = {
           p4: 'Implants can be placed at any age with healthy bone and good general health. Prerequisites are sufficient bone volume, healthy gums and the absence of serious systemic diseases. If bone has been lost, bone augmentation may be necessary — we will advise you individually.',
           h2_5: 'Aftercare and longevity',
           p5: 'Implants require the same care as natural teeth: regular brushing, flossing and professional dental cleaning. With good care, implants last a lifetime. We offer regular implant recall appointments.'
+        },
+        benefits: {
+          h2: 'Why Implants at Dr. Kielhorn?',
+          b1_h4: 'Natural Appearance', b1_p: 'Ceramic crowns on implants are virtually indistinguishable from real teeth — in shape, colour and light refraction.',
+          b2_h4: '20+ Years Durability', b2_p: 'With good care, implants last a lifetime — scientific studies show success rates of over 95% after 10 years.',
+          b3_h4: 'Preserve Bone', b3_p: 'The implant stimulates the jaw like a natural tooth root, preventing bone loss after tooth extraction.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions about Implantology',
+          q1: 'Am I suitable for an implant?', a1: 'Most adults in good general health are suitable candidates. Prerequisites are sufficient jawbone, healthy gums and the absence of uncontrolled diabetes or blood clotting disorders. We clarify your suitability in a free consultation.',
+          q2: 'Is the implantation painful?', a2: 'The procedure itself is carried out under local anaesthesia and is virtually pain-free. After the anaesthesia wears off there may be mild discomfort, which is generally well managed with over-the-counter pain medication. Most patients report it was considerably more pleasant than expected.',
+          q3: 'How long does the entire treatment take?', a3: 'From implantation to the final crown it generally takes 3–6 months. The healing phase alone is 8–16 weeks. During this time you wear a temporary restoration. In cases of good bone, immediate restoration is sometimes possible — we advise you individually.',
+          q4: 'What are the costs and what does insurance cover?', a4: 'Statutory insurance pays a fixed subsidy for the tooth replacement (crown), not for the implant itself. The implant costs are to be paid privately. We prepare a detailed treatment and cost plan and inform you about possible financing options.'
         }
       },
       zahnersatz: {
@@ -433,6 +459,18 @@ const TRANSLATIONS = {
           s4_h4: 'Fitting and aftercare', s4_p: 'Final fitting with instructions for care and follow-up appointments.',
           h2_3: 'Caring for your dentures',
           p4: 'The same care recommendations apply for fixed dentures as for natural teeth. Removable dentures are cleaned daily with a special brush and stored in water overnight. Regular check-ups are important as the jaw can change over time and dentures may need adjustment.'
+        },
+        benefits: {
+          h2: 'Your Advantages With Us',
+          b1_h4: 'Custom-Made', b1_p: 'Every denture is individually made for you — perfectly matched to your tooth colour, shape and jaw anatomy.',
+          b2_h4: 'Premium Materials', b2_p: 'We exclusively use all-ceramic and certified materials from German partner laboratories for the highest quality and durability.',
+          b3_h4: 'Fast Provision', b3_p: 'Thanks to modern CAD/CAM technology and efficiently scheduled appointments, you receive your denture as quickly as possible.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions about Dentures',
+          q1: 'When do I need a crown and when a bridge?', a1: 'A crown is used when a single tooth is severely damaged but the root can still be preserved. A bridge closes a gap between two healthy teeth that serve as pillars. If several teeth are affected or the gap is too large, an implant or denture may be more appropriate. We advise you individually.',
+          q2: 'How long does high-quality denture work last?', a2: 'All-ceramic crowns last 15–20 years or longer with good care. Bridges have a similar life expectancy. Removable dentures should be checked every 5–8 years and adjusted or replaced if necessary, as the jaw changes over time. Regular check-ups are essential.',
+          q3: 'Must I remove the denture at night?', a3: 'Removable dentures should be taken out at night for sleeping and cleaning. This protects the gums and gives the tissue a rest. Fixed dentures or implant-supported dentures remain permanently in the mouth.'
         }
       },
       oralchirurgie: {
@@ -456,6 +494,18 @@ const TRANSLATIONS = {
           li2_1: 'No hard or hot foods in the first 24 hours', li2_2: 'Cool the operated area in case of swelling',
           li2_3: 'Avoid physical exertion for 1–2 days', li2_4: 'Check-up appointment approx. 7–10 days after the procedure',
           li2_5: 'Contact us immediately in case of severe pain or bleeding'
+        },
+        benefits: {
+          h2: 'Why Oral Surgery at Dr. Kielhorn?',
+          b1_h4: 'Gentle Technique', b1_p: 'We use minimally invasive methods, state-of-the-art instruments and magnifying loupes for precise, tissue-preserving work.',
+          b2_h4: 'Effective Anaesthesia', b2_p: 'Finest needles, pre-applied numbing gel and modern anaesthetics — we only begin when you genuinely feel nothing.',
+          b3_h4: 'Aftercare Included', b3_p: 'You receive comprehensive written aftercare instructions and a check-up appointment — we do not leave you alone after the procedure.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions about Oral Surgery',
+          q1: 'How long does healing take after a tooth extraction?', a1: 'The gum generally closes after 1–2 weeks. Complete bone healing takes 2–3 months. In the first few days there may be slight swelling and pain, managed with pain medication and cooling. Recovery time is somewhat longer after wisdom tooth surgery.',
+          q2: 'Do all wisdom teeth need to be removed?', a2: 'No — not every wisdom tooth needs to be removed. If it has fully erupted, can be cleaned well and causes no problems, it can be left in place. We only recommend removal for specific problems: lack of space, inflammation, caries risk or pressure pain on adjacent teeth.',
+          q3: 'What can I eat after the procedure?', a3: 'In the first 24 hours you should only eat soft, lukewarm foods: yoghurt, soup, porridge, banana. Avoid hard, crumbly or very hot foods. No alcohol or nicotine in the first few days. From day 3 onwards you can gradually normalise your diet.'
         }
       },
       kinderzahnheilkunde: {
@@ -476,6 +526,18 @@ const TRANSLATIONS = {
           li1: 'Talk positively about the dentist at home', li2: 'Come along to the first appointment and stay if needed',
           li3: 'Start brushing with the first tooth', li4: 'Use age-appropriate toothpaste with appropriate fluoride content',
           li5: 'Reduce sugary drinks and snacks', li6: 'Praise your child after every dental visit'
+        },
+        benefits: {
+          h2: 'Our Promise for Your Child',
+          b1_h4: 'Child-Friendly', b1_p: 'Our practice is set up for children: friendly atmosphere, toys in the waiting area and a team that loves children.',
+          b2_h4: 'Fear-Free', b2_p: 'Tell-Show-Do, laughing gas sedation and lots of patience: we work so that no child develops a fear of the dentist.',
+          b3_h4: 'Learn Early', b3_p: 'Children who have positive dental experiences early take better care of their teeth and avoid anxiety in adulthood.'
+        },
+        faq: {
+          h2: "Frequently Asked Questions about Children's Dentistry",
+          q1: 'From what age should children visit the dentist?', a1: 'The first visit is recommended with the eruption of the first milk tooth — at about 6–12 months. This first appointment is a getting-to-know-you visit. From the age of 2, half-yearly check-ups are recommended. Statutory insurance pays for half-yearly preventive care from the age of 3.',
+          q2: 'How do I prepare my child for the dental visit?', a2: 'Talk positively about the dentist at home — no horror stories! Explain that the dentist helps teeth stay healthy. Play "dentist" at home to make the situation familiar. Avoid words like "needle" or "drilling". Bring a favourite toy or cuddly animal.',
+          q3: 'Do milk teeth need treatment if they fall out anyway?', a3: 'Yes, absolutely! Milk teeth are placeholders for the permanent teeth. Decayed milk teeth can damage the permanent teeth and cause misalignment. Decay can also cause pain, make chewing difficult and create negative dental experiences. Healthy milk teeth are the foundation for healthy permanent teeth.'
         }
       },
       angstpatienten: {
@@ -498,6 +560,18 @@ const TRANSLATIONS = {
           s1_h4: 'Initial contact by phone', s1_p: 'Simply call us and tell us that you are anxious about the dentist. We will plan the appointment accordingly.',
           s2_h4: 'Getting-to-know-you appointment without treatment', s2_p: 'At the first appointment, we only have a conversation. No instruments, no pressure. Just listening.',
           s3_h4: 'Step-by-step treatment', s3_p: 'We proceed together at your own pace — always with your full consent.'
+        },
+        benefits: {
+          h2: 'Why Anxious Patients Trust Us',
+          b1_h4: 'Empathetic Team', b1_p: 'Our entire team is trained in dealing with dental anxiety. We take your fear seriously — without judgement.',
+          b2_h4: 'Your Pace', b2_p: 'No time pressure, no rushing. We plan generous appointments and take breaks at any time if you wish.',
+          b3_h4: 'Laughing Gas Sedation', b3_p: 'Safe, proven, without side effects. Laughing gas relieves tension and makes the treatment considerably more comfortable.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions from Anxious Patients',
+          q1: 'Am I an anxious patient?', a1: 'If the thought of a dental visit gives you palpitations, you keep postponing appointments, have sleep problems before the appointment or tense up in the treatment chair — then you are an anxious patient. This is not unusual. An estimated 60% of all people have some form of dental anxiety. With us you have come to the right place.',
+          q2: 'Do you offer general anaesthesia?', a2: 'We do not offer general anaesthesia at our practice as this requires an anaesthetist and special equipment. Instead we offer laughing gas sedation (inhalation sedation), which is already sufficient for most anxious patients and very well tolerated. With extreme phobia we can refer you to specialist clinics.',
+          q3: 'What happens at the first appointment?', a3: 'At the first appointment: nothing happens except talking. We do not put you in the treatment chair if you do not want that. We listen to what makes you anxious, explain how we work and answer all your questions. Only when you feel ready do we plan the next step — at your pace.'
         }
       },
       aesthetik: {
@@ -520,6 +594,18 @@ const TRANSLATIONS = {
           box: '<strong>Digital Smile Design:</strong> Before we start, we show you a digital preview of your future smile. This way you can co-design the result and are prepared for your new smile.',
           h2_3: 'Consultation and planning',
           p6: 'Every aesthetic treatment begins with an in-depth consultation. We listen to you, analyse the current situation and develop a tailor-made plan together with you — transparently regarding costs, time required and result.'
+        },
+        benefits: {
+          h2: 'Your Smile — Your Investment',
+          b1_h4: 'Radiant Smile', b1_p: 'A beautiful smile changes your life — more confidence, better charisma, a positive first impression.',
+          b2_h4: 'Digital Smile Design', b2_p: 'With modern software you see your new smile before the first treatment — you stay in control.',
+          b3_h4: 'Natural & Lasting', b3_p: 'We work with high-quality ceramic materials — the result looks natural and lasts many years with good care.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions about Aesthetics',
+          q1: 'What is the difference between a veneer and bonding?', a1: 'Veneers are laboratory-made ceramic shells permanently bonded to the tooth — highly precise, long-lasting (10–20 years) but more costly. Bonding is a direct method: composite material is applied directly to the tooth and shaped — cheaper, faster (often a single session) but less durable (5–8 years) and less stain-resistant.',
+          q2: 'Is bleaching harmful to tooth enamel?', a2: 'Professional bleaching carried out by a dentist is safe for healthy teeth. The peroxide concentrations used are chosen so that the enamel is not permanently damaged. Temporary sensitivity is possible. Before bleaching we check whether your teeth are suitable and choose the gentlest method.',
+          q3: 'How long do veneers last?', a3: 'Ceramic veneers last 10–20 years or longer with good care. Key factors are: regular prophylaxis, use of a bite splint with bruxism, avoidance of hard foods and good home oral hygiene. Composite veneers last 5–8 years and can be repaired or renewed.'
         }
       },
       zahnerhaltung: {
@@ -545,6 +631,18 @@ const TRANSLATIONS = {
           s3_h4: 'Preparation and disinfection', s3_p: 'The root canals are cleaned, prepared and thoroughly disinfected.',
           s4_h4: 'Root filling', s4_p: 'The prepared canals are permanently sealed with a biocompatible material (gutta-percha).',
           s5_h4: 'Crown restoration', s5_p: 'The treated tooth is restored and strengthened long-term with a crown or build-up.'
+        },
+        benefits: {
+          h2: 'Why Preserve Natural Teeth?',
+          b1_h4: 'Keep Your Own Teeth', b1_p: 'Natural teeth offer superior chewing function, sensation and aesthetics — no implant reaches the quality of a healthy natural tooth.',
+          b2_h4: 'Highest Precision', b2_p: 'We work with magnifying loupes and operating microscopes — for minimal substance removal and optimal results even in difficult cases.',
+          b3_h4: 'Pain-Free', b3_p: 'Modern local anaesthesia makes even root canal treatments virtually pain-free. Many patients are positively surprised at how comfortable the procedure is.'
+        },
+        faq: {
+          h2: 'Frequently Asked Questions about Tooth Preservation',
+          q1: 'When is a root canal treatment necessary?', a1: 'A root canal treatment is necessary when the dental pulp has been affected by bacterial infection or has died due to decay, cracks or injury. Symptoms can include: severe toothache, sensitivity to tapping, swelling, darkening of the tooth or sensitivity to heat. An X-ray confirms the diagnosis.',
+          q2: 'Is a root canal treatment painful?', a2: 'The pain is often attributed to the thought of the treatment — not the treatment itself. With modern local anaesthesia the procedure is virtually pain-free. Mild discomfort may occur for a few days after treatment, which is well managed with pain medication. Most patients are surprised at how straightforward it was.',
+          q3: 'Can every tooth really be saved?', a3: 'Not always. Whether a tooth is worth preserving depends on several factors: the condition of the roots, the remaining tooth substance, bone support and the overall findings. We advise you honestly whether preservation makes sense or whether other options (implant, bridge) would be the better long-term choice.'
         }
       }
     }
@@ -932,6 +1030,19 @@ const TRANSLATIONS = {
           li4: 'Erhalt und Verbesserung der Zahnästhetik', li5: 'Systemische Gesundheitsvorteile (Herz, Diabetes)',
           h2_4: 'Kosten und Kostenübernahme',
           p5: 'Die professionelle Zahnreinigung ist eine Privatleistung, die von der gesetzlichen Krankenkasse in der Regel nicht übernommen wird. Die Kosten variieren je nach Aufwand. Viele private Zusatzversicherungen übernehmen die Kosten ganz oder teilweise. Sprechen Sie uns gerne an — wir beraten Sie transparent zu den Kosten.'
+        },
+        benefits: {
+          h2: 'Warum Prophylaxe bei Dr. Kielhorn?',
+          b1_h4: 'Langfristige Gesundheit', b1_p: 'Regelmäßige PZR reduziert das Karies- und Parodontitisrisiko nachweislich und schützt Ihre Zähne ein Leben lang.',
+          b2_h4: 'Strahlend weiße Zähne', b2_p: 'Zahnstein und Verfärbungen werden gründlich entfernt — für ein frisches, weißeres Lächeln nach jeder Sitzung.',
+          b3_h4: 'Kosten sparen', b3_p: 'Vorsorge ist günstiger als Behandlung. Eine PZR kostet einen Bruchteil einer aufwendigen Parodontitis-Therapie.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zur Prophylaxe',
+          q1: 'Wie oft sollte ich zur professionellen Zahnreinigung?', a1: 'Für die meisten Patienten empfehlen wir 2× pro Jahr. Bei erhöhtem Risiko (Raucher, Diabetiker, Parodontitis-Patienten) kann eine häufigere Behandlung — bis zu 4× jährlich — sinnvoll sein. Wir beraten Sie individuell.',
+          q2: 'Ist die PZR schmerzhaft?', a2: 'Die professionelle Zahnreinigung ist in der Regel nicht schmerzhaft. Bei empfindlichen Zähnen oder entzündetem Zahnfleisch kann es zu leichten Missempfindungen kommen — sprechen Sie uns an, wir passen die Behandlung entsprechend an.',
+          q3: 'Übernimmt die Krankenkasse die Kosten?', a3: 'Die GKV übernimmt die PZR in der Regel nicht. Viele private Zusatzversicherungen übernehmen die Kosten jedoch vollständig oder teilweise. Die meisten Zahnzusatzversicherungen decken 2 PZR pro Jahr ab.',
+          q4: 'Wie lange dauert eine PZR?', a4: 'Eine professionelle Zahnreinigung dauert je nach Aufwand 45 bis 90 Minuten. Beim ersten Termin nehmen wir uns besonders viel Zeit, um Ihre individuelle Mundsituation kennenzulernen.'
         }
       },
       implantologie: {
@@ -955,6 +1066,19 @@ const TRANSLATIONS = {
           p4: 'Implantate können bei gesundem Knochen und allgemeiner Gesundheit in jedem Alter eingesetzt werden. Voraussetzungen sind ausreichendes Knochenvolumen, gesundes Zahnfleisch und das Fehlen schwerwiegender Allgemeinerkrankungen. Bei Knochenabbau kann ein Knochenaufbau notwendig sein — wir beraten Sie individuell.',
           h2_5: 'Nachsorge und Langlebigkeit',
           p5: 'Implantate erfordern dieselbe Pflege wie natürliche Zähne: regelmäßiges Zähneputzen, Zahnseide und professionelle Zahnreinigung. Mit guter Pflege halten Implantate ein Leben lang. Wir begleiten Sie langfristig und bieten regelmäßige Implantat-Recalls an.'
+        },
+        benefits: {
+          h2: 'Warum Implantate bei Dr. Kielhorn?',
+          b1_h4: 'Natürliches Aussehen', b1_p: 'Keramikkronen auf Implantaten sind von echten Zähnen kaum zu unterscheiden — in Form, Farbe und Lichtbrechung.',
+          b2_h4: '20+ Jahre Haltbarkeit', b2_p: 'Bei guter Pflege halten Implantate ein Leben lang — wissenschaftliche Studien belegen Erfolgsraten über 95 % nach 10 Jahren.',
+          b3_h4: 'Knochen erhalten', b3_p: 'Das Implantat stimuliert den Kiefer wie eine natürliche Zahnwurzel und verhindert so den gefürchteten Knochenabbau nach Zahnverlust.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zur Implantologie',
+          q1: 'Bin ich für ein Implantat geeignet?', a1: 'Die meisten Erwachsenen mit gesundem Allgemeinzustand sind geeignete Kandidaten. Voraussetzungen sind ausreichend Kieferknochen, gesundes Zahnfleisch und die Abwesenheit von unkontrolliertem Diabetes oder Blutgerinnungsstörungen. Wir klären Ihre Eignung in einem kostenlosen Beratungsgespräch.',
+          q2: 'Ist die Implantation schmerzhaft?', a2: 'Der Eingriff selbst erfolgt unter lokaler Betäubung und ist nahezu schmerzfrei. Nach der Betäubung kann es zu leichten Beschwerden kommen, die in der Regel mit handelsüblichen Schmerzmitteln gut kontrollierbar sind. Die meisten Patienten berichten, dass es deutlich angenehmer war als erwartet.',
+          q3: 'Wie lange dauert die gesamte Behandlung?', a3: 'Von der Implantation bis zur endgültigen Krone dauert es in der Regel 3–6 Monate. Die Einheilphase allein beträgt 8–16 Wochen. In dieser Zeit tragen Sie ein Provisorium. Bei gutem Knochen kann in manchen Fällen eine Sofortversorgung erfolgen — wir beraten Sie individuell.',
+          q4: 'Welche Kosten entstehen und was übernimmt die Kasse?', a4: 'Gesetzliche Krankenkassen zahlen einen Festzuschuss für den Zahnersatz (Krone), nicht für das Implantat selbst. Die Implantatkosten sind privat zu tragen. Wir erstellen Ihnen einen detaillierten Heil- und Kostenplan und informieren Sie über mögliche Finanzierungsoptionen.'
         }
       },
       zahnersatz: {
@@ -979,6 +1103,18 @@ const TRANSLATIONS = {
           s4_h4: 'Eingliederung und Nachsorge', s4_p: 'Endgültige Eingliederung mit Einweisung zur Pflege und Nachsorgeterminen.',
           h2_3: 'Pflege Ihres Zahnersatzes',
           p4: 'Für festsitzenden Zahnersatz gelten dieselben Pflegeempfehlungen wie für natürliche Zähne. Herausnehmbare Prothesen werden täglich mit einer speziellen Bürste gereinigt und über Nacht in Wasser aufbewahrt. Regelmäßige Kontrollen sind wichtig, da sich der Kiefer im Laufe der Zeit verändern kann und Prothesen angepasst werden müssen.'
+        },
+        benefits: {
+          h2: 'Ihre Vorteile bei uns',
+          b1_h4: 'Maßgefertigt', b1_p: 'Jeder Zahnersatz wird individuell für Sie angefertigt — perfekt abgestimmt auf Ihre Zahnfarbe, Form und Kieferanatomie.',
+          b2_h4: 'Premium-Materialien', b2_p: 'Wir verwenden ausschließlich Vollkeramik und zertifizierte Materialien aus deutschen Partnerlabors für höchste Qualität und Langlebigkeit.',
+          b3_h4: 'Schnelle Versorgung', b3_p: 'Dank moderner CAD/CAM-Technologie und effizient taktierter Termine erhalten Sie Ihren Zahnersatz so schnell wie möglich.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zum Zahnersatz',
+          q1: 'Wann brauche ich eine Krone und wann eine Brücke?', a1: 'Eine Krone wird eingesetzt, wenn ein einzelner Zahn stark beschädigt ist, aber die Wurzel noch erhalten werden kann. Eine Brücke schließt eine Lücke zwischen zwei gesunden Zähnen, die als Pfeiler dienen. Sind mehrere Zähne betroffen oder die Lücke zu groß, kann ein Implantat oder eine Prothese sinnvoller sein. Wir beraten Sie individuell.',
+          q2: 'Wie lange hält hochwertiger Zahnersatz?', a2: 'Vollkeramikkronen halten bei guter Pflege 15–20 Jahre oder länger. Brücken haben eine ähnliche Lebenserwartung. Herausnehmbare Prothesen sollten alle 5–8 Jahre überprüft und ggf. angepasst oder erneuert werden. Regelmäßige Kontrollen sind entscheidend.',
+          q3: 'Muss ich die Prothese nachts herausnehmen?', a3: 'Herausnehmbare Prothesen sollten nachts zum Schlafen und zur Reinigung herausgenommen werden. Das schont das Zahnfleisch und gibt dem Gewebe eine Ruhepause. Festsitzender Zahnersatz oder implantatgetragene Prothesen bleiben dauerhaft im Mund.'
         }
       },
       oralchirurgie: {
@@ -1002,6 +1138,18 @@ const TRANSLATIONS = {
           li2_1: 'Keine harten oder heißen Speisen in den ersten 24 Stunden', li2_2: 'Kühlung der operierten Region bei Schwellungen',
           li2_3: 'Vermeidung von körperlicher Anstrengung für 1–2 Tage', li2_4: 'Kontrolltermin ca. 7–10 Tage nach dem Eingriff',
           li2_5: 'Bei starken Schmerzen oder Blutungen sofort melden'
+        },
+        benefits: {
+          h2: 'Warum Oralchirurgie bei Dr. Kielhorn?',
+          b1_h4: 'Schonende Technik', b1_p: 'Wir verwenden minimalinvasive Methoden, modernste Instrumente und Lupenbrille für präzises, gewebeschonendes Arbeiten.',
+          b2_h4: 'Effektive Betäubung', b2_p: 'Dünnste Nadeln, Betäubungsgel im Voraus und moderne Anästhetika — erst wenn Sie wirklich nichts spüren, beginnen wir.',
+          b3_h4: 'Nachsorge inklusive', b3_p: 'Sie erhalten umfangreiche schriftliche Nachsorgeanweisungen und einen Kontrolltermin — wir lassen Sie nach dem Eingriff nicht allein.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zur Oralchirurgie',
+          q1: 'Wie lange dauert die Heilung nach einer Zahnentfernung?', a1: 'Das Zahnfleisch schließt sich in der Regel nach 1–2 Wochen. Die vollständige Knochenheilung dauert 2–3 Monate. In den ersten Tagen kann es zu leichten Schwellungen und Schmerzen kommen, die mit Schmerzmitteln und Kühlung gut behandelbar sind.',
+          q2: 'Müssen alle Weisheitszähne entfernt werden?', a2: 'Nein — nicht jeder Weisheitszahn muss entfernt werden. Wenn er vollständig durchgebrochen ist, gut gereinigt werden kann und keine Probleme verursacht, kann er belassen werden. Wir empfehlen die Entfernung nur bei konkreten Problemen: Platzmangel, Entzündungen, Kariesrisiko oder Druckschmerz auf Nachbarzähne.',
+          q3: 'Was darf ich nach dem Eingriff essen?', a3: 'In den ersten 24 Stunden sollten Sie nur weiche, lauwarme Speisen zu sich nehmen: Joghurt, Suppe, Brei, Banane. Vermeiden Sie harte, krümelige oder sehr heiße Speisen. Kein Alkohol und kein Nikotin in den ersten Tagen. Ab dem 3. Tag können Sie die Kostform schrittweise normalisieren.'
         }
       },
       kinderzahnheilkunde: {
@@ -1022,6 +1170,18 @@ const TRANSLATIONS = {
           li1: 'Erzählen Sie zu Hause positiv über den Zahnarzt', li2: 'Kommen Sie mit zum ersten Termin und bleiben Sie bei Bedarf dabei',
           li3: 'Fangen Sie mit dem Zähneputzen beim ersten Zahn an', li4: 'Verwenden Sie kindgerechte Zahnpasta mit altersgerechtem Fluoridgehalt',
           li5: 'Reduzieren Sie zuckerhaltige Getränke und Snacks', li6: 'Loben Sie Ihr Kind nach jedem Zahnarztbesuch'
+        },
+        benefits: {
+          h2: 'Unser Versprechen für Ihr Kind',
+          b1_h4: 'Kinderfreundlich', b1_p: 'Unsere Praxis ist auf Kinder eingestellt: freundliche Atmosphäre, Spielzeug im Wartebereich und ein Team, das Kinder lieb hat.',
+          b2_h4: 'Angstfrei', b2_p: 'Tell-Show-Do, Lachgassedierung und viel Geduld: Wir arbeiten so, dass kein Kind eine Angst vor dem Zahnarzt entwickelt.',
+          b3_h4: 'Früh lernen', b3_p: 'Kinder die früh positive Zahnarzt-Erfahrungen machen, pflegen ihre Zähne besser und vermeiden Angst im Erwachsenenalter.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zur Kinderzahnheilkunde',
+          q1: 'Ab wann sollten Kinder zum Zahnarzt?', a1: 'Empfohlen wird der erste Besuch mit dem Durchbruch des ersten Milchzahns — also etwa mit 6–12 Monaten. Dieser erste Termin ist ein Kennenlernen. Ab dem 2. Lebensjahr sind halbjährliche Kontrollen empfehlenswert. Die gesetzliche Kasse bezahlt ab dem 3. Lebensjahr halbjährliche Vorsorge.',
+          q2: 'Wie bereite ich mein Kind auf den Zahnarztbesuch vor?', a2: 'Reden Sie zu Hause positiv über den Zahnarzt — keine Schreckensgeschichten! Erklären Sie, dass der Zahnarzt den Zähnen hilft, gesund zu bleiben. Spielen Sie "Zahnarzt" zu Hause. Vermeiden Sie Worte wie "Spritze" oder "Bohren". Bringen Sie ein Lieblingstier oder Spielzeug mit.',
+          q3: 'Müssen Milchzähne behandelt werden, wenn sie sowieso ausfallen?', a3: 'Ja, unbedingt! Milchzähne sind Platzhalter für die bleibenden Zähne. Karies-befallene Milchzähne können die bleibenden Zähne schädigen und zu Fehlstellungen führen. Außerdem kann Karies im Milchgebiss Schmerzen verursachen und negative Zahnarzt-Erfahrungen erzeugen.'
         }
       },
       angstpatienten: {
@@ -1044,6 +1204,18 @@ const TRANSLATIONS = {
           s1_h4: 'Erstkontakt per Telefon', s1_p: 'Rufen Sie uns einfach an und sagen uns, dass Sie Angst vor dem Zahnarzt haben. Wir planen den Termin entsprechend ein.',
           s2_h4: 'Kennenlerntermin ohne Behandlung', s2_p: 'Beim ersten Termin führen wir nur ein Gespräch. Keine Instrumente, kein Druck. Nur Zuhören.',
           s3_h4: 'Schrittweise Behandlung', s3_p: 'Wir gehen gemeinsam in Ihrem eigenen Tempo vor — immer mit Ihrer vollen Zustimmung.'
+        },
+        benefits: {
+          h2: 'Warum Angstpatienten uns vertrauen',
+          b1_h4: 'Einfühlsames Team', b1_p: 'Unser gesamtes Team ist geschult im Umgang mit Zahnarztangst. Wir nehmen Ihre Angst ernst — ohne zu urteilen.',
+          b2_h4: 'Ihr Tempo', b2_p: 'Kein Zeitdruck, keine Überrumpelung. Wir planen großzügige Termine und machen jederzeit Pausen, wenn Sie das möchten.',
+          b3_h4: 'Lachgassedierung', b3_p: 'Sicher, bewährt, ohne Nachwirkungen. Lachgas nimmt die Anspannung und macht die Behandlung deutlich angenehmer.'
+        },
+        faq: {
+          h2: 'Häufige Fragen von Angstpatienten',
+          q1: 'Bin ich ein Angstpatient?', a1: 'Wenn Sie bei dem Gedanken an einen Zahnarztbesuch Herzklopfen bekommen, Termine immer wieder verschieben, Schlafprobleme vor dem Termin haben oder im Behandlungsstuhl verkrampfen — dann sind Sie ein Angstpatient. Das ist nichts Ungewöhnliches. Schätzungsweise 60 % aller Menschen haben eine Form von Zahnarztangst. Bei uns sind Sie damit an der richtigen Adresse.',
+          q2: 'Bieten Sie auch Vollnarkose an?', a2: 'Vollnarkose bieten wir in unserer Praxis nicht an, da dies einen Anästhesisten und spezielle Ausstattung erfordert. Stattdessen bieten wir Lachgassedierung an, die für die meisten Angstpatienten bereits ausreichend und sehr gut verträglich ist. Bei extremer Phobie können wir Sie an spezialisierte Kliniken überweisen.',
+          q3: 'Was passiert beim ersten Termin?', a3: 'Beim ersten Termin passiert: nichts, außer Reden. Wir setzen Sie nicht in den Behandlungsstuhl, wenn Sie das nicht möchten. Wir hören zu, was Ihnen Angst macht, erklären wie wir arbeiten und beantworten alle Ihre Fragen. Erst wenn Sie sich bereit fühlen, planen wir den nächsten Schritt — in Ihrem Tempo.'
         }
       },
       aesthetik: {
@@ -1066,6 +1238,18 @@ const TRANSLATIONS = {
           box: '<strong>Digital Smile Design:</strong> Bevor wir starten, zeigen wir Ihnen eine digitale Vorschau Ihres zukünftigen Lächelns. So können Sie das Ergebnis mitgestalten und sind auf Ihr neues Lächeln vorbereitet.',
           h2_3: 'Beratung und Planung',
           p6: 'Jede ästhetische Behandlung beginnt mit einem ausführlichen Beratungsgespräch. Wir hören Ihnen zu, analysieren die aktuelle Situation und entwickeln gemeinsam mit Ihnen einen maßgeschneiderten Plan — transparent bezüglich Kosten, Zeitaufwand und Ergebnis.'
+        },
+        benefits: {
+          h2: 'Ihr Lächeln — Ihre Investition',
+          b1_h4: 'Strahlendes Lächeln', b1_p: 'Ein schönes Lächeln verändert Ihr Leben — mehr Selbstbewusstsein, bessere Ausstrahlung, positiver erster Eindruck.',
+          b2_h4: 'Digital Smile Design', b2_p: 'Mit moderner Software sehen Sie Ihr neues Lächeln schon vor der ersten Behandlung — Sie behalten die Kontrolle.',
+          b3_h4: 'Natürlich & dauerhaft', b3_p: 'Wir arbeiten mit hochwertigen Keramikmaterialien — das Ergebnis sieht natürlich aus und hält mit guter Pflege viele Jahre.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zur Ästhetik',
+          q1: 'Was ist der Unterschied zwischen Veneer und Bonding?', a1: 'Veneers sind im Labor gefertigte Keramikschalen, die dauerhaft auf den Zahn aufgeklebt werden — hochpräzise, langlebig (10–20 Jahre), aber kostenintensiver. Bonding ist eine direkte Methode: Kompositmaterial wird direkt auf den Zahn aufgetragen und geformt — günstiger, schneller, aber weniger langlebig (5–8 Jahre) und weniger resistent gegen Verfärbungen.',
+          q2: 'Ist Bleaching schädlich für den Zahnschmelz?', a2: 'Professionelles Bleaching, das von einem Zahnarzt durchgeführt wird, ist bei gesunden Zähnen sicher. Die verwendeten Peroxid-Konzentrationen sind so gewählt, dass der Zahnschmelz nicht dauerhaft geschädigt wird. Temporäre Empfindlichkeit ist möglich. Wir prüfen vor dem Bleaching, ob Ihre Zähne geeignet sind.',
+          q3: 'Wie lange halten Veneers?', a3: 'Keramik-Veneers halten bei guter Pflege 10–20 Jahre oder länger. Entscheidend sind: regelmäßige Prophylaxe, Verwendung einer Aufbissschiene bei Bruxismus, Vermeidung von harten Speisen und guter häuslicher Mundhygiene. Kompositveneers halten 5–8 Jahre und können repariert oder erneuert werden.'
         }
       },
       zahnerhaltung: {
@@ -1091,6 +1275,18 @@ const TRANSLATIONS = {
           s3_h4: 'Aufbereitung und Desinfektion', s3_p: 'Die Wurzelkanäle werden gereinigt, aufbereitet und gründlich desinfiziert.',
           s4_h4: 'Wurzelfüllung', s4_p: 'Die aufbereiteten Kanäle werden dauerhaft mit einem biokompatiblen Material (Guttapercha) versiegelt.',
           s5_h4: 'Kronenversorgung', s5_p: 'Der behandelte Zahn wird mit einer Krone oder einem Aufbau langfristig versorgt und gestärkt.'
+        },
+        benefits: {
+          h2: 'Warum natürliche Zähne erhalten?',
+          b1_h4: 'Eigene Zähne behalten', b1_p: 'Natürliche Zähne bieten überlegene Kaufunktion, Empfindung und Ästhetik — kein Implantat erreicht die Qualität eines gesunden eigenen Zahns.',
+          b2_h4: 'Höchste Präzision', b2_p: 'Wir arbeiten mit Lupenbrille und OP-Mikroskop — für minimale Substanzentfernung und optimale Ergebnisse auch bei schwierigen Fällen.',
+          b3_h4: 'Schmerzfrei', b3_p: 'Moderne Lokalanästhesie macht auch Wurzelkanalbehandlungen nahezu schmerzfrei. Viele Patienten sind positiv überrascht, wie angenehm der Eingriff ist.'
+        },
+        faq: {
+          h2: 'Häufige Fragen zur Zahnerhaltung',
+          q1: 'Wann ist eine Wurzelkanalbehandlung notwendig?', a1: 'Eine Wurzelkanalbehandlung ist notwendig, wenn das Zahnmark durch Karies, Risse oder Verletzungen bakteriell befallen oder abgestorben ist. Symptome können sein: starke Zahnschmerzen, Klopfempfindlichkeit, Schwellung, Dunkelwerden des Zahns oder Empfindlichkeit auf Wärme. Ein Röntgenbild sichert die Diagnose.',
+          q2: 'Ist eine Wurzelkanalbehandlung schmerzhaft?', a2: 'Der Schmerz wird oft dem Gedanken an die Behandlung zugeschrieben — nicht der Behandlung selbst. Mit moderner Lokalanästhesie ist der Eingriff nahezu schmerzfrei. Nach der Behandlung können einige Tage leichte Beschwerden auftreten. Die meisten Patienten sind überrascht, wie unkompliziert es war.',
+          q3: 'Kann wirklich jeder Zahn gerettet werden?', a3: 'Nicht immer. Ob ein Zahn erhaltungswürdig ist, hängt von mehreren Faktoren ab: dem Zustand der Wurzeln, dem verbleibenden Zahnsubstanz, der Knochenunterstützung und dem Gesamtbefund. Wir beraten Sie ehrlich, ob eine Erhaltung sinnvoll ist oder ob andere Optionen langfristig die bessere Wahl wären.'
         }
       }
     }
