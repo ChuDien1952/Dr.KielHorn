@@ -408,7 +408,7 @@ p  { max-width:68ch }
   width:100%;
   aspect-ratio:3/4;
   object-fit:cover;
-  object-position:top center;
+  object-position:center 30%;
   border-radius:var(--radius-lg);
   margin-bottom:32px;
   box-shadow:var(--shadow-md);
