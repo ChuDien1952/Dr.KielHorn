@@ -281,6 +281,7 @@ p  { max-width:68ch }
 .trust-item strong { font-family:var(--font-display); font-size:1.3rem; font-weight:600; color:var(--text); line-height:1 }
 .trust-item span { font-size:.77rem; color:var(--text-muted); font-weight:400 }
 .trust-stars { color:#F59E0B; font-size:.85rem; letter-spacing:2px }
+.trust-stars::before { content:"\2605\2605\2605\2605\2605"; color:#F59E0B }
 .trust-divider { width:1px; height:32px; background:var(--border); flex-shrink:0 }
 
 .hero-visual { display:flex; justify-content:center; overflow:visible }
@@ -711,10 +712,12 @@ p  { max-width:68ch }
 .rs-main { text-align:center; flex-shrink:0; padding-right:48px; border-right:1px solid var(--border) }
 .rs-number { font-family:var(--font-display); font-size:4rem; font-weight:700; color:var(--text); line-height:1 }
 .rs-stars  { color:#F59E0B; font-size:1.1rem; letter-spacing:3px; margin:8px 0 4px }
+.rs-stars::before { content:"\2605\2605\2605\2605\2605"; color:#F59E0B }
 .rs-label  { font-size:.78rem; color:var(--text-muted) }
 .rs-bars   { flex:1; display:flex; flex-direction:column; gap:9px }
 .rs-bar-row { display:flex; align-items:center; gap:10px; font-size:.82rem; color:var(--text-muted) }
-.rs-bar-row span:first-child { width:32px; text-align:right; flex-shrink:0; color:#F59E0B; font-weight:500 }
+.rs-bar-row span:first-child { width:32px; text-align:right; flex-shrink:0; color:var(--text-muted); font-weight:500 }
+.rs-bar-row span:first-child::after { content:"\2605"; color:#F59E0B; margin-left:1px }
 .rs-bar-row span:last-child  { width:34px; flex-shrink:0 }
 .rs-bar      { flex:1; height:7px; background:var(--border); border-radius:10px; overflow:hidden }
 .rs-bar-fill { height:100%; background:linear-gradient(90deg,var(--primary) 0%,var(--accent) 100%); border-radius:10px; transition:width 1.2s ease }
@@ -733,6 +736,7 @@ p  { max-width:68ch }
 .rc-header strong { font-size:.9rem; font-weight:600 }
 .review-card--featured .rc-header strong { color:white }
 .rc-stars { color:#F59E0B; font-size:.75rem; letter-spacing:1px; margin-top:2px }
+.rc-stars::before { content:"\2605\2605\2605\2605\2605"; color:#F59E0B }
 .rc-date  { font-size:.72rem; color:var(--text-light); flex-shrink:0 }
 .review-card p { font-size:.88rem; color:var(--text-muted); font-style:italic; line-height:1.7; position:relative; z-index:1 }
 .review-card--featured p { color:rgba(255,255,255,.85) }
