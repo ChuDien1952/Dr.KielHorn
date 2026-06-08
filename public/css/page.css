@@ -903,54 +903,54 @@ p  { max-width:68ch }
   0%,100% { box-shadow:0 24px 64px rgba(0,0,0,.38),0 4px 16px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.16),0 0 0 0 rgba(30,111,168,0) }
   50%      { box-shadow:0 24px 64px rgba(0,0,0,.38),0 4px 16px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.16),0 0 28px 6px rgba(30,111,168,.16) }
 }
-/* ── Water droplets ──────────────────────────────── */
-.water-drop {
+/* ── Slow water stream ───────────────────────────── */
+.water-stream {
   position:absolute;
   left:50%;
-  top:0;
-  border-radius:50% 50% 50% 50% / 35% 35% 65% 65%;
-  background:linear-gradient(155deg,
-    rgba(220,248,255,.92) 0%,
-    rgba(100,215,248,.95) 28%,
-    rgba(28,148,215,.88) 62%,
-    rgba(10,108,188,.72) 100%);
-  box-shadow:
-    inset -1px -2px 3px rgba(255,255,255,.58),
-    inset  1px  1px 2px rgba(255,255,255,.22),
-    0 0 6px 2px rgba(80,200,245,.32);
-  pointer-events:none;
-  z-index:3;
+  top:14px; bottom:14px;
+  width:3px;
   transform:translateX(-50%);
-  will-change:top,opacity;
-}
-/* Circle hit — wet ripple glow */
-@keyframes dripHit {
-  0%   { border-color:rgba(100,215,248,.75);
-         box-shadow:0 0 0 2px rgba(100,215,248,.35),0 0 10px rgba(80,200,245,.45) }
-  42%  { border-color:rgba(130,235,255,.95);
-         box-shadow:0 0 0 6px rgba(80,200,245,.12),0 0 24px rgba(80,200,245,.6),0 0 38px rgba(30,148,215,.28) }
-  100% { border-color:rgba(255,255,255,.16);
-         box-shadow:inset 0 1px 0 rgba(255,255,255,.1) }
-}
-.svc-nav-circle.drip-hit {
-  animation:dripHit .65s ease-out forwards;
-  color:rgba(210,248,255,.92);
-}
-/* Expanding ripple ring */
-.water-ripple {
-  position:absolute;
-  left:50%; top:50%;
-  width:40px; height:40px;
-  border-radius:50%;
-  border:1.5px solid rgba(100,215,248,.65);
-  transform:translate(-50%,-50%) scale(0.3);
+  border-radius:2px;
+  z-index:2;
+  overflow:hidden;
   pointer-events:none;
-  z-index:0;
-  animation:waterRipple .68s ease-out forwards;
 }
-@keyframes waterRipple {
-  0%   { transform:translate(-50%,-50%) scale(0.3); opacity:.85 }
-  100% { transform:translate(-50%,-50%) scale(2.0); opacity:0 }
+.water-stream::before {
+  content:'';
+  position:absolute;
+  left:0; right:0;
+  top:-44px; bottom:-44px;
+  background:repeating-linear-gradient(
+    180deg,
+    rgba(200,245,255,.05)  0px,
+    rgba(110,215,248,.60)  6px,
+    rgba(28,145,215,.44)  13px,
+    rgba(80,200,245,.28)  20px,
+    rgba(110,215,248,.56) 26px,
+    rgba(28,145,215,.40)  33px,
+    rgba(200,245,255,.05) 44px
+  );
+  animation:streamSlide 4s linear infinite;
+}
+@keyframes streamSlide {
+  from { transform:translateY(0) }
+  to   { transform:translateY(44px) }
+}
+/* Subtle permanent wet tint on all circles in stream */
+.svc-nav-circle.stream-on {
+  border-color:rgba(80,200,245,.28);
+  color:rgba(160,228,255,.58);
+}
+/* Traveling glow — the "current" passing through */
+.svc-nav-circle.stream-current {
+  border-color:rgba(120,230,255,.82);
+  color:rgba(210,248,255,.9);
+  box-shadow:
+    0 0 0 3px rgba(80,200,245,.18),
+    0 0 16px rgba(80,200,245,.50),
+    0 0 30px rgba(28,145,215,.22);
+  transform:scale(1.07);
+  transition:all .8s cubic-bezier(.4,0,.2,1);
 }
 /* Top shine reflection */
 .svc-nav-inner::after {

@@ -600,87 +600,33 @@ function initScrollProgress() {
   update();
 }
 
-/* ── Service Nav Water Droplets ─────────────────── */
+/* ── Slow water stream ───────────────────────────── */
 function initWaterDrops() {
   const inner = document.querySelector('.svc-nav-inner');
   if (!inner) return;
   const circles = [...inner.querySelectorAll('.svc-nav-circle')];
   if (circles.length < 2) return;
 
-  const hitCooldown = new Set();
+  // Inject the stream channel element
+  const stream = document.createElement('div');
+  stream.className = 'water-stream';
+  inner.appendChild(stream);
 
-  function getCircleY(el) {
-    const er = el.getBoundingClientRect();
-    const ir = inner.getBoundingClientRect();
-    return er.top - ir.top + er.height / 2;
+  // All circles get a permanent subtle wet tint
+  circles.forEach(c => c.classList.add('stream-on'));
+
+  // Slowly travel the "current" glow through circles, one at a time
+  let idx = 0;
+  const STEP = 1300; // ms per circle — very slow flow
+
+  function step() {
+    circles.forEach(c => c.classList.remove('stream-current'));
+    circles[idx].classList.add('stream-current');
+    idx = (idx + 1) % circles.length;
+    setTimeout(step, STEP);
   }
 
-  function spawnRipple(circleEl) {
-    const item = circleEl.closest('.svc-nav-item');
-    if (!item) return;
-    const r = document.createElement('span');
-    r.className = 'water-ripple';
-    item.appendChild(r);
-    setTimeout(() => r.remove(), 700);
-  }
-
-  function spawnDrop() {
-    const containerH = inner.getBoundingClientRect().height;
-    const w = 4 + Math.random() * 3;          // 4–7 px wide
-    const h = w * 1.45 + Math.random() * 2;   // proportionally taller
-    const xOff = (Math.random() - 0.5) * 4;   // ±2 px lateral drift
-
-    const drop = document.createElement('span');
-    drop.className = 'water-drop';
-    drop.style.width  = w + 'px';
-    drop.style.height = h + 'px';
-    drop.style.left   = `calc(50% + ${xOff}px)`;
-    drop.style.opacity = '0';
-    inner.appendChild(drop);
-
-    const startY   = -h - 2;
-    const endY     = containerH + h + 2;
-    const duration = 1900 + Math.random() * 750; // 1.9–2.65 s
-    const t0       = performance.now();
-
-    function frame(now) {
-      const prog = (now - t0) / duration;
-      if (prog >= 1) { drop.remove(); return; }
-
-      // Gravity easing: t^1.7 — accelerates as it falls
-      const eased = Math.pow(prog, 1.7);
-      const y = startY + (endY - startY) * eased;
-
-      drop.style.top = (y - h / 2) + 'px';
-      drop.style.opacity =
-        prog < 0.06 ? String(prog / 0.06) :
-        prog > 0.92 ? String((1 - prog) / 0.08) : '1';
-
-      // Circle collision detection
-      circles.forEach((circle, i) => {
-        if (hitCooldown.has(i)) return;
-        if (Math.abs(y - getCircleY(circle)) < 5) {
-          hitCooldown.add(i);
-          circle.classList.add('drip-hit');
-          spawnRipple(circle);
-          setTimeout(() => {
-            circle.classList.remove('drip-hit');
-            hitCooldown.delete(i);
-          }, 680);
-        }
-      });
-
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  }
-
-  function releaseLoop() {
-    spawnDrop();
-    setTimeout(releaseLoop, 300 + Math.random() * 520); // 0.3–0.82 s between drops
-  }
-
-  setTimeout(releaseLoop, 900);
+  setTimeout(step, 600);
 }
 
 /* ── Init all ───────────────────────────────────── */
