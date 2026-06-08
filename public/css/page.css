@@ -214,43 +214,70 @@ p  { max-width:68ch }
 /* ── Services Dropdown ─────────────────────────── */
 .nav-dropdown-wrap { position:relative; display:flex; align-items:center }
 .nav-has-dropdown { display:flex !important; align-items:center; gap:4px; cursor:pointer }
-.nav-chevron { flex-shrink:0; transition:transform .25s ease }
-.nav-dropdown-wrap:hover .nav-chevron,
+.nav-chevron { flex-shrink:0; transition:transform .3s cubic-bezier(.34,1.56,.64,1) }
 .nav-dropdown-wrap.open .nav-chevron { transform:rotate(180deg) }
 
 .nav-dropdown {
   position:absolute;
-  top:calc(100% + 10px); left:50%;
-  transform:translateX(-50%) translateY(6px);
-  background:#fff; border-radius:16px;
-  box-shadow:0 16px 48px rgba(0,0,0,.13), 0 2px 8px rgba(30,111,168,.08);
-  border:1px solid rgba(30,111,168,.1);
+  top:calc(100% + 6px); left:50%;
+  transform:translateX(-50%) translateY(10px);
+  background:#fff; border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.14), 0 4px 16px rgba(30,111,168,.1);
+  border:1px solid rgba(30,111,168,.12);
   padding:10px; display:grid; grid-template-columns:1fr 1fr;
-  gap:3px; min-width:400px;
+  gap:4px; min-width:420px;
   opacity:0; visibility:hidden; pointer-events:none;
-  transition:opacity .22s ease, transform .22s ease, visibility .22s;
+  transition:opacity .25s ease, transform .25s cubic-bezier(.34,1.56,.64,1), visibility 0s .25s;
   z-index:1001;
 }
-.nav-dropdown-wrap:hover .nav-dropdown {
+.nav-dropdown-wrap.open .nav-dropdown {
   opacity:1; visibility:visible; pointer-events:auto;
   transform:translateX(-50%) translateY(0);
+  transition:opacity .25s ease, transform .25s cubic-bezier(.34,1.56,.64,1), visibility 0s 0s;
 }
 .nav-dropdown::before {
   content:''; position:absolute;
-  top:-6px; left:50%; transform:translateX(-50%);
-  width:12px; height:6px; background:#fff;
-  clip-path:polygon(50% 0%,0% 100%,100% 100%);
+  top:-7px; left:50%; transform:translateX(-50%);
+  border:7px solid transparent; border-bottom-color:rgba(30,111,168,.12);
+}
+.nav-dropdown::after {
+  content:''; position:absolute;
+  top:-5px; left:50%; transform:translateX(-50%);
+  border:6px solid transparent; border-bottom-color:#fff;
 }
 .ndi {
-  display:flex; align-items:center; gap:10px;
-  padding:10px 14px; border-radius:10px;
-  font-size:.83rem; font-weight:500; color:var(--text);
-  text-decoration:none; transition:background .18s, color .18s; white-space:nowrap;
+  display:flex; align-items:center; gap:12px;
+  padding:11px 14px; border-radius:12px;
+  font-size:.84rem; font-weight:500; color:var(--text);
+  text-decoration:none; white-space:nowrap;
+  transition:background .2s ease, color .2s ease, transform .2s ease;
+  position:relative; overflow:hidden;
 }
-.ndi-icon { width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; background:var(--primary-light); flex-shrink:0; transition:background .18s }
-.ndi-icon svg { color:var(--primary) }
-.ndi:hover { background:rgba(30,111,168,.06); color:var(--primary) }
-.ndi:hover .ndi-icon { background:rgba(30,111,168,.12) }
+.ndi::before {
+  content:''; position:absolute;
+  left:0; top:50%; transform:translateY(-50%);
+  width:3px; height:0; border-radius:3px;
+  background:linear-gradient(to bottom, var(--primary), var(--teal));
+  transition:height .2s ease;
+}
+.ndi:hover::before { height:60% }
+.ndi:hover {
+  background:linear-gradient(135deg, rgba(30,111,168,.08) 0%, rgba(13,148,136,.05) 100%);
+  color:var(--primary); transform:translateX(3px);
+}
+.ndi-icon {
+  width:34px; height:34px; border-radius:10px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg, var(--primary-light) 0%, #e0f5fd 100%);
+  transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.ndi-icon svg { color:var(--primary); transition:color .2s ease }
+.ndi:hover .ndi-icon {
+  background:linear-gradient(135deg, var(--primary) 0%, var(--teal) 100%);
+  transform:scale(1.08) rotate(-4deg);
+  box-shadow:0 4px 12px rgba(30,111,168,.3);
+}
+.ndi:hover .ndi-icon svg { color:#fff }
 
 /* CTA button in header */
 .main-nav .btn-primary {

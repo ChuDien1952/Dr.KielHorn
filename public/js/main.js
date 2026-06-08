@@ -43,18 +43,39 @@ function initServicesDropdown() {
   const trigger = wrap.querySelector('.nav-has-dropdown');
   if (!trigger) return;
 
+  let hideTimer = null;
+
+  function openDropdown() {
+    clearTimeout(hideTimer);
+    wrap.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+  function closeDropdown(delay) {
+    hideTimer = setTimeout(() => {
+      wrap.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }, delay || 0);
+  }
+
+  /* Desktop: hover with 300ms grace period */
+  wrap.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 900) openDropdown();
+  });
+  wrap.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 900) closeDropdown(300);
+  });
+
+  /* Mobile: tap trigger toggles submenu */
   trigger.addEventListener('click', e => {
     if (window.innerWidth <= 900) {
       e.preventDefault();
-      const isOpen = wrap.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', String(isOpen));
+      wrap.classList.contains('open') ? closeDropdown(0) : openDropdown();
     }
   });
 
+  /* Close on outside click */
   document.addEventListener('click', e => {
-    if (window.innerWidth > 900 && !wrap.contains(e.target)) {
-      wrap.classList.remove('open');
-    }
+    if (!wrap.contains(e.target)) closeDropdown(0);
   });
 }
 
