@@ -1311,6 +1311,10 @@ function applyTranslations(lang) {
       el.placeholder = val;
     } else if (el.hasAttribute('data-i18n-html')) {
       el.innerHTML = val;
+    } else if (el.childElementCount > 0) {
+      // has child elements (e.g. icon spans) — update only the trailing text node
+      const textNode = [...el.childNodes].reverse().find(n => n.nodeType === 3 && n.textContent.trim());
+      if (textNode) textNode.textContent = ' ' + val;
     } else {
       el.textContent = val;
     }
