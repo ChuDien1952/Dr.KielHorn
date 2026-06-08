@@ -241,15 +241,15 @@ function initCustomCursor() {
   const ring = document.createElement('div');
   ring.className = 'cursor-ring';
   ring.innerHTML = `
-    <svg class="cursor-svg" viewBox="0 0 36 36" aria-hidden="true">
+    <svg class="cursor-svg" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
       <defs>
         <linearGradient id="cursorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stop-color="#1E6FA8"/>
           <stop offset="100%" stop-color="#0D9488"/>
         </linearGradient>
       </defs>
-      <circle class="ring-track" cx="18" cy="18" r="16.5"/>
-      <circle class="ring-arc" cx="18" cy="18" r="16.5"/>
+      <circle class="ring-track" cx="18" cy="18" r="16.5" fill="none"/>
+      <circle class="ring-arc" cx="18" cy="18" r="16.5" fill="none"/>
     </svg>
     <div class="cursor-fill"></div>
   `;

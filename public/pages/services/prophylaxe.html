@@ -224,6 +224,6 @@
   document.querySelectorAll('.svc-faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.svc-faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.svc-faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.svc-faq-q').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});
   </script>
   <script src="../../js/i18n.js?v=20260609"></script>
-  <script src="../../js/main.js?v=20260615"></script>
+  <script src="../../js/main.js?v=20260616"></script>
 </body>
 </html>
