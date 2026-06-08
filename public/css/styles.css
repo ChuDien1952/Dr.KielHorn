@@ -269,18 +269,22 @@ p  { max-width:68ch }
   transform:translateX(3px);
 }
 .ndi-icon {
-  width:34px; height:34px; border-radius:10px; flex-shrink:0;
+  width:40px; height:40px; border-radius:12px; flex-shrink:0;
   display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(135deg, var(--primary-light) 0%, #e0f5fd 100%);
-  transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease, filter .2s ease;
 }
-.ndi-icon svg { color:var(--primary); transition:color .2s ease }
-.ndi:hover .ndi-icon {
-  background:linear-gradient(135deg, var(--primary) 0%, var(--teal) 100%);
-  transform:scale(1.08) rotate(-4deg);
-  box-shadow:0 4px 12px rgba(30,111,168,.3);
-}
-.ndi:hover .ndi-icon svg { color:#fff }
+.ndi-icon svg { color:#fff; transition:none }
+.ndi:hover .ndi-icon { transform:scale(1.12) rotate(-5deg); box-shadow:0 6px 16px rgba(0,0,0,.22); filter:brightness(1.1) }
+
+/* Per-service icon colors */
+.nav-dropdown .ndi:nth-child(1) .ndi-icon { background:linear-gradient(135deg,#10b981,#059669) }
+.nav-dropdown .ndi:nth-child(2) .ndi-icon { background:linear-gradient(135deg,#3b82f6,#1E6FA8) }
+.nav-dropdown .ndi:nth-child(3) .ndi-icon { background:linear-gradient(135deg,#f59e0b,#d97706) }
+.nav-dropdown .ndi:nth-child(4) .ndi-icon { background:linear-gradient(135deg,#ef4444,#dc2626) }
+.nav-dropdown .ndi:nth-child(5) .ndi-icon { background:linear-gradient(135deg,#ec4899,#db2777) }
+.nav-dropdown .ndi:nth-child(6) .ndi-icon { background:linear-gradient(135deg,#8b5cf6,#7c3aed) }
+.nav-dropdown .ndi:nth-child(7) .ndi-icon { background:linear-gradient(135deg,#06b6d4,#0D9488) }
+.nav-dropdown .ndi:nth-child(8) .ndi-icon { background:linear-gradient(135deg,#1E6FA8,#0D9488) }
 
 /* CTA button in header */
 .main-nav .btn-primary {
