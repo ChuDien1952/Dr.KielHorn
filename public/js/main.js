@@ -641,14 +641,6 @@ function initWaterDrops() {
   defs.appendChild(filt);
   svg.appendChild(defs);
 
-  // Faint channel track between circles
-  const track = document.createElementNS(NS, 'line');
-  track.setAttribute('x1',CX); track.setAttribute('y1',TOP);
-  track.setAttribute('x2',CX); track.setAttribute('y2',BOT);
-  track.setAttribute('stroke','rgba(80,200,245,0.07)');
-  track.setAttribute('stroke-width','1.5');
-  svg.appendChild(track);
-
   // The stream travels on a line that starts TAIL above TOP so it enters smoothly
   // Total line length = PATH + TAIL  →  dasharray TAIL covers exactly one segment
   function mkLine(color, w) {
