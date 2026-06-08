@@ -600,90 +600,95 @@ function initScrollProgress() {
   update();
 }
 
-/* ── Water arc flowing on circle borders ─────────── */
+/* ── Water stream: circle 1 → circle 8 ──────────── */
 function initWaterDrops() {
   const inner = document.querySelector('.svc-nav-inner');
   if (!inner) return;
-  const items = [...inner.querySelectorAll('.svc-nav-item')];
-  if (!items.length) return;
+  const circles = [...inner.querySelectorAll('.svc-nav-circle')];
+  if (circles.length < 2) return;
 
-  const NS   = 'http://www.w3.org/2000/svg';
-  const SZ   = 48;                     // SVG canvas size
-  const CX   = SZ / 2, CY = SZ / 2;   // center
-  const R    = 22;                     // arc radius — just outside the 40px circle
-  const CIRC = 2 * Math.PI * R;        // full circumference ≈ 138.2
-  const ARC  = CIRC * (130 / 360);     // visible arc ≈ 130° of the circle
-  const GAP  = CIRC - ARC;
-  const SPEED        = 18;             // degrees/sec — very slow (20 s per rotation)
-  const PHASE_STEP   = 360 / items.length; // phase offset between consecutive circles
+  const NS = 'http://www.w3.org/2000/svg';
+  const ir = inner.getBoundingClientRect();
+  const CX = ir.width / 2;
 
-  // Build an SVG arc element for each nav item
-  const arcs = items.map((item, i) => {
-    const svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('class', 'circle-arc-svg');
-    svg.setAttribute('width',  SZ);
-    svg.setAttribute('height', SZ);
-    svg.setAttribute('viewBox', `0 0 ${SZ} ${SZ}`);
-
-    // Soft glow filter
-    const defs   = document.createElementNS(NS, 'defs');
-    const filter = document.createElementNS(NS, 'filter');
-    filter.setAttribute('id', `wf${i}`);
-    filter.setAttribute('x', '-50%'); filter.setAttribute('y', '-50%');
-    filter.setAttribute('width', '200%'); filter.setAttribute('height', '200%');
-    const gblur = document.createElementNS(NS, 'feGaussianBlur');
-    gblur.setAttribute('stdDeviation', '1.8');
-    gblur.setAttribute('result', 'b');
-    const merge = document.createElementNS(NS, 'feMerge');
-    ['b', 'SourceGraphic'].forEach(src => {
-      const n = document.createElementNS(NS, 'feMergeNode');
-      n.setAttribute('in', src);
-      merge.appendChild(n);
-    });
-    filter.appendChild(gblur);
-    filter.appendChild(merge);
-    defs.appendChild(filter);
-    svg.appendChild(defs);
-
-    // Background halo arc (wider, softer)
-    const halo = document.createElementNS(NS, 'circle');
-    halo.setAttribute('cx', CX); halo.setAttribute('cy', CY); halo.setAttribute('r', R);
-    halo.setAttribute('fill', 'none');
-    halo.setAttribute('stroke', 'rgba(80,200,245,0.22)');
-    halo.setAttribute('stroke-width', '5');
-    halo.setAttribute('stroke-linecap', 'round');
-    halo.setAttribute('stroke-dasharray', `${ARC} ${GAP}`);
-    halo.setAttribute('transform', `rotate(-90,${CX},${CY})`);
-    svg.appendChild(halo);
-
-    // Main water arc (crisp, bright)
-    const arc = document.createElementNS(NS, 'circle');
-    arc.setAttribute('cx', CX); arc.setAttribute('cy', CY); arc.setAttribute('r', R);
-    arc.setAttribute('fill', 'none');
-    arc.setAttribute('stroke', 'rgba(130,225,255,0.82)');
-    arc.setAttribute('stroke-width', '2');
-    arc.setAttribute('stroke-linecap', 'round');
-    arc.setAttribute('stroke-dasharray', `${ARC} ${GAP}`);
-    arc.setAttribute('transform', `rotate(-90,${CX},${CY})`);
-    arc.setAttribute('filter', `url(#wf${i})`);
-    svg.appendChild(arc);
-
-    item.appendChild(svg);
-    return { arc, halo, phase: i * PHASE_STEP };
+  // Circle centre Y coords relative to .svc-nav-inner
+  const cy = circles.map(c => {
+    const r = c.getBoundingClientRect();
+    return r.top - ir.top + r.height / 2;
   });
+  const TOP = cy[0];
+  const BOT = cy[cy.length - 1];
+  const PATH = BOT - TOP;   // distance between first and last circle centres
+  const TAIL = 64;           // visible stream length in px
 
-  // Animate all arcs — each offset by its phase so the "crest" cascades downward
-  function frame(now) {
-    const deg = (now / 1000) * SPEED;   // total degrees rotated so far
-    arcs.forEach(({ arc, halo, phase }) => {
-      const offset = -CIRC * ((deg + phase) / 360);
-      arc.setAttribute('stroke-dashoffset',  String(offset));
-      halo.setAttribute('stroke-dashoffset', String(offset));
-    });
-    requestAnimationFrame(frame);
+  /* ── Build SVG ── */
+  const svg = document.createElementNS(NS, 'svg');
+  svg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible';
+
+  // Glow filter
+  const defs = document.createElementNS(NS, 'defs');
+  const filt = document.createElementNS(NS, 'filter');
+  filt.id = 'wglow';
+  filt.setAttribute('x','-300%'); filt.setAttribute('y','-5%');
+  filt.setAttribute('width','700%'); filt.setAttribute('height','110%');
+  const gb = document.createElementNS(NS, 'feGaussianBlur');
+  gb.setAttribute('stdDeviation','2.2'); gb.setAttribute('result','b');
+  const mg = document.createElementNS(NS, 'feMerge');
+  ['b','SourceGraphic'].forEach(s => {
+    const n = document.createElementNS(NS,'feMergeNode'); n.setAttribute('in',s); mg.appendChild(n);
+  });
+  filt.appendChild(gb); filt.appendChild(mg);
+  defs.appendChild(filt);
+  svg.appendChild(defs);
+
+  // Faint channel track between circles
+  const track = document.createElementNS(NS, 'line');
+  track.setAttribute('x1',CX); track.setAttribute('y1',TOP);
+  track.setAttribute('x2',CX); track.setAttribute('y2',BOT);
+  track.setAttribute('stroke','rgba(80,200,245,0.07)');
+  track.setAttribute('stroke-width','1.5');
+  svg.appendChild(track);
+
+  // The stream travels on a line that starts TAIL above TOP so it enters smoothly
+  // Total line length = PATH + TAIL  →  dasharray TAIL covers exactly one segment
+  function mkLine(color, w) {
+    const l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', CX); l.setAttribute('y1', TOP - TAIL);
+    l.setAttribute('x2', CX); l.setAttribute('y2', BOT);
+    l.setAttribute('stroke', color);
+    l.setAttribute('stroke-width', w);
+    l.setAttribute('stroke-linecap','round');
+    l.setAttribute('stroke-dasharray', `${TAIL} 9999`);
+    l.setAttribute('stroke-dashoffset','0');
+    l.setAttribute('filter','url(#wglow)');
+    svg.appendChild(l);
+    return l;
   }
 
-  setTimeout(() => requestAnimationFrame(frame), 400);
+  // 3 layers: outer glow → mid → bright core
+  const glow = mkLine('rgba(60,185,240,0.18)', 9);
+  const mid  = mkLine('rgba(100,218,255,0.48)', 3.5);
+  const core = mkLine('rgba(200,245,255,0.90)', 1.8);
+
+  inner.appendChild(svg);
+
+  const TOTAL = PATH + TAIL;   // total travel distance
+  const DUR   = 6800;          // ms — very slow
+  const t0    = performance.now();
+
+  function animate(now) {
+    const t      = ((now - t0) % DUR) / DUR;          // 0 → 1 looping
+    const offset = -(t * TOTAL);                       // shifts dash downward
+    [glow, mid, core].forEach(l => l.setAttribute('stroke-dashoffset', String(offset)));
+
+    // Stream centre Y: used for circle glow detection
+    const streamCY = (TOP - TAIL) + t * TOTAL + TAIL / 2;
+    circles.forEach((c, i) => c.classList.toggle('water-pass', Math.abs(streamCY - cy[i]) < TAIL * 0.55));
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
 }
 
 /* ── Init all ───────────────────────────────────── */
