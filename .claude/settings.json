@@ -11,7 +11,31 @@
       "Bash(awk '{ins=$4; del=$6; print \"LINES:\"\\(ins+del\\)}')",
       "Bash(awk 'END {print \"FILES:\"NR}')",
       "Bash(git commit -m ' *)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git commit *)",
+      "Bash(node -e ' *)",
+      "Bash(python3 \"%USERPROFILE%/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"dental clinic medical\" --domain product)",
+      "Bash(python3 \"%USERPROFILE%/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"luxury healthcare premium\" --domain style)",
+      "Bash(python3 \"%USERPROFILE%/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"medical trust calm\" --domain color)",
+      "Bash(python3 -c \"import sys,re; txt=sys.stdin.read\\(\\); print\\(re.sub\\('<[^>]+>','',txt\\)[:2000]\\)\")",
+      "Bash(findstr /i \"Kielhorn\\\\|Telefon\\\\|Fax\\\\|Email\\\\|Straße\\\\|Nieder\\\\|21423\\\\|Handels\\\\|Steuern\\\\|Kammer\")",
+      "Bash(node --check \"C:/Users/Admin/Desktop/Projects/Kielhorn/Coder/Dr.KielHorn/public/js/main.js\")",
+      "Bash(node --check \"c:/Users/Admin/Desktop/Projects/Kielhorn/Coder/Dr.KielHorn/public/js/main.js\")",
+      "Bash(git reset *)",
+      "Bash(python3 -c ' *)",
+      "PowerShell(python --version)",
+      "Bash(node server.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pages/services.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pages/faq.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pages/praxis.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pages/contact.html)",
+      "Bash(python \"%USERPROFILE%/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"dental clinic website header navigation\" --domain product)",
+      "Bash(python \"%USERPROFILE%/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"premium glassmorphism sticky header navbar\" --domain style)",
+      "PowerShell(python \"$env:USERPROFILE/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"dental clinic website header navigation\" --domain product 2>&1 | Select-Object -First 60)",
+      "PowerShell(python \"$env:USERPROFILE/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"premium glassmorphism sticky header cursor\" --domain style 2>&1 | Select-Object -First 60)",
+      "PowerShell(python \"$env:USERPROFILE/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"custom cursor animation interaction\" --domain style 2>&1 | Select-Object -First 80)",
+      "Bash(xargs sed *)"
     ]
   }
 }

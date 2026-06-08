@@ -13,6 +13,14 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "keywords": ["dental", "zahnarzt", "kielhorn", "winsen"],
-  "license": "UNLICENSED"
+  "keywords": [
+    "dental",
+    "zahnarzt",
+    "kielhorn",
+    "winsen"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jimp": "^1.6.1"
+  }
 }

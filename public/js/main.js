@@ -1,6 +1,6 @@
-/* ═══════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════
    main.js — Interactions, animations, UI behaviors
-   Dr. Kielhorn Dental Practice Website
+   Kielhorn Dental Practice Website
 ═══════════════════════════════════════════════════ */
 
 /* ── Sticky header ──────────────────────────────── */

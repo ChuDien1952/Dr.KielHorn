@@ -1,6 +1,6 @@
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    i18n.js — Bilingual: English + German
-   Dr. Kielhorn Dental Practice Website
+   Kielhorn Dental Practice Website
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 const TRANSLATIONS = {
@@ -21,7 +21,7 @@ const TRANSLATIONS = {
     hero: {
       tag: 'Dental Practice in Winsen (Luhe)',
       title: 'Your Dentist in<br>Winsen (Luhe) —<br><em>With Heart &amp; Expertise</em>',
-      desc: 'Modern dentistry, personal care, and a team that truly cares about your well-being. Dr. Christopher Kielhorn and his team look forward to welcoming you.',
+      desc: 'Modern dentistry, personal care, and a team that truly cares about your well-being. Christopher Kielhorn and his team look forward to welcoming you.',
       cta1: 'Book Appointment',
       cta2: 'Call Now',
       card1_title: 'Next Appointment',
@@ -119,7 +119,7 @@ const TRANSLATIONS = {
       feat4: { title: 'Hygienic Standards', desc: 'Certified sterilisation and infection control' },
       lab_title: 'In-House Laboratory',
       quote: 'Our goal is not just healthy teeth, but confident smiles that last a lifetime.',
-      quote_author: 'Dr. Christopher Kielhorn',
+      quote_author: 'Christopher Kielhorn',
       cta: 'Discover Our Practice →'
     },
     hours: {
@@ -143,7 +143,7 @@ const TRANSLATIONS = {
       eyebrow: 'Patient Reviews',
       title: 'What Our Patients Say',
       score_label: 'Based on 127 Google reviews',
-      r1: { name: 'Maria S.', text: 'Absolutely the best dental practice I have ever visited. Dr. Kielhorn is incredibly gentle and professional. I used to fear the dentist — not anymore!', date: 'March 2025' },
+      r1: { name: 'Maria S.', text: 'Absolutely the best dental practice I have ever visited. Kielhorn is incredibly gentle and professional. I used to fear the dentist — not anymore!', date: 'March 2025' },
       r2: { name: 'Thomas B.', text: 'Wonderful team, short wait times, and excellent results. My implants look completely natural. Highly recommended to everyone.', date: 'February 2025' },
       r3: { name: 'Anna K.', text: 'My children actually look forward to their dental appointments now. The team is so warm and patient. We won\'t go anywhere else.', date: 'January 2025' }
     },
@@ -208,7 +208,7 @@ const TRANSLATIONS = {
         privacy: 'Privacy Policy',
         accessibility: 'Accessibility'
       },
-      copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. All rights reserved.'
+      copyright: '© 2025 Zahnarztpraxis Kielhorn. All rights reserved.'
     },
     svc_sidebar: {
       call: 'Call Now',
@@ -218,7 +218,7 @@ const TRANSLATIONS = {
       more_h3: 'More Services',
       mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday', fri: 'Friday',
       sat_sun: 'Sat / Sun', closed: 'Closed',
-      img_caption: 'Dental Practice Dr. Kielhorn • Winsen (Luhe)'
+      img_caption: 'Dental Practice Kielhorn • Winsen (Luhe)'
     },
     svc_names: {
       prophylaxe: 'Prevention', prophylaxe_full: 'Prevention & Dental Cleaning',
@@ -235,11 +235,11 @@ const TRANSLATIONS = {
         history: {
           label: 'Our History',
           h2: 'A Practice with <em>Tradition</em>',
-          p1: 'Founded by Dr. Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn, now passionately continued by their son Dr. Christopher Kielhorn. For over 40 years, we have been caring for patients in Winsen (Luhe) and the surrounding region.',
+          p1: 'Founded by Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn, now passionately continued by their son Christopher Kielhorn. For over 40 years, we have been caring for patients in Winsen (Luhe) and the surrounding region.',
           p2: 'What began as a small practice in 1980 is today a modern treatment centre with its own laboratory, digital X-ray, and 3D diagnostics.',
-          t1_year: '1980', t1_h3: 'Founding of the Practice', t1_p: 'Dr. Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn open the dental practice in Winsen (Luhe) — with the aspiration to treat patients like friends.',
+          t1_year: '1980', t1_h3: 'Founding of the Practice', t1_p: 'Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn open the dental practice in Winsen (Luhe) — with the aspiration to treat patients like friends.',
           t2_year: '1990s – 2010s', t2_h3: 'Growth &amp; Modernisation', t2_p: 'Continuous expansion: own dental laboratory, new treatment rooms, and entry into digital dentistry with state-of-the-art equipment.',
-          t3_year: '2023', t3_h3: 'Handover to the 2nd Generation', t3_p: 'Dr. Christopher Kielhorn takes over the practice, combining decades of family tradition with modern treatment methods and fresh energy.',
+          t3_year: '2023', t3_h3: 'Handover to the 2nd Generation', t3_p: 'Christopher Kielhorn takes over the practice, combining decades of family tradition with modern treatment methods and fresh energy.',
           t4_year: 'Today', t4_h3: 'Modern Treatment Centre', t4_p: 'Digital X-ray, 3D diagnostics, own laboratory and a dedicated team — for the highest quality and genuine human warmth.'
         },
         gallery: {
@@ -301,7 +301,7 @@ const TRANSLATIONS = {
         g3: {
           title: 'Anxious Patients',
           q1: 'What can I do if I am very anxious about the dentist?',
-          a1: '<p>Start with a <strong>consultation appointment only</strong> — without treatment. Together we will find a step-by-step approach. Dr. Kielhorn is known for his empathetic care of anxious patients.</p>',
+          a1: '<p>Start with a <strong>consultation appointment only</strong> — without treatment. Together we will find a step-by-step approach. Kielhorn is known for his empathetic care of anxious patients.</p>',
           q2: 'Is treatment under sedation safe?',
           a2: '<p>Yes, sedation is a safe and proven method. You will be professionally monitored throughout the entire treatment. Many patients describe it as very pleasant and relaxing.</p>',
           q3: 'How long does the anaesthetic take to wear off?',
@@ -388,7 +388,7 @@ const TRANSLATIONS = {
           p5: 'Professional dental cleaning is a private service generally not covered by statutory health insurance. Costs vary depending on the effort involved. Many supplementary private insurance policies cover costs fully or partially. Please ask us — we will advise you transparently about the costs.'
         },
         benefits: {
-          h2: 'Why Prevention at Dr. Kielhorn?',
+          h2: 'Why Prevention at Kielhorn?',
           b1_h4: 'Long-Term Health', b1_p: 'Regular PDC demonstrably reduces the risk of tooth decay and periodontitis, protecting your teeth for life.',
           b2_h4: 'Radiant White Teeth', b2_p: 'Tartar and stains are thoroughly removed — for a fresh, whiter smile after every session.',
           b3_h4: 'Save Money', b3_p: 'Prevention is cheaper than treatment. A PDC costs a fraction of an elaborate periodontitis therapy.'
@@ -408,7 +408,7 @@ const TRANSLATIONS = {
           h2_1: 'What are dental implants?',
           p1: 'A dental implant is an artificial tooth root made of biocompatible titanium, surgically inserted into the jawbone. A crown, bridge or prosthesis is then attached — permanently and as stable as a natural tooth.',
           p2: 'Unlike conventional bridges, implants do not require healthy neighbouring teeth to be ground down. And unlike a removable denture, the implant sits firmly in the bone and simultaneously prevents bone loss after tooth loss.',
-          box: '<strong>Dr. Kielhorn specialises in implantology</strong> and has been successfully placing premium implant systems for over 15 years. Scientific studies show success rates of over 95% after 10 years.',
+          box: '<strong>Kielhorn specialises in implantology</strong> and has been successfully placing premium implant systems for over 15 years. Scientific studies show success rates of over 95% after 10 years.',
           h2_2: 'The implant procedure step by step',
           s1_h4: 'Diagnostics and planning', s1_p: '3D X-ray (DVT) and digital planning of the implant. Assessment of bone volume and quality.',
           s2_h4: 'Implantation (outpatient)', s2_p: 'The titanium implant is placed pain-free in the jaw under local anaesthesia. The procedure takes approx. 30–60 minutes.',
@@ -424,7 +424,7 @@ const TRANSLATIONS = {
           p5: 'Implants require the same care as natural teeth: regular brushing, flossing and professional dental cleaning. With good care, implants last a lifetime. We offer regular implant recall appointments.'
         },
         benefits: {
-          h2: 'Why Implants at Dr. Kielhorn?',
+          h2: 'Why Implants at Kielhorn?',
           b1_h4: 'Natural Appearance', b1_p: 'Ceramic crowns on implants are virtually indistinguishable from real teeth — in shape, colour and light refraction.',
           b2_h4: '20+ Years Durability', b2_p: 'With good care, implants last a lifetime — scientific studies show success rates of over 95% after 10 years.',
           b3_h4: 'Preserve Bone', b3_p: 'The implant stimulates the jaw like a natural tooth root, preventing bone loss after tooth extraction.'
@@ -496,7 +496,7 @@ const TRANSLATIONS = {
           li2_5: 'Contact us immediately in case of severe pain or bleeding'
         },
         benefits: {
-          h2: 'Why Oral Surgery at Dr. Kielhorn?',
+          h2: 'Why Oral Surgery at Kielhorn?',
           b1_h4: 'Gentle Technique', b1_p: 'We use minimally invasive methods, state-of-the-art instruments and magnifying loupes for precise, tissue-preserving work.',
           b2_h4: 'Effective Anaesthesia', b2_p: 'Finest needles, pre-applied numbing gel and modern anaesthetics — we only begin when you genuinely feel nothing.',
           b3_h4: 'Aftercare Included', b3_p: 'You receive comprehensive written aftercare instructions and a check-up appointment — we do not leave you alone after the procedure.'
@@ -665,7 +665,7 @@ const TRANSLATIONS = {
     hero: {
       tag: 'Zahnarztpraxis in Winsen (Luhe)',
       title: 'Ihr Zahnarzt in<br>Winsen (Luhe) —<br><em>Mit Herz &amp; Kompetenz</em>',
-      desc: 'Moderne Zahnmedizin, persönliche Betreuung und ein Team, dem Ihr Wohlbefinden wirklich am Herzen liegt. Dr. Christopher Kielhorn und sein Team freuen sich auf Ihren Besuch.',
+      desc: 'Moderne Zahnmedizin, persönliche Betreuung und ein Team, dem Ihr Wohlbefinden wirklich am Herzen liegt. Christopher Kielhorn und sein Team freuen sich auf Ihren Besuch.',
       cta1: 'Termin buchen',
       cta2: 'Jetzt anrufen',
       card1_title: 'Nächster Termin',
@@ -763,7 +763,7 @@ const TRANSLATIONS = {
       feat4: { title: 'Hygienestandards', desc: 'Zertifizierte Sterilisation und Infektionskontrolle' },
       lab_title: 'Eigenes Labor',
       quote: 'Unser Ziel sind nicht nur gesunde Zähne, sondern selbstbewusste Lächeln, die ein Leben lang halten.',
-      quote_author: 'Dr. Christopher Kielhorn',
+      quote_author: 'Christopher Kielhorn',
       cta: 'Praxis entdecken →'
     },
     hours: {
@@ -787,7 +787,7 @@ const TRANSLATIONS = {
       eyebrow: 'Patientenbewertungen',
       title: 'Was Unsere Patienten Sagen',
       score_label: 'Basierend auf 127 Google-Bewertungen',
-      r1: { name: 'Maria S.', text: 'Absolut die beste Zahnarztpraxis, die ich je besucht habe. Dr. Kielhorn ist unglaublich einfühlsam und professionell. Ich hatte früher Angst vor dem Zahnarzt — das ist jetzt vorbei!', date: 'März 2025' },
+      r1: { name: 'Maria S.', text: 'Absolut die beste Zahnarztpraxis, die ich je besucht habe. Kielhorn ist unglaublich einfühlsam und professionell. Ich hatte früher Angst vor dem Zahnarzt — das ist jetzt vorbei!', date: 'März 2025' },
       r2: { name: 'Thomas B.', text: 'Wunderbares Team, kurze Wartezeiten und hervorragende Ergebnisse. Meine Implantate sehen völlig natürlich aus. Ich empfehle die Praxis jedem weiter.', date: 'Februar 2025' },
       r3: { name: 'Anna K.', text: 'Meine Kinder freuen sich jetzt tatsächlich auf ihre Zahnarzttermine. Das Team ist so herzlich und geduldig. Wir gehen nirgendwo anders hin.', date: 'Januar 2025' }
     },
@@ -852,7 +852,7 @@ const TRANSLATIONS = {
         privacy: 'Datenschutz',
         accessibility: 'Barrierefreiheit'
       },
-      copyright: '© 2025 Zahnarztpraxis Dr. Christopher Kielhorn. Alle Rechte vorbehalten.'
+      copyright: '© 2025 Zahnarztpraxis Kielhorn. Alle Rechte vorbehalten.'
     },
     svc_sidebar: {
       call: 'Jetzt anrufen',
@@ -862,7 +862,7 @@ const TRANSLATIONS = {
       more_h3: 'Weitere Leistungen',
       mon: 'Montag', tue: 'Dienstag', wed: 'Mittwoch', thu: 'Donnerstag', fri: 'Freitag',
       sat_sun: 'Sa / So', closed: 'Geschlossen',
-      img_caption: 'Zahnarztpraxis Dr. Kielhorn • Winsen (Luhe)'
+      img_caption: 'Zahnarztpraxis Kielhorn • Winsen (Luhe)'
     },
     svc_names: {
       prophylaxe: 'Prophylaxe', prophylaxe_full: 'Prophylaxe & Zahnreinigung',
@@ -879,11 +879,11 @@ const TRANSLATIONS = {
         history: {
           label: 'Unsere Geschichte',
           h2: 'Eine Praxis mit <em>Tradition</em>',
-          p1: 'Gegründet von Dr. Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn, heute mit Herzblut weitergeführt von ihrem Sohn Dr. Christopher Kielhorn. Seit über 40 Jahren versorgen wir Patienten in Winsen (Luhe) und der gesamten Region.',
+          p1: 'Gegründet von Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn, heute mit Herzblut weitergeführt von ihrem Sohn Christopher Kielhorn. Seit über 40 Jahren versorgen wir Patienten in Winsen (Luhe) und der gesamten Region.',
           p2: 'Was 1980 als kleine Praxis begann, ist heute ein modernes Behandlungszentrum mit eigenem Labor, digitalem Röntgen und 3D-Diagnostik.',
-          t1_year: '1980', t1_h3: 'Gründung der Praxis', t1_p: 'Dr. Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn eröffnen die Zahnarztpraxis in Winsen (Luhe) — mit dem Anspruch, Patienten wie Freunde zu behandeln.',
+          t1_year: '1980', t1_h3: 'Gründung der Praxis', t1_p: 'Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn eröffnen die Zahnarztpraxis in Winsen (Luhe) — mit dem Anspruch, Patienten wie Freunde zu behandeln.',
           t2_year: '1990er – 2010er', t2_h3: 'Wachstum &amp; Modernisierung', t2_p: 'Kontinuierliche Erweiterung: eigenes Dentallabor, neue Behandlungsräume und der Einstieg in die digitale Zahnmedizin mit modernsten Geräten.',
-          t3_year: '2023', t3_h3: 'Übergabe an die 2. Generation', t3_p: 'Dr. Christopher Kielhorn übernimmt die Praxis und verbindet die jahrzehntelange Familientradition mit modernsten Behandlungsmethoden und frischem Elan.',
+          t3_year: '2023', t3_h3: 'Übergabe an die 2. Generation', t3_p: 'Christopher Kielhorn übernimmt die Praxis und verbindet die jahrzehntelange Familientradition mit modernsten Behandlungsmethoden und frischem Elan.',
           t4_year: 'Heute', t4_h3: 'Modernes Behandlungszentrum', t4_p: 'Digitales Röntgen, 3D-Diagnostik, eigenes Labor und ein engagiertes Team — für höchste Qualität und echte menschliche Wärme.'
         },
         gallery: {
@@ -945,7 +945,7 @@ const TRANSLATIONS = {
         g3: {
           title: 'Angstpatienten',
           q1: 'Was kann ich tun, wenn ich große Angst vor dem Zahnarzt habe?',
-          a1: '<p>Vereinbaren Sie zunächst einen <strong>Termin nur für ein Gespräch</strong> — ohne Behandlung. Gemeinsam finden wir einen Weg Schritt für Schritt. Dr. Kielhorn ist bekannt für seinen einfühlsamen Umgang mit ängstlichen Patienten.</p>',
+          a1: '<p>Vereinbaren Sie zunächst einen <strong>Termin nur für ein Gespräch</strong> — ohne Behandlung. Gemeinsam finden wir einen Weg Schritt für Schritt. Kielhorn ist bekannt für seinen einfühlsamen Umgang mit ängstlichen Patienten.</p>',
           q2: 'Ist eine Behandlung unter Sedierung sicher?',
           a2: '<p>Ja, Sedierung ist eine sichere und erprobte Methode. Sie werden während der gesamten Behandlung professionell überwacht. Viele Patienten beschreiben die Sedierung als sehr angenehm und entspannend.</p>',
           q3: 'Wie lange dauert es, bis die Betäubung nachlässt?',
@@ -1032,7 +1032,7 @@ const TRANSLATIONS = {
           p5: 'Die professionelle Zahnreinigung ist eine Privatleistung, die von der gesetzlichen Krankenkasse in der Regel nicht übernommen wird. Die Kosten variieren je nach Aufwand. Viele private Zusatzversicherungen übernehmen die Kosten ganz oder teilweise. Sprechen Sie uns gerne an — wir beraten Sie transparent zu den Kosten.'
         },
         benefits: {
-          h2: 'Warum Prophylaxe bei Dr. Kielhorn?',
+          h2: 'Warum Prophylaxe bei Kielhorn?',
           b1_h4: 'Langfristige Gesundheit', b1_p: 'Regelmäßige PZR reduziert das Karies- und Parodontitisrisiko nachweislich und schützt Ihre Zähne ein Leben lang.',
           b2_h4: 'Strahlend weiße Zähne', b2_p: 'Zahnstein und Verfärbungen werden gründlich entfernt — für ein frisches, weißeres Lächeln nach jeder Sitzung.',
           b3_h4: 'Kosten sparen', b3_p: 'Vorsorge ist günstiger als Behandlung. Eine PZR kostet einen Bruchteil einer aufwendigen Parodontitis-Therapie.'
@@ -1052,7 +1052,7 @@ const TRANSLATIONS = {
           h2_1: 'Was sind Zahnimplantate?',
           p1: 'Ein Zahnimplantat ist eine künstliche Zahnwurzel aus biokompatiblem Titan, die chirurgisch in den Kieferknochen eingesetzt wird. Auf diesem Implantat wird anschließend eine Krone, Brücke oder Prothese befestigt — dauerhaft und stabil wie ein natürlicher Zahn.',
           p2: 'Im Gegensatz zu herkömmlichen Brücken müssen für ein Implantat keine gesunden Nachbarzähne beschliffen werden. Und anders als eine herausnehmbare Prothese sitzt das Implantat fest im Knochen und verhindert gleichzeitig den Knochenabbau, der nach einem Zahnverlust einsetzt.',
-          box: '<strong>Dr. Kielhorn ist spezialisiert auf Implantologie</strong> und setzt seit über 15 Jahren erfolgreich Premium-Implantatsysteme ein. Wissenschaftliche Studien zeigen Erfolgsraten von über 95% nach 10 Jahren.',
+          box: '<strong>Kielhorn ist spezialisiert auf Implantologie</strong> und setzt seit über 15 Jahren erfolgreich Premium-Implantatsysteme ein. Wissenschaftliche Studien zeigen Erfolgsraten von über 95% nach 10 Jahren.',
           h2_2: 'Das Implantat-Verfahren Schritt für Schritt',
           s1_h4: 'Diagnostik und Planung', s1_p: '3D-Röntgenaufnahme (DVT) und digitale Planung des Implantats. Beurteilung von Knochenvolumen und -qualität.',
           s2_h4: 'Implantation (ambulant)', s2_p: 'Das Titanimplantat wird unter lokaler Betäubung schmerzfrei in den Kiefer eingesetzt. Der Eingriff dauert ca. 30–60 Minuten.',
@@ -1068,7 +1068,7 @@ const TRANSLATIONS = {
           p5: 'Implantate erfordern dieselbe Pflege wie natürliche Zähne: regelmäßiges Zähneputzen, Zahnseide und professionelle Zahnreinigung. Mit guter Pflege halten Implantate ein Leben lang. Wir begleiten Sie langfristig und bieten regelmäßige Implantat-Recalls an.'
         },
         benefits: {
-          h2: 'Warum Implantate bei Dr. Kielhorn?',
+          h2: 'Warum Implantate bei Kielhorn?',
           b1_h4: 'Natürliches Aussehen', b1_p: 'Keramikkronen auf Implantaten sind von echten Zähnen kaum zu unterscheiden — in Form, Farbe und Lichtbrechung.',
           b2_h4: '20+ Jahre Haltbarkeit', b2_p: 'Bei guter Pflege halten Implantate ein Leben lang — wissenschaftliche Studien belegen Erfolgsraten über 95 % nach 10 Jahren.',
           b3_h4: 'Knochen erhalten', b3_p: 'Das Implantat stimuliert den Kiefer wie eine natürliche Zahnwurzel und verhindert so den gefürchteten Knochenabbau nach Zahnverlust.'
@@ -1140,7 +1140,7 @@ const TRANSLATIONS = {
           li2_5: 'Bei starken Schmerzen oder Blutungen sofort melden'
         },
         benefits: {
-          h2: 'Warum Oralchirurgie bei Dr. Kielhorn?',
+          h2: 'Warum Oralchirurgie bei Kielhorn?',
           b1_h4: 'Schonende Technik', b1_p: 'Wir verwenden minimalinvasive Methoden, modernste Instrumente und Lupenbrille für präzises, gewebeschonendes Arbeiten.',
           b2_h4: 'Effektive Betäubung', b2_p: 'Dünnste Nadeln, Betäubungsgel im Voraus und moderne Anästhetika — erst wenn Sie wirklich nichts spüren, beginnen wir.',
           b3_h4: 'Nachsorge inklusive', b3_p: 'Sie erhalten umfangreiche schriftliche Nachsorgeanweisungen und einen Kontrolltermin — wir lassen Sie nach dem Eingriff nicht allein.'
