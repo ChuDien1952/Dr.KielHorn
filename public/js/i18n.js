@@ -69,9 +69,9 @@ const TRANSLATIONS = {
       title: 'Experienced Professionals Here for You',
       doctor: {
         role: 'Principal Dentist & Practice Owner',
-        name: 'Dr. Christopher Kielhorn',
-        desc1: 'Dr. Christopher Kielhorn has been practicing dentistry in Winsen (Luhe) for over 20 years, continuing a family tradition of dental excellence. His approach combines clinical precision with genuine patient empathy.',
-        desc2: 'After his dental studies, Dr. Kielhorn completed numerous advanced trainings in implantology, aesthetic dentistry, and anxious patient care. With over 20 years of experience and a 4.9-star Google rating, he is one of the most respected dentists in the Harburg district.',
+        name: 'Christopher Kielhorn',
+        desc1: 'Christopher Kielhorn has been practicing dentistry in Winsen (Luhe) for over 20 years, continuing a family tradition of dental excellence. His approach combines clinical precision with genuine patient empathy.',
+        desc2: 'After his dental studies, he completed numerous advanced trainings in implantology, aesthetic dentistry, and anxious patient care. With over 20 years of experience and a 4.9-star Google rating, he is one of the most respected dentists in the Harburg district.',
         desc3: 'He is known for his calm, empathetic manner and his ability to put even anxious patients at ease. "No tooth and no patient is too complicated for me," he says — and means it.',
         cred1: 'Specialist in Implantology',
         cred2: '20+ Years Experience',
@@ -79,7 +79,7 @@ const TRANSLATIONS = {
         cred4: '4.9★ Patient Rating',
         cred5: 'Aesthetic Dentistry',
         cred6: 'Anxious Patient Care',
-        cta: 'Book Appointment with Dr. Kielhorn'
+        cta: 'Book an Appointment'
       },
       staff: {
         role_dentist: 'Associate Dentist',
@@ -713,9 +713,9 @@ const TRANSLATIONS = {
       title: 'Erfahrene Fachkräfte, die für Sie da sind',
       doctor: {
         role: 'Inhaber & Leitender Zahnarzt',
-        name: 'Dr. Christopher Kielhorn',
-        desc1: 'Dr. Christopher Kielhorn führt die Zahnarztpraxis in Winsen (Luhe) bereits in zweiter Generation und verbindet dabei die jahrzehntelange Tradition seines Vaters mit modernsten Behandlungsmethoden. Sein Credo: Jeder Patient verdient eine Behandlung auf höchstem Niveau — verbunden mit echter menschlicher Wärme.',
-        desc2: 'Nach seinem Studium der Zahnmedizin absolvierte Dr. Kielhorn zahlreiche Fortbildungen in den Bereichen Implantologie, Ästhetische Zahnheilkunde und Angstpatientenbehandlung. Mit über 20 Jahren Berufserfahrung und einer 4,9-Sterne-Bewertung bei Google ist er einer der angesehensten Zahnärzte im Landkreis Harburg.',
+        name: 'Christopher Kielhorn',
+        desc1: 'Christopher Kielhorn führt die Zahnarztpraxis in Winsen (Luhe) bereits in zweiter Generation und verbindet dabei die jahrzehntelange Tradition seines Vaters mit modernsten Behandlungsmethoden. Sein Credo: Jeder Patient verdient eine Behandlung auf höchstem Niveau — verbunden mit echter menschlicher Wärme.',
+        desc2: 'Nach seinem Studium der Zahnmedizin absolvierte er zahlreiche Fortbildungen in den Bereichen Implantologie, Ästhetische Zahnheilkunde und Angstpatientenbehandlung. Mit über 20 Jahren Berufserfahrung und einer 4,9-Sterne-Bewertung bei Google ist er einer der angesehensten Zahnärzte im Landkreis Harburg.',
         desc3: 'Er ist bekannt für seine ruhige, einfühlsame Art und die Fähigkeit, auch ängstlichen Patienten die Angst zu nehmen. "Kein Zahn und kein Patient ist mir zu kompliziert", sagt er — und meint es ernst.',
         cred1: 'Spezialist für Implantologie',
         cred2: '20+ Jahre Erfahrung',
@@ -723,7 +723,7 @@ const TRANSLATIONS = {
         cred4: '4,9★ Patientenbewertung',
         cred5: 'Ästhetische Zahnheilkunde',
         cred6: 'Angstpatientenbehandlung',
-        cta: 'Termin bei Dr. Kielhorn buchen'
+        cta: 'Termin buchen'
       },
       staff: {
         role_dentist: 'Zahnärztin',
