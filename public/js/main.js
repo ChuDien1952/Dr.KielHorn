@@ -26,12 +26,35 @@ function initMobileNav() {
   });
 
   nav.querySelectorAll('a').forEach(link => {
+    if (link.classList.contains('nav-has-dropdown')) return;
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     });
+  });
+}
+
+/* ── Services dropdown ──────────────────────────── */
+function initServicesDropdown() {
+  const wrap = document.getElementById('navServicesWrap');
+  if (!wrap) return;
+  const trigger = wrap.querySelector('.nav-has-dropdown');
+  if (!trigger) return;
+
+  trigger.addEventListener('click', e => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      const isOpen = wrap.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if (window.innerWidth > 900 && !wrap.contains(e.target)) {
+      wrap.classList.remove('open');
+    }
   });
 }
 
@@ -560,6 +583,7 @@ function initScrollProgress() {
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initMobileNav();
+  initServicesDropdown();
   initSmoothScroll();
   initActiveNav();
   initScrollReveal();
