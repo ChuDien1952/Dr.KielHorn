@@ -600,33 +600,90 @@ function initScrollProgress() {
   update();
 }
 
-/* ── Slow water stream ───────────────────────────── */
+/* ── Water arc flowing on circle borders ─────────── */
 function initWaterDrops() {
   const inner = document.querySelector('.svc-nav-inner');
   if (!inner) return;
-  const circles = [...inner.querySelectorAll('.svc-nav-circle')];
-  if (circles.length < 2) return;
+  const items = [...inner.querySelectorAll('.svc-nav-item')];
+  if (!items.length) return;
 
-  // Inject the stream channel element
-  const stream = document.createElement('div');
-  stream.className = 'water-stream';
-  inner.appendChild(stream);
+  const NS   = 'http://www.w3.org/2000/svg';
+  const SZ   = 48;                     // SVG canvas size
+  const CX   = SZ / 2, CY = SZ / 2;   // center
+  const R    = 22;                     // arc radius — just outside the 40px circle
+  const CIRC = 2 * Math.PI * R;        // full circumference ≈ 138.2
+  const ARC  = CIRC * (130 / 360);     // visible arc ≈ 130° of the circle
+  const GAP  = CIRC - ARC;
+  const SPEED        = 18;             // degrees/sec — very slow (20 s per rotation)
+  const PHASE_STEP   = 360 / items.length; // phase offset between consecutive circles
 
-  // All circles get a permanent subtle wet tint
-  circles.forEach(c => c.classList.add('stream-on'));
+  // Build an SVG arc element for each nav item
+  const arcs = items.map((item, i) => {
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'circle-arc-svg');
+    svg.setAttribute('width',  SZ);
+    svg.setAttribute('height', SZ);
+    svg.setAttribute('viewBox', `0 0 ${SZ} ${SZ}`);
 
-  // Slowly travel the "current" glow through circles, one at a time
-  let idx = 0;
-  const STEP = 1300; // ms per circle — very slow flow
+    // Soft glow filter
+    const defs   = document.createElementNS(NS, 'defs');
+    const filter = document.createElementNS(NS, 'filter');
+    filter.setAttribute('id', `wf${i}`);
+    filter.setAttribute('x', '-50%'); filter.setAttribute('y', '-50%');
+    filter.setAttribute('width', '200%'); filter.setAttribute('height', '200%');
+    const gblur = document.createElementNS(NS, 'feGaussianBlur');
+    gblur.setAttribute('stdDeviation', '1.8');
+    gblur.setAttribute('result', 'b');
+    const merge = document.createElementNS(NS, 'feMerge');
+    ['b', 'SourceGraphic'].forEach(src => {
+      const n = document.createElementNS(NS, 'feMergeNode');
+      n.setAttribute('in', src);
+      merge.appendChild(n);
+    });
+    filter.appendChild(gblur);
+    filter.appendChild(merge);
+    defs.appendChild(filter);
+    svg.appendChild(defs);
 
-  function step() {
-    circles.forEach(c => c.classList.remove('stream-current'));
-    circles[idx].classList.add('stream-current');
-    idx = (idx + 1) % circles.length;
-    setTimeout(step, STEP);
+    // Background halo arc (wider, softer)
+    const halo = document.createElementNS(NS, 'circle');
+    halo.setAttribute('cx', CX); halo.setAttribute('cy', CY); halo.setAttribute('r', R);
+    halo.setAttribute('fill', 'none');
+    halo.setAttribute('stroke', 'rgba(80,200,245,0.22)');
+    halo.setAttribute('stroke-width', '5');
+    halo.setAttribute('stroke-linecap', 'round');
+    halo.setAttribute('stroke-dasharray', `${ARC} ${GAP}`);
+    halo.setAttribute('transform', `rotate(-90,${CX},${CY})`);
+    svg.appendChild(halo);
+
+    // Main water arc (crisp, bright)
+    const arc = document.createElementNS(NS, 'circle');
+    arc.setAttribute('cx', CX); arc.setAttribute('cy', CY); arc.setAttribute('r', R);
+    arc.setAttribute('fill', 'none');
+    arc.setAttribute('stroke', 'rgba(130,225,255,0.82)');
+    arc.setAttribute('stroke-width', '2');
+    arc.setAttribute('stroke-linecap', 'round');
+    arc.setAttribute('stroke-dasharray', `${ARC} ${GAP}`);
+    arc.setAttribute('transform', `rotate(-90,${CX},${CY})`);
+    arc.setAttribute('filter', `url(#wf${i})`);
+    svg.appendChild(arc);
+
+    item.appendChild(svg);
+    return { arc, halo, phase: i * PHASE_STEP };
+  });
+
+  // Animate all arcs — each offset by its phase so the "crest" cascades downward
+  function frame(now) {
+    const deg = (now / 1000) * SPEED;   // total degrees rotated so far
+    arcs.forEach(({ arc, halo, phase }) => {
+      const offset = -CIRC * ((deg + phase) / 360);
+      arc.setAttribute('stroke-dashoffset',  String(offset));
+      halo.setAttribute('stroke-dashoffset', String(offset));
+    });
+    requestAnimationFrame(frame);
   }
 
-  setTimeout(step, 600);
+  setTimeout(() => requestAnimationFrame(frame), 400);
 }
 
 /* ── Init all ───────────────────────────────────── */
