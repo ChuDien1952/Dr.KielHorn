@@ -903,18 +903,41 @@ p  { max-width:68ch }
   0%,100% { box-shadow:0 24px 64px rgba(0,0,0,.38),0 4px 16px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.16),0 0 0 0 rgba(30,111,168,0) }
   50%      { box-shadow:0 24px 64px rgba(0,0,0,.38),0 4px 16px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.16),0 0 28px 6px rgba(30,111,168,.16) }
 }
-/* Connector line */
-.svc-nav-inner::before {
-  content:'';
+/* Light beam orb (replaces static connector line) */
+.nav-light-beam {
   position:absolute;
   left:50%;
-  top:32px;
-  bottom:32px;
-  width:2px;
+  width:6px; height:6px;
+  border-radius:50%;
   transform:translateX(-50%);
-  background:linear-gradient(to bottom,rgba(255,255,255,.07),rgba(30,111,168,.42),rgba(13,148,136,.24),rgba(255,255,255,.07));
-  border-radius:1px;
-  z-index:0;
+  background:radial-gradient(circle at center,#c8faff 0%,#7df8ff 40%,#1a9ed4 100%);
+  box-shadow:
+    0 0 3px 1px rgba(200,250,255,.95),
+    0 0 8px 4px rgba(125,216,248,.75),
+    0 0 18px 8px rgba(30,111,168,.50),
+    0 0 34px 14px rgba(13,148,136,.28);
+  z-index:2;
+  pointer-events:none;
+  will-change:top;
+}
+@keyframes beamArrival {
+  0%   { transform:translateX(-50%) scale(1) }
+  40%  { transform:translateX(-50%) scale(2.6);
+         box-shadow:0 0 8px 4px rgba(200,250,255,.9),0 0 22px 10px rgba(125,216,248,.9),0 0 44px 20px rgba(30,111,168,.65) }
+  100% { transform:translateX(-50%) scale(1) }
+}
+.nav-light-beam.arriving {
+  animation:beamArrival .38s cubic-bezier(.22,1,.36,1) forwards;
+}
+@keyframes circleHit {
+  0%   { box-shadow:0 0 0 3px rgba(125,216,248,.4),0 0 14px rgba(125,216,248,.5) }
+  50%  { box-shadow:0 0 0 8px rgba(125,216,248,.15),0 0 30px rgba(125,216,248,.7),0 0 44px rgba(30,111,168,.38) }
+  100% { box-shadow:none }
+}
+.svc-nav-circle.beam-hit {
+  animation:circleHit .42s ease-out forwards;
+  border-color:rgba(125,216,248,.65);
+  color:rgba(200,250,255,.95);
 }
 /* Top shine reflection */
 .svc-nav-inner::after {

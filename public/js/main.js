@@ -600,6 +600,65 @@ function initScrollProgress() {
   update();
 }
 
+/* ── Service Nav Light Beam ─────────────────────── */
+function initNavBeam() {
+  const inner = document.querySelector('.svc-nav-inner');
+  if (!inner) return;
+  const circles = [...inner.querySelectorAll('.svc-nav-circle')];
+  if (circles.length < 2) return;
+
+  const beam = document.createElement('span');
+  beam.className = 'nav-light-beam';
+  inner.appendChild(beam);
+
+  function getCenter(idx) {
+    const el = circles[idx];
+    const er = el.getBoundingClientRect();
+    const ir = inner.getBoundingClientRect();
+    return er.top - ir.top + er.height / 2 - 3;
+  }
+
+  let step = 0;
+  let timer = null;
+  const TRAVEL = 380;
+  const HOLD   = 560;
+
+  function shoot() {
+    const from = step % circles.length;
+    const to   = (step + 1) % circles.length;
+
+    beam.classList.remove('arriving');
+    beam.style.transition = 'none';
+    beam.style.top = getCenter(from) + 'px';
+    beam.style.opacity = '1';
+
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      beam.style.transition = `top ${TRAVEL}ms cubic-bezier(0.6,0,0.35,1)`;
+      beam.style.top = getCenter(to) + 'px';
+    }));
+
+    timer = setTimeout(() => {
+      beam.classList.add('arriving');
+      circles[to].classList.add('beam-hit');
+      setTimeout(() => {
+        beam.classList.remove('arriving');
+        circles[to].classList.remove('beam-hit');
+      }, 420);
+      step++;
+      timer = setTimeout(shoot, HOLD);
+    }, TRAVEL + 30);
+  }
+
+  // Initialise hidden at circle 0 then fade in
+  beam.style.top = getCenter(0) + 'px';
+  beam.style.opacity = '0';
+  timer = setTimeout(() => {
+    beam.style.transition = 'opacity 0.5s ease';
+    beam.style.opacity = '1';
+    setTimeout(shoot, 500);
+  }, 700);
+}
+
 /* ── Init all ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
@@ -620,6 +679,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroParticles();
   initTestimonialCarousel();
   initEyebrowLetters();
+  initNavBeam();
 
   document.fonts.ready.then(initHeroGSAP);
 });
