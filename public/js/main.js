@@ -54,7 +54,7 @@ function initServicesDropdown() {
     hideTimer = setTimeout(() => {
       wrap.classList.remove('open');
       trigger.setAttribute('aria-expanded', 'false');
-    }, delay || 0);
+    }, delay != null ? delay : 0);
   }
 
   /* Desktop: hover with 300ms grace period */
@@ -62,7 +62,7 @@ function initServicesDropdown() {
     if (window.innerWidth > 900) openDropdown();
   });
   wrap.addEventListener('mouseleave', () => {
-    if (window.innerWidth > 900) closeDropdown(300);
+    if (window.innerWidth > 900) closeDropdown(600);
   });
 
   /* Mobile: tap trigger toggles submenu */
