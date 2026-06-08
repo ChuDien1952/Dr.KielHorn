@@ -399,8 +399,6 @@
     scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
     /* Mobile menu */
-    const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
-    hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
 
     /* Scroll reveal */
     document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.08}).observe(el);});
@@ -426,5 +424,6 @@
     });
   </script>
   <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

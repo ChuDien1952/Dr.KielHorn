@@ -252,11 +252,10 @@
   const header=document.getElementById('siteHeader'),scrollTop=document.getElementById('scrollTop'),progress=document.getElementById('scrollProgress');
   window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20);scrollTop.classList.toggle('visible',window.scrollY>500);if(progress){const t=document.documentElement.scrollHeight-window.innerHeight;progress.style.transform='scaleX('+(window.scrollY/t)+')';}},{passive:true});
   scrollTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-  const hb=document.getElementById('hamburger'),nv=document.getElementById('mainNav');
-  hb.addEventListener('click',()=>{const o=nv.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o));});
   document.querySelectorAll('[data-reveal]').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('revealed');}},{threshold:0.1}).observe(el);});
   document.querySelectorAll('.svc-faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.svc-faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.svc-faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.svc-faq-q').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});
   </script>
   <script src="../../js/i18n.js"></script>
+  <script src="../../js/main.js"></script>
 </body>
 </html>
