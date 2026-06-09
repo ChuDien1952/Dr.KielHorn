@@ -91,7 +91,7 @@ const TRANSLATIONS = {
         role_technician: 'Dental Technician'
       },
       overview: {
-        title: 'A 10-Person Team Ready for You',
+        title: 'Our Team Ready for You',
         desc: 'Dentists, hygienists, assistants, and coordinators — all with one goal: your well-being and a healthy, beautiful smile.'
       },
       cta: 'Meet Our Entire Team →',
@@ -737,7 +737,7 @@ const TRANSLATIONS = {
         role_technician: 'Zahntechniker'
       },
       overview: {
-        title: 'Unser 10-köpfiges Team für Sie',
+        title: 'Unser Team für Sie',
         desc: 'Zahnärzte, Hygieniker, Assistenten und Koordinatoren — alle mit einem Ziel: Ihr Wohlbefinden und ein gesundes, schönes Lächeln.'
       },
       cta: 'Unser gesamtes Team kennenlernen →',
