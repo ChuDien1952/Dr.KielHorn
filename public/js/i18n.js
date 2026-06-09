@@ -68,10 +68,10 @@ const TRANSLATIONS = {
       eyebrow: 'Our Team',
       title: 'Experienced Professionals Here for You',
       doctor: {
-        role: 'Principal Dentist & Practice Owner',
+        role: 'Dentist & Practice Owner',
         name: 'Christopher Kielhorn',
-        desc1: 'Christopher Kielhorn has been practicing dentistry in Winsen (Luhe) for over 20 years, continuing a family tradition of dental excellence. His approach combines clinical precision with genuine patient empathy.',
-        desc2: 'After his dental studies, he completed numerous advanced trainings in implantology, aesthetic dentistry, and anxious patient care. With over 20 years of experience and a 4.9-star Google rating, he is one of the most respected dentists in the Harburg district.',
+        desc1: 'Christopher Kielhorn is a dentist and practice owner in Winsen (Luhe), continuing a family tradition of dental excellence into the second generation. He holds a DMD (Doctor of Dental Medicine) and has completed advanced curricula in Periodontology and Endodontology.',
+        desc2: 'With over 20 years of experience, he combines clinical precision with genuine patient empathy. His specialty training in implantology, aesthetic dentistry, and anxious patient care makes him one of the most respected dentists in the Harburg district, with a 4.9-star Google rating.',
         desc3: 'He is known for his calm, empathetic manner and his ability to put even anxious patients at ease. "No tooth and no patient is too complicated for me," he says — and means it.',
         cred1: 'Specialist in Implantology',
         cred2: '20+ Years Experience',
@@ -79,6 +79,8 @@ const TRANSLATIONS = {
         cred4: '4.9★ Patient Rating',
         cred5: 'Aesthetic Dentistry',
         cred6: 'Anxious Patient Care',
+        cred7: 'DMD · Doctor of Dental Medicine',
+        cred8: 'Curriculum: Periodontology & Endodontology',
         cta: 'Book an Appointment'
       },
       staff: {
@@ -712,10 +714,10 @@ const TRANSLATIONS = {
       eyebrow: 'Unser Team',
       title: 'Erfahrene Fachkräfte, die für Sie da sind',
       doctor: {
-        role: 'Inhaber & Leitender Zahnarzt',
+        role: 'Zahnarzt und Praxisinhaber',
         name: 'Christopher Kielhorn',
-        desc1: 'Christopher Kielhorn führt die Zahnarztpraxis in Winsen (Luhe) bereits in zweiter Generation und verbindet dabei die jahrzehntelange Tradition seines Vaters mit modernsten Behandlungsmethoden. Sein Credo: Jeder Patient verdient eine Behandlung auf höchstem Niveau — verbunden mit echter menschlicher Wärme.',
-        desc2: 'Nach seinem Studium der Zahnmedizin absolvierte er zahlreiche Fortbildungen in den Bereichen Implantologie, Ästhetische Zahnheilkunde und Angstpatientenbehandlung. Mit über 20 Jahren Berufserfahrung und einer 4,9-Sterne-Bewertung bei Google ist er einer der angesehensten Zahnärzte im Landkreis Harburg.',
+        desc1: 'Christopher Kielhorn ist Zahnarzt und Praxisinhaber in Winsen (Luhe) und führt die Zahnarztpraxis bereits in zweiter Generation. Er trägt den akademischen Grad DMD (Doctor of Dental Medicine) und hat Curricula in Parodontologie und Endodontologie abgeschlossen.',
+        desc2: 'Mit über 20 Jahren Berufserfahrung verbindet er klinische Präzision mit echtem Einfühlungsvermögen. Sein Schwerpunkt liegt auf Implantologie, ästhetischer Zahnheilkunde und der Behandlung von Angstpatienten. Mit einer 4,9-Sterne-Bewertung bei Google gehört er zu den angesehensten Zahnärzten im Landkreis Harburg.',
         desc3: 'Er ist bekannt für seine ruhige, einfühlsame Art und die Fähigkeit, auch ängstlichen Patienten die Angst zu nehmen. "Kein Zahn und kein Patient ist mir zu kompliziert", sagt er — und meint es ernst.',
         cred1: 'Spezialist für Implantologie',
         cred2: '20+ Jahre Erfahrung',
@@ -723,6 +725,8 @@ const TRANSLATIONS = {
         cred4: '4,9★ Patientenbewertung',
         cred5: 'Ästhetische Zahnheilkunde',
         cred6: 'Angstpatientenbehandlung',
+        cred7: 'DMD · Doctor of Dental Medicine',
+        cred8: 'Curriculum: Parodontologie & Endodontologie',
         cta: 'Termin buchen'
       },
       staff: {
