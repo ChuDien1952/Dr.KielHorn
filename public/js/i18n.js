@@ -88,7 +88,8 @@ const TRANSLATIONS = {
         role_hygienist: 'Dental Hygienist',
         role_assistant: 'Dental Assistant',
         role_reception: 'Patient Coordinator',
-        role_technician: 'Dental Technician'
+        role_technician: 'Dental Technician',
+        role_founder: 'Founder of the Practice'
       },
       overview: {
         title: 'Our Team Ready for You',
@@ -734,7 +735,8 @@ const TRANSLATIONS = {
         role_hygienist: 'Dentalhygienikerin',
         role_assistant: 'Zahnmedizinische Fachangestellte',
         role_reception: 'Patientenkoordinatorin',
-        role_technician: 'Zahntechniker'
+        role_technician: 'Zahntechniker',
+        role_founder: 'Gründer der Praxis'
       },
       overview: {
         title: 'Unser Team für Sie',
