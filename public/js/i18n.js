@@ -20,7 +20,8 @@ const TRANSLATIONS = {
     },
     hero: {
       tag: 'Dental Practice in Winsen (Luhe)',
-      title: 'Your Dentist in<br>Winsen (Luhe) —<br><em>With Heart &amp; Expertise</em>',
+      title: 'Your Dentist in<br>Winsen (Luhe)',
+      tagline: 'With Heart &amp; Expertise',
       desc: 'Modern dentistry, personal care, and a team that truly cares about your well-being. Christopher Kielhorn and his team look forward to welcoming you.',
       cta1: 'Book Appointment',
       cta2: 'Call Now',
@@ -788,7 +789,8 @@ const TRANSLATIONS = {
     },
     hero: {
       tag: 'Zahnarztpraxis in Winsen (Luhe)',
-      title: 'Ihr Zahnarzt in<br>Winsen (Luhe) —<br><em>Mit Herz &amp; Kompetenz</em>',
+      title: 'Ihr Zahnarzt in<br>Winsen (Luhe)',
+      tagline: 'Mit Herz &amp; Kompetenz',
       desc: 'Moderne Zahnmedizin, persönliche Betreuung und ein Team, dem Ihr Wohlbefinden wirklich am Herzen liegt. Christopher Kielhorn und sein Team freuen sich auf Ihren Besuch.',
       cta1: 'Termin buchen',
       cta2: 'Jetzt anrufen',
