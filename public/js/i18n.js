@@ -792,7 +792,7 @@ const TRANSLATIONS = {
       title: 'Ihr Zahnarzt in<br>Winsen (Luhe)',
       tagline: 'Mit Herz &amp; Kompetenz',
       desc: 'Moderne Zahnmedizin, persönliche Betreuung und ein Team, dem Ihr Wohlbefinden wirklich am Herzen liegt. Das Team der Praxis Kielhorn freut sich auf Ihren Besuch.',
-      cta1: 'Termin buchen',
+      cta1: 'Termin vereinbaren',
       cta2: 'Jetzt anrufen',
       card1_title: 'Nächster Termin',
       card1_sub: 'Heute noch verfügbar',
