@@ -785,7 +785,7 @@ const TRANSLATIONS = {
       hours: 'Öffnungszeiten',
       faq: 'FAQ',
       contact: 'Kontakt',
-      cta: 'Termin buchen'
+      cta: 'Termin vereinbaren'
     },
     hero: {
       tag: 'Zahnarztpraxis Kielhorn',
