@@ -21,8 +21,8 @@
   --border-light:  #EBF5FD;
   --white:         #FFFFFF;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Manrope', system-ui, sans-serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
 
   --container-max: 1180px;
   --section-pad:   100px;
@@ -47,7 +47,7 @@
 /* ── Reset ──────────────────────────────────────── */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
 html { scroll-behavior:smooth; font-size:16px }
-body { font-family:var(--font-body); color:var(--text); background:var(--white); line-height:1.68; -webkit-font-smoothing:antialiased; overflow-x:hidden }
+body { font-family:var(--font-body); font-weight:500; color:var(--text); background:var(--white); line-height:1.68; -webkit-font-smoothing:antialiased; overflow-x:hidden }
 img  { max-width:100%; display:block; height:auto }
 a    { color:var(--primary); text-decoration:none; transition:color var(--tr) }
 a:hover { color:var(--primary-dark) }
