@@ -231,101 +231,6 @@ function initGallery() {
   });
 }
 
-/* ═══════════════════════════════════════════════════
-   1a. CUSTOM CURSOR — Luxury Edition
-═══════════════════════════════════════════════════ */
-function initCustomCursor() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-  /* Create ring with SVG spinner */
-  const ring = document.createElement('div');
-  ring.className = 'cursor-ring';
-  ring.innerHTML = `
-    <svg class="cursor-svg" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
-      <defs>
-        <linearGradient id="cursorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#1E6FA8"/>
-          <stop offset="100%" stop-color="#0D9488"/>
-        </linearGradient>
-      </defs>
-      <circle class="ring-track" cx="18" cy="18" r="16.5" fill="none"/>
-      <circle class="ring-arc" cx="18" cy="18" r="16.5" fill="none"/>
-    </svg>
-    <div class="cursor-fill"></div>
-  `;
-
-  const dot = document.createElement('div');
-  dot.className = 'cursor-dot';
-
-  document.body.appendChild(ring);
-  document.body.appendChild(dot);
-
-  let mx = -200, my = -200;
-  let rx = -200, ry = -200;
-  const lerp = (a, b, t) => a + (b - a) * t;
-
-  window.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
-  }, { passive: true });
-
-  (function animRing() {
-    rx = lerp(rx, mx, 0.13);
-    ry = lerp(ry, my, 0.13);
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(animRing);
-  })();
-
-  /* State management */
-  const HOVER_TARGETS  = 'a, button, [role="button"], .nav-link, .btn, .svc-more, input[type=submit], select, label[for]';
-  const IMG_TARGETS    = '.gallery-item, .hero-photo, .team-card, .svc-bg, .service-card-img, img';
-  const TEXT_TARGETS   = 'p, h1, h2, h3, h4, h5, span, li, td';
-
-  let state = 'default';
-  function setState(s) {
-    if (state === s) return;
-    const prev = state;
-    state = s;
-    if (prev === 'hover') { ring.classList.remove('hovered'); dot.classList.remove('hovered'); }
-    else if (prev === 'image') { ring.classList.remove('image-hovered'); }
-    else if (prev === 'text') { ring.classList.remove('text-hovered'); dot.classList.remove('text-hovered'); }
-    if (s === 'hover') {
-      ring.classList.add('hovered'); dot.classList.add('hovered');
-    } else if (s === 'image') {
-      ring.classList.add('image-hovered');
-    } else if (s === 'text') {
-      ring.classList.add('text-hovered'); dot.classList.add('text-hovered');
-    }
-  }
-
-  document.addEventListener('mouseover', e => {
-    if (e.target.closest(HOVER_TARGETS)) setState('hover');
-    else if (e.target.closest(IMG_TARGETS)) setState('image');
-    else if (e.target.closest(TEXT_TARGETS)) setState('text');
-    else setState('default');
-  });
-  document.addEventListener('mouseout', e => {
-    if (!e.relatedTarget || e.relatedTarget === document.documentElement) setState('default');
-  });
-
-  /* Click ripple */
-  document.addEventListener('mousedown', () => {
-    ring.classList.add('clicking'); dot.classList.add('clicking');
-  });
-  document.addEventListener('mouseup', () => {
-    ring.classList.remove('clicking'); dot.classList.remove('clicking');
-  });
-
-  /* Hide when leaving window */
-  document.addEventListener('mouseleave', () => {
-    ring.style.opacity = '0'; dot.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    ring.style.opacity = '1'; dot.style.opacity = '1';
-  });
-}
 
 /* ═══════════════════════════════════════════════════
    1b. CARD TILT EFFECT
@@ -696,7 +601,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initGallery();
   initScrollProgress();
-  initCustomCursor();
   initCardTilt();
   initHeroParallax();
   initMagneticButtons();
