@@ -1647,11 +1647,7 @@ function initLangSwitcher() {
 
 /* â”€â”€ Bootstrap on DOM ready â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 document.addEventListener('DOMContentLoaded', () => {
-  initLangSwitcher();
-  let saved = localStorage.getItem('lang') || 'de';
-  if (saved === 'vi' || !TRANSLATIONS[saved]) saved = 'de';
-  localStorage.setItem('lang', saved);
-  window.currentLang = saved;
-  applyTranslations(saved);
-  updateSwitcherUI(saved);
+  window.currentLang = 'de';
+  applyTranslations('de');
+  document.documentElement.lang = 'de';
 });
