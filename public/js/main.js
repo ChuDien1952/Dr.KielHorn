@@ -505,88 +505,6 @@ function initScrollProgress() {
   update();
 }
 
-/* ── Water stream: circle 1 → circle 8 ──────────── */
-function initWaterDrops() {
-  const inner = document.querySelector('.svc-nav-inner');
-  if (!inner) return;
-  const circles = [...inner.querySelectorAll('.svc-nav-circle')];
-  if (circles.length < 2) return;
-
-  const NS = 'http://www.w3.org/2000/svg';
-  const ir = inner.getBoundingClientRect();
-  const CX = ir.width / 2;
-
-  // Circle centre Y coords relative to .svc-nav-inner
-  const cy = circles.map(c => {
-    const r = c.getBoundingClientRect();
-    return r.top - ir.top + r.height / 2;
-  });
-  const TOP = cy[0];
-  const BOT = cy[cy.length - 1];
-  const PATH = BOT - TOP;   // distance between first and last circle centres
-  const TAIL = 64;           // visible stream length in px
-
-  /* ── Build SVG ── */
-  const svg = document.createElementNS(NS, 'svg');
-  svg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible';
-
-  // Glow filter
-  const defs = document.createElementNS(NS, 'defs');
-  const filt = document.createElementNS(NS, 'filter');
-  filt.id = 'wglow';
-  filt.setAttribute('x','-300%'); filt.setAttribute('y','-5%');
-  filt.setAttribute('width','700%'); filt.setAttribute('height','110%');
-  const gb = document.createElementNS(NS, 'feGaussianBlur');
-  gb.setAttribute('stdDeviation','2.2'); gb.setAttribute('result','b');
-  const mg = document.createElementNS(NS, 'feMerge');
-  ['b','SourceGraphic'].forEach(s => {
-    const n = document.createElementNS(NS,'feMergeNode'); n.setAttribute('in',s); mg.appendChild(n);
-  });
-  filt.appendChild(gb); filt.appendChild(mg);
-  defs.appendChild(filt);
-  svg.appendChild(defs);
-
-  // The stream travels on a line that starts TAIL above TOP so it enters smoothly
-  // Total line length = PATH + TAIL  →  dasharray TAIL covers exactly one segment
-  function mkLine(color, w) {
-    const l = document.createElementNS(NS, 'line');
-    l.setAttribute('x1', CX); l.setAttribute('y1', TOP - TAIL);
-    l.setAttribute('x2', CX); l.setAttribute('y2', BOT);
-    l.setAttribute('stroke', color);
-    l.setAttribute('stroke-width', w);
-    l.setAttribute('stroke-linecap','round');
-    l.setAttribute('stroke-dasharray', `${TAIL} 9999`);
-    l.setAttribute('stroke-dashoffset','0');
-    l.setAttribute('filter','url(#wglow)');
-    svg.appendChild(l);
-    return l;
-  }
-
-  // 3 layers: outer glow → mid → bright core
-  const glow = mkLine('rgba(60,185,240,0.18)', 9);
-  const mid  = mkLine('rgba(100,218,255,0.48)', 3.5);
-  const core = mkLine('rgba(200,245,255,0.90)', 1.8);
-
-  inner.appendChild(svg);
-
-  const TOTAL = PATH + TAIL;   // total travel distance
-  const DUR   = 6800;          // ms — very slow
-  const t0    = performance.now();
-
-  function animate(now) {
-    const t      = ((now - t0) % DUR) / DUR;          // 0 → 1 looping
-    const offset = -(t * TOTAL);                       // shifts dash downward
-    [glow, mid, core].forEach(l => l.setAttribute('stroke-dashoffset', String(offset)));
-
-    // Stream centre Y: used for circle glow detection
-    const streamCY = (TOP - TAIL) + t * TOTAL + TAIL / 2;
-    circles.forEach((c, i) => c.classList.toggle('water-pass', Math.abs(streamCY - cy[i]) < TAIL * 0.55));
-
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
-}
 
 /* ── Init all ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -607,7 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroParticles();
   initTestimonialCarousel();
   initEyebrowLetters();
-  initWaterDrops();
 
   document.fonts.ready.then(initHeroGSAP);
 });
