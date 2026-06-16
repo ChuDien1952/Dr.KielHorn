@@ -235,13 +235,13 @@ const TRANSLATIONS = {
       services: { hero: { h1: 'Our Services — <em>Your Smile in the Best Hands</em>', desc: 'From prevention to aesthetic dentistry — comprehensive dental care tailored individually to you.', back: 'Back to Homepage' } },
       team:     { hero: { h1: 'Our Team — <em>Experienced, Dedicated, Compassionate</em>', desc: 'Behind every healthy smile is a team working with passion and expertise. Get to know us.', back: 'Back to Homepage' } },
       praxis: {
-        hero: { h1: 'Our Practice — <em>Modern, Welcoming, Trustworthy</em>', desc: 'A practice with tradition — combining modern medicine with personal care since 1980.', back: 'Back to Homepage' },
+        hero: { h1: 'Our Practice — <em>Modern, Welcoming, Trustworthy</em>', desc: 'A practice with tradition — combining modern medicine with personal care since 1986.', back: 'Back to Homepage' },
         history: {
           label: 'Our History',
           h2: 'A Practice with <em>Tradition</em>',
           p1: 'Founded by Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn, now passionately continued by their son Christopher Kielhorn. For over 40 years, we have been caring for patients in Winsen (Luhe) and the surrounding region.',
-          p2: 'What began as a small practice in 1980 is today a modern treatment centre with its own laboratory, digital X-ray, and 3D diagnostics.',
-          t1_year: '1980', t1_h3: 'Founding of the Practice', t1_p: 'Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn open the dental practice in Winsen (Luhe) — with the aspiration to treat patients like friends.',
+          p2: 'What began as a small practice in 1986 is today a modern treatment centre with its own laboratory, digital X-ray, and 3D diagnostics.',
+          t1_year: '1986', t1_h3: 'Founding of the Practice', t1_p: 'Wilhelm Heinrich Kielhorn and Ingrid Schierz-Kielhorn open the dental practice in Winsen (Luhe) — with the aspiration to treat patients like friends.',
           t2_year: '1990s – 2010s', t2_h3: 'Growth &amp; Modernisation', t2_p: 'Continuous expansion: own dental laboratory, new treatment rooms, and entry into digital dentistry with state-of-the-art equipment.',
           t3_year: '2023', t3_h3: 'Handover to the 2nd Generation', t3_p: 'Christopher Kielhorn takes over the practice, combining decades of family tradition with modern treatment methods and fresh energy.',
           t4_year: 'Today', t4_h3: 'Modern Treatment Centre', t4_p: 'Digital X-ray, 3D diagnostics, own laboratory and a dedicated team — for the highest quality and genuine human warmth.'
@@ -1004,13 +1004,13 @@ const TRANSLATIONS = {
       services: { hero: { h1: 'Unsere Leistungen — <em>Ihr Lächeln in besten Händen</em>', desc: 'Von der Vorsorge über Implantate bis zur ästhetischen Zahnheilkunde — umfassende Zahnmedizin auf höchstem Niveau, individuell auf Sie abgestimmt.', back: 'Zurück zur Startseite' } },
       team:     { hero: { h1: 'Unser Team — <em>Erfahren, Engagiert, Einfühlsam</em>', desc: 'Hinter jedem gesunden Lächeln steckt ein Team, das mit Leidenschaft und Fachkompetenz arbeitet. Lernen Sie uns kennen.', back: 'Zurück zur Startseite' } },
       praxis: {
-        hero: { h1: 'Unsere Praxis — <em>Modern, Herzlich, Vertrauensvoll</em>', desc: 'Eine Praxis mit Geschichte — moderne Medizin verbunden mit persönlicher Betreuung seit 1980.', back: 'Zurück zur Startseite' },
+        hero: { h1: 'Unsere Praxis — <em>Modern, Herzlich, Vertrauensvoll</em>', desc: 'Eine Praxis mit Geschichte — moderne Medizin verbunden mit persönlicher Betreuung seit 1986.', back: 'Zurück zur Startseite' },
         history: {
           label: 'Unsere Geschichte',
           h2: 'Eine Praxis mit <em>Tradition</em>',
           p1: 'Gegründet von Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn, heute mit Herzblut weitergeführt von ihrem Sohn Christopher Kielhorn. Seit über 40 Jahren versorgen wir Patienten in Winsen (Luhe) und der gesamten Region.',
-          p2: 'Was 1980 als kleine Praxis begann, ist heute ein modernes Behandlungszentrum mit eigenem Labor, digitalem Röntgen und 3D-Diagnostik.',
-          t1_year: '1980', t1_h3: 'Gründung der Praxis', t1_p: 'Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn eröffnen die Zahnarztpraxis in Winsen (Luhe) — mit dem Anspruch, Patienten wie Freunde zu behandeln.',
+          p2: 'Was 1986 als kleine Praxis begann, ist heute ein modernes Behandlungszentrum mit eigenem Labor, digitalem Röntgen und 3D-Diagnostik.',
+          t1_year: '1986', t1_h3: 'Gründung der Praxis', t1_p: 'Wilhelm Heinrich Kielhorn und Ingrid Schierz-Kielhorn eröffnen die Zahnarztpraxis in Winsen (Luhe) — mit dem Anspruch, Patienten wie Freunde zu behandeln.',
           t2_year: '1990er – 2010er', t2_h3: 'Wachstum &amp; Modernisierung', t2_p: 'Kontinuierliche Erweiterung: eigenes Dentallabor, neue Behandlungsräume und der Einstieg in die digitale Zahnmedizin mit modernsten Geräten.',
           t3_year: '2023', t3_h3: 'Übergabe an die 2. Generation', t3_p: 'Christopher Kielhorn übernimmt die Praxis und verbindet die jahrzehntelange Familientradition mit modernsten Behandlungsmethoden und frischem Elan.',
           t4_year: 'Heute', t4_h3: 'Modernes Behandlungszentrum', t4_p: 'Digitales Röntgen, 3D-Diagnostik, eigenes Labor und ein engagiertes Team — für höchste Qualität und echte menschliche Wärme.'
