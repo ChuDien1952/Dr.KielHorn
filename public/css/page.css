@@ -897,20 +897,6 @@ p  { max-width:68ch }
     inset 0 1px 0 rgba(255,255,255,.16),
     inset 0 -1px 0 rgba(0,0,0,.14);
   position:relative;
-  animation:navPillGlow 5s ease-in-out infinite;
-}
-@keyframes navPillGlow {
-  0%,100% { box-shadow:0 24px 64px rgba(0,0,0,.38),0 4px 16px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.16),0 0 0 0 rgba(30,111,168,0) }
-  50%      { box-shadow:0 24px 64px rgba(0,0,0,.38),0 4px 16px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.16),0 0 28px 6px rgba(30,111,168,.16) }
-}
-/* ── Water stream flowing through circles ────────── */
-.svc-nav-circle.water-pass {
-  border-color:rgba(100,215,248,.70);
-  color:rgba(210,248,255,.90);
-  box-shadow:
-    0 0 0 3px rgba(80,200,245,.16),
-    0 0 14px rgba(80,200,245,.50),
-    0 0 26px rgba(28,145,215,.20);
 }
 /* Top shine reflection */
 .svc-nav-inner::after {
@@ -959,13 +945,8 @@ p  { max-width:68ch }
   background:linear-gradient(135deg,var(--primary) 0%,var(--teal) 100%);
   border-color:transparent;
   color:#fff;
-  box-shadow:0 0 0 4px rgba(30,111,168,.28),0 0 26px rgba(13,148,136,.65),inset 0 1px 0 rgba(255,255,255,.3);
+  box-shadow:0 0 0 3px rgba(30,111,168,.22),inset 0 1px 0 rgba(255,255,255,.3);
   transform:scale(1.2);
-  animation:navActivePulse 2.6s ease-in-out infinite;
-}
-@keyframes navActivePulse {
-  0%,100% { box-shadow:0 0 0 4px rgba(30,111,168,.28),0 0 22px rgba(13,148,136,.6),inset 0 1px 0 rgba(255,255,255,.3) }
-  50%      { box-shadow:0 0 0 8px rgba(30,111,168,.1),0 0 42px rgba(13,148,136,.82),inset 0 1px 0 rgba(255,255,255,.3) }
 }
 /* Tooltip — white glass card */
 .svc-nav-label {
