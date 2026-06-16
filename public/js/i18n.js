@@ -83,7 +83,7 @@ const TRANSLATIONS = {
         cred6: 'Anxious Patient Care',
         cred7: 'Ausgebildeter Rettungssanitäter',
         cred8: 'Practice Takeover since 2023',
-        cta: 'Book an Appointment'
+        cta: 'Termin vereinbaren'
       },
       staff: {
         role_dentist: 'Associate Dentist',
@@ -853,7 +853,7 @@ const TRANSLATIONS = {
         cred6: 'Angstpatientenbehandlung',
         cred7: 'Ausgebildeter Rettungssanitäter',
         cred8: 'Praxisübernahme seit 2023',
-        cta: 'Termin buchen'
+        cta: 'Termin vereinbaren'
       },
       staff: {
         role_dentist: 'Zahnärztin',
