@@ -76,13 +76,13 @@ const TRANSLATIONS = {
         desc3: 'After his studies, he gained a broad range of experience in several practices in northern Germany — from general dentistry to implantology and aesthetic dentistry. This variety has sharpened his eye for individual patient needs and shaped his treatment style: precise, empathetic and always at eye level.',
         desc4: 'In 2023 he took over the practice from his parents — continuing a dental family tradition that is deeply rooted in Winsen (Luhe) and the surrounding area.',
         cred1: 'Specialist in Implantology',
-        cred2: '20+ Years Experience',
+        cred2: 'Qualified Dental Technician',
         cred3: '3rd Generation Dentist',
         cred4: '4.9★ Patient Rating',
         cred5: 'Aesthetic Dentistry',
         cred6: 'Anxious Patient Care',
-        cred7: 'DMD · Doctor of Dental Medicine',
-        cred8: 'Curriculum: Periodontology & Endodontology',
+        cred7: 'Ausgebildeter Rettungssanitäter',
+        cred8: 'Practice Takeover since 2023',
         cta: 'Book an Appointment'
       },
       staff: {
@@ -846,13 +846,13 @@ const TRANSLATIONS = {
         desc3: 'Nach seinem Studium sammelte er in mehreren Praxen in Norddeutschland ein breites Erfahrungsspektrum — von der Allgemeinzahnmedizin über Implantologie bis hin zur ästhetischen Zahnmedizin. Diese Vielfalt hat seinen Blick für individuelle Patientenbedürfnisse geschärft und seinen Behandlungsstil geprägt: präzise, einfühlsam und immer auf Augenhöhe.',
         desc4: 'Im Jahr 2023 übernahm er die Praxis von seinen Eltern — und führt damit eine zahnärztliche Familientradition fort, die in Winsen (Luhe) und Umgebung tief verwurzelt ist.',
         cred1: 'Spezialist für Implantologie',
-        cred2: '20+ Jahre Erfahrung',
+        cred2: 'Ausgebildeter Zahntechniker',
         cred3: 'Zahnarzt in 3. Generation',
         cred4: '4,9★ Patientenbewertung',
         cred5: 'Ästhetische Zahnheilkunde',
         cred6: 'Angstpatientenbehandlung',
-        cred7: 'DMD · Doctor of Dental Medicine',
-        cred8: 'Curriculum: Parodontologie & Endodontologie',
+        cred7: 'Ausgebildeter Rettungssanitäter',
+        cred8: 'Praxisübernahme seit 2023',
         cta: 'Termin buchen'
       },
       staff: {
