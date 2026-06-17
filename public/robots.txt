@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /pages/datenschutz.html
-Disallow: /pages/impressum.html
-Disallow: /pages/barrierefreiheit.html
 
 Sitemap: https://dr-kielhorn.io.vn/sitemap.xml
